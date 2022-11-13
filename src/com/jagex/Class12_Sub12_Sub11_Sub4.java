@@ -1449,12 +1449,12 @@ public class Class12_Sub12_Sub11_Sub4 extends Class12_Sub12_Sub11 {
 		class12_sub11.position = arg0.length - 18;
 		int i = class12_sub11.readShort(-1);
 		int i_245_ = class12_sub11.readShort(-1);
-		int i_246_ = class12_sub11.readSignedByte(true);
-		int i_247_ = class12_sub11.readSignedByte(true);
-		int i_248_ = class12_sub11.readSignedByte(true);
-		int i_249_ = class12_sub11.readSignedByte(true);
-		int i_250_ = class12_sub11.readSignedByte(true);
-		int i_251_ = class12_sub11.readSignedByte(true);
+		int i_246_ = class12_sub11.readUByte();
+		int i_247_ = class12_sub11.readUByte();
+		int i_248_ = class12_sub11.readUByte();
+		int i_249_ = class12_sub11.readUByte();
+		int i_250_ = class12_sub11.readUByte();
+		int i_251_ = class12_sub11.readUByte();
 		int i_252_ = class12_sub11.readShort(-1);
 		int i_253_ = class12_sub11.readShort(-1);
 		int i_254_ = class12_sub11.readShort(-1);
@@ -1535,7 +1535,7 @@ public class Class12_Sub12_Sub11_Sub4 extends Class12_Sub12_Sub11 {
 		int i_271_ = 0;
 		int i_272_ = 0;
 		for (int i_273_ = 0; i_273_ < i; i_273_++) {
-			int i_274_ = class12_sub11.readSignedByte(true);
+			int i_274_ = class12_sub11.readUByte();
 			int i_275_ = 0;
 			if ((i_274_ & 0x1) != 0)
 				i_275_ = class12_sub11_241_.method216(23138);
@@ -1552,7 +1552,7 @@ public class Class12_Sub12_Sub11_Sub4 extends Class12_Sub12_Sub11 {
 			i_271_ = anIntArray2802[i_273_];
 			i_272_ = anIntArray2791[i_273_];
 			if (anIntArray2793 != null)
-				anIntArray2793[i_273_] = class12_sub11_244_.readSignedByte(true);
+				anIntArray2793[i_273_] = class12_sub11_244_.readUByte();
 		}
 		class12_sub11.position = i_265_;
 		class12_sub11_241_.position = i_261_;
@@ -1562,13 +1562,13 @@ public class Class12_Sub12_Sub11_Sub4 extends Class12_Sub12_Sub11 {
 		for (int i_278_ = 0; i_278_ < i_245_; i_278_++) {
 			anIntArray2792[i_278_] = class12_sub11.readShort(-1);
 			if (anIntArray2805 != null)
-				anIntArray2805[i_278_] = class12_sub11_241_.readSignedByte(true);
+				anIntArray2805[i_278_] = class12_sub11_241_.readUByte();
 			if (anIntArray2778 != null)
-				anIntArray2778[i_278_] = class12_sub11_242_.readSignedByte(true);
+				anIntArray2778[i_278_] = class12_sub11_242_.readUByte();
 			if (anIntArray2795 != null)
-				anIntArray2795[i_278_] = class12_sub11_243_.readSignedByte(true);
+				anIntArray2795[i_278_] = class12_sub11_243_.readUByte();
 			if (anIntArray2786 != null)
-				anIntArray2786[i_278_] = class12_sub11_244_.readSignedByte(true);
+				anIntArray2786[i_278_] = class12_sub11_244_.readUByte();
 		}
 		class12_sub11.position = i_264_;
 		class12_sub11_241_.position = i_258_;
@@ -1577,7 +1577,7 @@ public class Class12_Sub12_Sub11_Sub4 extends Class12_Sub12_Sub11 {
 		int i_281_ = 0;
 		int i_282_ = 0;
 		for (int i_283_ = 0; i_283_ < i_245_; i_283_++) {
-			int i_284_ = class12_sub11_241_.readSignedByte(true);
+			int i_284_ = class12_sub11_241_.readUByte();
 			if (i_284_ == 1) {
 				i_279_ = class12_sub11.method216(23138) + i_282_;
 				i_282_ = i_279_;

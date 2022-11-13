@@ -203,7 +203,7 @@ public class Class28 implements Runnable {
 						&& Class40.aByteArrayArray957[i] == null) {
 					Class40.aByteArrayArray957[i] = (Cache.mapsArchive
 							.method639(0, (byte) 97,
-									Class58.anIntArrayArray1350[i],
+									Class58.xteaKeys[i],
 									Class12_Sub12_Sub3.anIntArray2157[i]));
 					if (Class40.aByteArrayArray957[i] == null) {
 						bool = false;

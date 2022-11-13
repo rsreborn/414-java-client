@@ -46,9 +46,9 @@ public abstract class Class9 {
 			for (int i = 0; (i ^ 0xffffffff) > (Class47.anInt1094 ^ 0xffffffff); i++) {
 				int i_2_ = Class10.anIntArray220[i];
 				Class12_Sub12_Sub11_Sub2_Sub2 class12_sub12_sub11_sub2_sub2 = Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[i_2_];
-				int i_3_ = Game.inBuffer.readSignedByte(true);
+				int i_3_ = Game.inBuffer.readUByte();
 				if ((i_3_ & 0x40 ^ 0xffffffff) != -1)
-					i_3_ += (Game.inBuffer.readSignedByte(true) << 1830798056);
+					i_3_ += (Game.inBuffer.readUByte() << 1830798056);
 				Class23.method614(i_2_, i_3_, 255,
 						class12_sub12_sub11_sub2_sub2);
 			}

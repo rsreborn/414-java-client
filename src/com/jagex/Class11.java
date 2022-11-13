@@ -76,7 +76,7 @@ public class Class11 {
 			if (arg3 == -1507274585) {
 				anInt286++;
 				if (Class12_Sub12_Sub11_Sub3.method464(arg3 ^ ~0x59d76a02)) {
-					int i = arg1.method649(arg0, -22814);
+					int i = arg1.hashFileName(arg0, -22814);
 					int i_0_ = arg1.method655(i, (byte) 57, arg2);
 					method140((byte) 113, i_0_, arg5, arg7, arg4, arg6, i, arg1);
 				}

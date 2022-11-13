@@ -59,15 +59,15 @@ public class Class12_Sub12_Sub10 extends Class12_Sub12 {
 		anInt2379++;
 		if (arg1 == 1) {
 			anInt2373 = arg0.readShort(-1);
-			anInt2382 = arg0.readSignedByte(true);
-			anInt2380 = arg0.readSignedByte(true);
+			anInt2382 = arg0.readUByte();
+			anInt2380 = arg0.readUByte();
 		}
 	}
 
 	public void method430(Buffer arg0, boolean arg1) {
 		try {
 			for (;;) {
-				int i = arg0.readSignedByte(!arg1);
+				int i = arg0.readUByte();
 				if (i == 0)
 					break;
 				method429(arg0, i, (byte) 56);

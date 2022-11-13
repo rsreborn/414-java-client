@@ -145,7 +145,7 @@ public class Class2 {
 
 	public int method62(int arg0, int arg1) {
 		if (arg1 == 255) {
-			int i = aClass12_Sub11_91.readSignedByte(true);
+			int i = aClass12_Sub11_91.readUByte();
 			int i_7_ = aClass12_Sub11_91.method217((byte) 104);
 			if (i == 47) {
 				aClass12_Sub11_91.position += i_7_;
@@ -166,9 +166,9 @@ public class Class2 {
 		byte i = aByteArray90[arg1 - 128];
 		int i_10_ = arg1;
 		if (i >= 1)
-			i_10_ |= aClass12_Sub11_91.readSignedByte(true) << 8;
+			i_10_ |= aClass12_Sub11_91.readUByte() << 8;
 		if (i >= 2)
-			i_10_ |= aClass12_Sub11_91.readSignedByte(true) << 16;
+			i_10_ |= aClass12_Sub11_91.readUByte() << 16;
 		return i_10_;
 	}
 

@@ -15,13 +15,13 @@ public class Class45 {
 	public static int anInt1058;
 
 	public void method783(Buffer arg0, Class6 arg1) {
-		int i = arg0.readSignedByte(true);
+		int i = arg0.readUByte();
 		anIntArray1054[0] = i >> 4;
 		anIntArray1054[1] = i & 0xf;
 		if (i != 0) {
 			anIntArray1051[0] = arg0.readShort(-1);
 			anIntArray1051[1] = arg0.readShort(-1);
-			int i_0_ = arg0.readSignedByte(true);
+			int i_0_ = arg0.readUByte();
 			for (int i_1_ = 0; i_1_ < 2; i_1_++) {
 				for (int i_2_ = 0; i_2_ < anIntArray1054[i_1_]; i_2_++) {
 					anIntArrayArrayArray1052[i_1_][0][i_2_] = arg0

@@ -26,7 +26,7 @@ public abstract class Class64_Sub1 extends Class64 {
 		arg2 = (int) (0.5 + (double) arg2
 				* Math.pow(0.1, 5.0E-4 * (double) arg0));
 		if (arg1 < 68)
-			Game.encryptedLoginBuffer = null;
+			Game.loginBuffer = null;
 		if (arg2 != Class9_Sub2.anInt1583) {
 			Class9_Sub2.anInt1583 = arg2;
 			for (int i = 0; (i ^ 0xffffffff) > -17; i++) {
@@ -175,7 +175,7 @@ public abstract class Class64_Sub1 extends Class64 {
 			try {
 				aClass59_1950 = null;
 				aClass59_1949 = null;
-				Game.encryptedLoginBuffer = null;
+				Game.loginBuffer = null;
 				if (arg0 == 29250)
 					break;
 				method991(true);

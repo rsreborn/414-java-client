@@ -7,7 +7,6 @@ import com.jagex.util.Statics;
 
 import java.io.EOFException;
 import java.io.IOException;
-import java.math.BigInteger;
 
 public class Class51 {
 	public byte[] aByteArray1175;
@@ -156,7 +155,7 @@ public class Class51 {
 				&& arg1 >= 0 && (arg1 ^ 0xffffffff) > -105) {
 			Class12_Sub12_Sub11_Sub1.aByteArrayArrayArray2658[arg3][arg6][arg1] = (byte) 0;
 			for (;;) {
-				int i = arg7.readSignedByte(true);
+				int i = arg7.readUByte();
 				if (i == 0) {
 					if (arg3 == 0)
 						Statics.anIntArrayArrayArray569[0][arg6][arg1] = 8 * -Class38
@@ -169,7 +168,7 @@ public class Class51 {
 					break;
 				}
 				if (i == 1) {
-					int i_0_ = arg7.readSignedByte(true);
+					int i_0_ = arg7.readUByte();
 					if (i_0_ == 1)
 						i_0_ = 0;
 					if ((arg3 ^ 0xffffffff) != -1)
@@ -192,15 +191,15 @@ public class Class51 {
 			}
 		} else {
 			for (;;) {
-				int i = arg7.readSignedByte(true);
+				int i = arg7.readUByte();
 				if ((i ^ 0xffffffff) == -1)
 					break;
 				if ((i ^ 0xffffffff) == -2) {
-					arg7.readSignedByte(true);
+					arg7.readUByte();
 					break;
 				}
 				if (i <= 49)
-					arg7.readSignedByte(true);
+					arg7.readUByte();
 			}
 		}
 		if (arg5 < 110)
@@ -511,10 +510,5 @@ public class Class51 {
 					+ (arg0 != null ? "{...}" : "null") + ',' + arg1 + ','
 					+ arg2 + ')'));
 		}
-	}
-
-	static {
-		Game.rsaKey = (new BigInteger(
-				"58778699976184461502525193738213253649000149147835990136706041084440742975821"));
 	}
 }

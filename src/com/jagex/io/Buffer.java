@@ -9,6 +9,16 @@ public class Buffer extends Class12 {
 	public int position;
 	public byte[] payload;
 
+	public Buffer(int size) {
+		try {
+			payload = Class57.method906(true, size);
+			position = 0;
+		} catch (RuntimeException runtimeexception) {
+			throw Class35
+					.method724(runtimeexception, "tc.<init>(" + size + ')');
+		}
+	}
+
 	public int getByteS(int arg0) {
 		try {
 			Statics.anInt1779++;
@@ -36,15 +46,8 @@ public class Buffer extends Class12 {
 		}
 	}
 
-	public int readSignedByte(boolean arg0) {
-		try {
-			Statics.anInt1809++;
-			if (arg0 != true)
-				return 63;
-			return payload[position++] & 0xff;
-		} catch (RuntimeException runtimeexception) {
-			throw Class35.method724(runtimeexception, "tc.WA(" + arg0 + ')');
-		}
+	public int readUByte() {
+		return payload[position++] & 0xff;
 	}
 
 	public int method207(int arg0) {
@@ -54,9 +57,9 @@ public class Buffer extends Class12 {
 			position += 4;
 			Statics.anInt1812++;
 			return ((payload[-1 + position] & 0xff)
-					+ ((payload[position - 2] & 0xff) << -1748851928)
-					+ ((payload[position + -4] & 0xff) << 139857528) + (0xff0000 & payload[-3
-					+ position] << -1751636496));
+					+ ((payload[position - 2] & 0xff) << 8)
+					+ ((payload[position + -4] & 0xff) << 24) + (0xff0000 & payload[-3
+					+ position] << 16));
 		} catch (RuntimeException runtimeexception) {
 			throw Class35.method724(runtimeexception, "tc.GA(" + arg0 + ')');
 		}
@@ -74,9 +77,9 @@ public class Buffer extends Class12 {
 			Statics.anInt1775++;
 			payload[position++] = (byte) arg1;
 			if (arg0 == -921469304) {
-				payload[position++] = (byte) (arg1 >> -1061277176);
-				payload[position++] = (byte) (arg1 >> 59861328);
-				payload[position++] = (byte) (arg1 >> 1292840248);
+				payload[position++] = (byte) (arg1 >> 8);
+				payload[position++] = (byte) (arg1 >> 16);
+				payload[position++] = (byte) (arg1 >> 24);
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw Class35.method724(runtimeexception, "tc.PA(" + arg0 + ','
@@ -91,9 +94,9 @@ public class Buffer extends Class12 {
 				method240((byte) 33);
 			Statics.anInt1780++;
 			return ((payload[position + -2] & 0xff)
-					+ ((0xff00 & payload[-1 + position] << -1676624632) + ((0xff & payload[-3
-							+ position]) << 1589866776)) + (payload[-4
-					+ position] << 1854040560 & 0xff0000));
+					+ ((0xff00 & payload[-1 + position] << 8) + ((0xff & payload[-3
+							+ position]) << 24)) + (payload[-4
+					+ position] << 16 & 0xff0000));
 		} catch (RuntimeException runtimeexception) {
 			throw Class35.method724(runtimeexception, "tc.O(" + arg0 + ')');
 		}
@@ -107,7 +110,7 @@ public class Buffer extends Class12 {
 	public int method212(byte arg0) {
 		try {
 			position += 2;
-			int i = (((0xff & payload[-2 + position]) << 1375177608) - -(0xff & payload[position - 1]));
+			int i = (((0xff & payload[-2 + position]) << 8) - -(0xff & payload[position - 1]));
 			Statics.anInt1773++;
 			if (i > 32767)
 				i -= 65536;
@@ -134,17 +137,9 @@ public class Buffer extends Class12 {
 		}
 	}
 
-	public int method214(int arg0) {
-		try {
-			position += 2;
-			Statics.anInt1822++;
-			if (arg0 != 512)
-				return -18;
-			return ((payload[-2 + position] & 0xff) + (payload[position
-					+ -1] << -1915986776 & 0xff00));
-		} catch (RuntimeException runtimeexception) {
-			throw Class35.method724(runtimeexception, "tc.A(" + arg0 + ')');
-		}
+	public int readUShortLE() {
+		position += 2;
+		return ((payload[position - 2] & 0xff) + (payload[position - 1] << 8 & 0xff00));
 	}
 
 	public int method215(byte arg0) {
@@ -168,7 +163,7 @@ public class Buffer extends Class12 {
 				return -88;
 			Statics.anInt1805++;
 			if (i < 128)
-				return readSignedByte(true) - 64;
+				return readUByte() - 64;
 			return -49152 + readShort(-1);
 		} catch (RuntimeException runtimeexception) {
 			throw Class35.method724(runtimeexception, "tc.JA(" + arg0 + ')');
@@ -180,7 +175,7 @@ public class Buffer extends Class12 {
 			Statics.anInt1808++;
 			int i = 0;
 			int i_1_;
-			for (i_1_ = payload[position++]; (i_1_ ^ 0xffffffff) > -1; i_1_ = payload[position++])
+			for (i_1_ = payload[position++]; i_1_ < 0; i_1_ = payload[position++])
 				i = (i_1_ & 0x7f | i) << -1398415289;
 			if (arg0 <= 31)
 				return -41;
@@ -221,18 +216,12 @@ public class Buffer extends Class12 {
 		payload[position++] = (byte) value;
 	}
 
-	public int method222(boolean arg0) {
-		try {
-			position += 4;
-			if (arg0 != true)
-				method217((byte) 0);
-			Statics.anInt1820++;
-			return ((0xff & payload[position - 4])
-					+ ((payload[-2 + position] & 0xff) << -426389904) + (((0xff & payload[position
-					+ -1]) << -737751560) - -((0xff & payload[position - 3]) << -1066712856)));
-		} catch (RuntimeException runtimeexception) {
-			throw Class35.method724(runtimeexception, "tc.L(" + arg0 + ')');
-		}
+	public int readUIntLE() {
+		position += 4;
+		return (payload[position - 4] & 0xff) +
+				((payload[position - 3] & 0xff) << 8) +
+				((payload[position - 2] & 0xff) << 16) +
+				((payload[position - 1] & 0xff) << 24);
 	}
 
 	public void method223(byte arg0, int arg1, int[] arg2, int arg3) {
@@ -243,17 +232,17 @@ public class Buffer extends Class12 {
 			int i_2_ = (-arg3 + arg1) / 8;
 			if (arg0 <= 46)
 				Statics.aClass59_1829 = null;
-			for (int i_3_ = 0; (i_3_ ^ 0xffffffff) > (i_2_ ^ 0xffffffff); i_3_++) {
+			for (int i_3_ = 0; i_2_ > i_3_; i_3_++) {
 				int i_4_ = method207(-708753192);
 				int i_5_ = -957401312;
 				int i_6_ = -1640531527;
 				int i_7_ = method207(-708753192);
 				int i_8_ = 32;
-				while ((i_8_-- ^ 0xffffffff) < -1) {
-					i_7_ -= (i_5_ + arg2[(0x1bbf & i_5_) >>> -976264245] ^ i_4_
-							+ (i_4_ << -816026012 ^ i_4_ >>> 2139143685));
+				while (i_8_-- > 0) {
+					i_7_ -= (i_5_ + arg2[(0x1bbf & i_5_) >>> 11] ^ i_4_
+							+ (i_4_ << 4 ^ i_4_ >>> 5));
 					i_5_ -= i_6_;
-					i_4_ -= (i_7_ + (i_7_ << 1835976740 ^ i_7_ >>> 2010830021) ^ i_5_
+					i_4_ -= (i_7_ + (i_7_ << 4 ^ i_7_ >>> 5) ^ i_5_
 							- -arg2[i_5_ & 0x3]);
 				}
 				position -= 8;
@@ -274,7 +263,7 @@ public class Buffer extends Class12 {
 			payload[position++] = (byte) arg0;
 			if (arg1 != -9129)
 				method245((byte) 79, -3);
-			payload[position++] = (byte) (arg0 >> -926063608);
+			payload[position++] = (byte) (arg0 >> 8);
 		} catch (RuntimeException runtimeexception) {
 			throw Class35.method724(runtimeexception, "tc.OA(" + arg0 + ','
 					+ arg1 + ')');
@@ -283,11 +272,11 @@ public class Buffer extends Class12 {
 
 	public void method225(int arg0, int arg1) {
 		try {
-			payload[position++] = (byte) (arg1 >> 1422586864);
+			payload[position++] = (byte) (arg1 >> 16);
 			if (arg0 == -11129) {
-				payload[position++] = (byte) (arg1 >> 580621528);
+				payload[position++] = (byte) (arg1 >> 24);
 				payload[position++] = (byte) arg1;
-				payload[position++] = (byte) (arg1 >> -2059590680);
+				payload[position++] = (byte) (arg1 >> 8);
 				Statics.anInt1796++;
 			}
 		} catch (RuntimeException runtimeexception) {
@@ -307,17 +296,10 @@ public class Buffer extends Class12 {
 		}
 	}
 
-	public int method227(byte arg0) {
-		try {
-			Statics.anInt1825++;
-			if (arg0 <= 99)
-				method249(-39, -121);
-			position += 2;
-			return ((0xff & payload[position - 2] + -128) + ((payload[position
-					+ -1] & 0xff) << 654290504));
-		} catch (RuntimeException runtimeexception) {
-			throw Class35.method724(runtimeexception, "tc.EA(" + arg0 + ')');
-		}
+	public int readUShortLEA() {
+		// @todo refactor this out of the client - Kat 13/Nov/22
+		position += 2;
+		return ((0xff & payload[position - 2] - 128) + ((payload[position - 1] & 0xff) << 8));
 	}
 
 	public byte method228(boolean arg0) {
@@ -331,15 +313,9 @@ public class Buffer extends Class12 {
 		}
 	}
 
-	public int method230(boolean arg0) {
-		try {
-			if (arg0 != false)
-				method219(-76);
-			Statics.anInt1819++;
-			return payload[position++] + -128 & 0xff;
-		} catch (RuntimeException runtimeexception) {
-			throw Class35.method724(runtimeexception, "tc.RA(" + arg0 + ')');
-		}
+	public int readUByteA() {
+		// @todo refactor this out of the client - Kat 13/Nov/22
+		return payload[position++] - 128 & 0xff;
 	}
 
 	public int method231(boolean arg0) {
@@ -350,7 +326,7 @@ public class Buffer extends Class12 {
 			Statics.anInt1794++;
 			if ((i ^ 0xffffffff) <= -129)
 				return readShort(-1) - 32768;
-			return readSignedByte(true);
+			return readUByte();
 		} catch (RuntimeException runtimeexception) {
 			throw Class35.method724(runtimeexception, "tc.KA(" + arg0 + ')');
 		}
@@ -373,8 +349,8 @@ public class Buffer extends Class12 {
 			if (arg0 != 16711680)
 				return -27;
 			position += 3;
-			return ((0xff0000 & payload[-3 + position] << -1553276016) + (((payload[-2
-					+ position] & 0xff) << 1911219816) + (payload[-1
+			return ((0xff0000 & payload[-3 + position] << 16) + (((payload[-2
+					+ position] & 0xff) << 8) + (payload[-1
 					+ position] & 0xff)));
 		} catch (RuntimeException runtimeexception) {
 			throw Class35.method724(runtimeexception, "tc.FB(" + arg0 + ')');
@@ -382,7 +358,7 @@ public class Buffer extends Class12 {
 	}
 
 	public void method234(byte[] arg0, int arg1, boolean arg2, int arg3) {
-		for (int i = arg1; (arg3 + arg1 ^ 0xffffffff) < (i ^ 0xffffffff); i++)
+		for (int i = arg1; i < arg3 + arg1; i++)
 			arg0[i] = (byte) (-128 + payload[position++]);
 		Statics.anInt1790++;
 		if (arg2 != false)
@@ -391,7 +367,7 @@ public class Buffer extends Class12 {
 
 	public void method235(int arg0, byte arg1) {
 		Statics.anInt1813++;
-		payload[position++] = (byte) (arg0 >> 287268200);
+		payload[position++] = (byte) (arg0 >> 8);
 		payload[position++] = (byte) (arg0 + 128);
 		if (arg1 <= 57)
 			Statics.aClass26_1830 = null;
@@ -403,7 +379,7 @@ public class Buffer extends Class12 {
 				method219(17);
 			position += 2;
 			Statics.anInt1811++;
-			return (((payload[position + -2] & 0xff) << -1424341528) - -(0xff & -128
+			return (((payload[position + -2] & 0xff) << 8) - -(0xff & -128
 					+ payload[-1 + position]));
 		} catch (RuntimeException runtimeexception) {
 			throw Class35.method724(runtimeexception, "tc.N(" + arg0 + ')');
@@ -497,10 +473,10 @@ public class Buffer extends Class12 {
 
 	public void method245(byte arg0, int arg1) {
 		Statics.anInt1804++;
-		payload[position++] = (byte) (arg1 >> 971406024);
+		payload[position++] = (byte) (arg1 >> 8);
 		payload[position++] = (byte) arg1;
-		payload[position++] = (byte) (arg1 >> -708753192);
-		payload[position++] = (byte) (arg1 >> 298152848);
+		payload[position++] = (byte) (arg1 >> 24);
+		payload[position++] = (byte) (arg1 >> 16);
 		if (arg0 != -70)
 			method232(true, -22);
 	}
@@ -538,16 +514,6 @@ public class Buffer extends Class12 {
 		} catch (RuntimeException runtimeexception) {
 			throw Class35.method724(runtimeexception, "tc.HB(" + arg0 + ','
 					+ arg1 + ')');
-		}
-	}
-
-	public Buffer(int size) {
-		try {
-			payload = Class57.method906(true, size);
-			position = 0;
-		} catch (RuntimeException runtimeexception) {
-			throw Class35
-					.method724(runtimeexception, "tc.<init>(" + size + ')');
 		}
 	}
 
@@ -601,7 +567,7 @@ public class Buffer extends Class12 {
 		payload[position++] = (byte) arg0;
 		Statics.anInt1777++;
 		if (arg1 >= -25)
-			method227((byte) -53);
+			readUShortLEA();
 	}
 
 	public int readShort(int arg0) {

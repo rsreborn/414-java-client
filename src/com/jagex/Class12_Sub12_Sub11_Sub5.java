@@ -148,7 +148,7 @@ public class Class12_Sub12_Sub11_Sub5 extends Class12_Sub12_Sub11 {
 						int i_3_ = 0x3f & i_1_;
 						int i_4_ = i_1_ >> -1696428314 & 0x3f;
 						int i_5_ = i_1_ >> -649090644;
-						int i_6_ = class12_sub11.readSignedByte(true);
+						int i_6_ = class12_sub11.readUByte();
 						int i_7_ = i_6_ >> -1837810462;
 						int i_8_ = 0x3 & i_6_;
 						int i_9_ = i_3_ + arg1;

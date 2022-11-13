@@ -75,7 +75,7 @@ public class Class34 {
 	public Class34(Buffer arg0) {
 		aClass3Array832 = new Class3[10];
 		for (int i = 0; i < 10; i++) {
-			int i_10_ = arg0.readSignedByte(true);
+			int i_10_ = arg0.readUByte();
 			if (i_10_ != 0) {
 				arg0.position--;
 				aClass3Array832[i] = new Class3();

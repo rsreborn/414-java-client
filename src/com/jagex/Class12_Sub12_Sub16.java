@@ -205,7 +205,7 @@ public class Class12_Sub12_Sub16 extends Class12_Sub12 {
 		try {
 			if (arg1 < -78) {
 				for (;;) {
-					int i = arg0.readSignedByte(true);
+					int i = arg0.readUByte();
 					if ((i ^ 0xffffffff) == -1)
 						break;
 					method560(-107, i, arg0);

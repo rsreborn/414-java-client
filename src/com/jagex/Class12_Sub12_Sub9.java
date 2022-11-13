@@ -119,7 +119,7 @@ public class Class12_Sub12_Sub9 extends Class12_Sub12 {
 	public void method415(Buffer arg0, byte arg1) {
 		anInt2342++;
 		for (;;) {
-			int i = arg0.readSignedByte(true);
+			int i = arg0.readUByte();
 			if (i == 0)
 				break;
 			method423(i, 128, arg0);
@@ -375,7 +375,7 @@ public class Class12_Sub12_Sub9 extends Class12_Sub12 {
 	public void method423(int arg0, int arg1, Buffer arg2) {
 		try {
 			if ((arg0 ^ 0xffffffff) == -2) {
-				int i = arg2.readSignedByte(true);
+				int i = arg2.readUByte();
 				if ((i ^ 0xffffffff) < -1) {
 					if (anIntArray2353 == null || Class49.aBoolean1167) {
 						anIntArray2353 = new int[i];
@@ -383,14 +383,14 @@ public class Class12_Sub12_Sub9 extends Class12_Sub12 {
 						for (int i_11_ = 0; (i_11_ ^ 0xffffffff) > (i ^ 0xffffffff); i_11_++) {
 							anIntArray2353[i_11_] = arg2.readShort(Class21
 									.method609(arg1, -129));
-							anIntArray2350[i_11_] = arg2.readSignedByte(true);
+							anIntArray2350[i_11_] = arg2.readUByte();
 						}
 					} else
 						arg2.position += i * 3;
 				}
 			} else if ((arg0 ^ 0xffffffff) != -3) {
 				if ((arg0 ^ 0xffffffff) == -6) {
-					int i = arg2.readSignedByte(true);
+					int i = arg2.readUByte();
 					if (i > 0) {
 						if (anIntArray2353 == null || Class49.aBoolean1167) {
 							anIntArray2350 = null;
@@ -402,13 +402,13 @@ public class Class12_Sub12_Sub9 extends Class12_Sub12 {
 					}
 				} else if ((arg0 ^ 0xffffffff) != -15) {
 					if (arg0 == 15)
-						anInt2334 = arg2.readSignedByte(true);
+						anInt2334 = arg2.readUByte();
 					else if (arg0 == 17)
 						aBoolean2317 = false;
 					else if ((arg0 ^ 0xffffffff) == -19)
 						aBoolean2321 = false;
 					else if ((arg0 ^ 0xffffffff) == -20)
-						anInt2320 = arg2.readSignedByte(true);
+						anInt2320 = arg2.readUByte();
 					else if ((arg0 ^ 0xffffffff) == -22)
 						aBoolean2322 = true;
 					else if ((arg0 ^ 0xffffffff) != -23) {
@@ -429,7 +429,7 @@ public class Class12_Sub12_Sub9 extends Class12_Sub12 {
 														(byte) -122))
 											aClass59Array2327[arg0 - 30] = null;
 									} else if (arg0 == 40) {
-										int i = arg2.readSignedByte(true);
+										int i = arg2.readUByte();
 										anIntArray2331 = new int[i];
 										anIntArray2325 = new int[i];
 										for (int i_13_ = 0; i > i_13_; i_13_++) {
@@ -451,7 +451,7 @@ public class Class12_Sub12_Sub9 extends Class12_Sub12 {
 												else if (arg0 != 68) {
 													if (arg0 == 69)
 														anInt2340 = (arg2
-																.readSignedByte(true));
+																.readUByte());
 													else if (arg0 != 70) {
 														if (arg0 != 71) {
 															if ((arg0 ^ 0xffffffff) != -73) {
@@ -461,7 +461,7 @@ public class Class12_Sub12_Sub9 extends Class12_Sub12 {
 																	aBoolean2348 = true;
 																else if (arg0 == 75)
 																	anInt2344 = (arg2
-																			.readSignedByte(true));
+																			.readUByte());
 																else if (arg0 == 77) {
 																	anInt2303 = (arg2
 																			.readShort(-1));
@@ -472,7 +472,7 @@ public class Class12_Sub12_Sub9 extends Class12_Sub12 {
 																	if ((anInt2326 ^ 0xffffffff) == -65536)
 																		anInt2326 = -1;
 																	int i = (arg2
-																			.readSignedByte(true));
+																			.readUByte());
 																	anIntArray2310 = (new int[1 + i]);
 																	for (int i_14_ = 0; ((i_14_ ^ 0xffffffff) >= (i ^ 0xffffffff)); i_14_++) {
 																		anIntArray2310[i_14_] = arg2
@@ -503,7 +503,7 @@ public class Class12_Sub12_Sub9 extends Class12_Sub12 {
 								} else
 									anInt2355 = arg2.readByte(true);
 							} else
-								anInt2346 = arg2.readSignedByte(true);
+								anInt2346 = arg2.readUByte();
 						} else {
 							anInt2330 = arg2.readShort(-1);
 							if ((anInt2330 ^ 0xffffffff) == -65536)
@@ -512,7 +512,7 @@ public class Class12_Sub12_Sub9 extends Class12_Sub12 {
 					} else
 						aBoolean2314 = true;
 				} else
-					anInt2318 = arg2.readSignedByte(true);
+					anInt2318 = arg2.readUByte();
 			} else
 				aClass59_2312 = arg2.method246(20356);
 			if (arg1 != 128)

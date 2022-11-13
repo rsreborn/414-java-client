@@ -30,12 +30,12 @@ public class Class37 {
 		Buffer class12_sub11 = new Buffer(arg0);
 		Buffer class12_sub11_0_ = new Buffer(arg0);
 		class12_sub11.position = 2;
-		int i = class12_sub11.readSignedByte(true);
+		int i = class12_sub11.readUByte();
 		int i_1_ = -1;
 		int i_2_ = 0;
 		class12_sub11_0_.position = class12_sub11.position + i;
 		for (int i_3_ = 0; i_3_ < i; i_3_++) {
-			int i_4_ = class12_sub11.readSignedByte(true);
+			int i_4_ = class12_sub11.readUByte();
 			if (i_4_ > 0) {
 				if (aClass12_Sub4_898.anIntArray1665[i_3_] != 0) {
 					for (int i_5_ = i_3_ - 1; i_5_ > i_1_; i_5_--) {

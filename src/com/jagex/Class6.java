@@ -40,7 +40,7 @@ public class Class6 {
 	}
 
 	public void method80(Buffer arg0) {
-		anInt167 = arg0.readSignedByte(true);
+		anInt167 = arg0.readUByte();
 		anIntArray164 = new int[anInt167];
 		anIntArray163 = new int[anInt167];
 		for (int i = 0; i < anInt167; i++) {
@@ -50,7 +50,7 @@ public class Class6 {
 	}
 
 	public void method81(Buffer arg0) {
-		anInt165 = arg0.readSignedByte(true);
+		anInt165 = arg0.readUByte();
 		anInt168 = arg0.method207(-708753192);
 		anInt166 = arg0.method207(-708753192);
 		method80(arg0);

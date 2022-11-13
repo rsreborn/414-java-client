@@ -37,7 +37,7 @@ public class Class3 {
 		aClass6_114.method81(arg0);
 		aClass6_108 = new Class6();
 		aClass6_108.method81(arg0);
-		int i = arg0.readSignedByte(true);
+		int i = arg0.readUByte();
 		if (i != 0) {
 			arg0.position--;
 			aClass6_100 = new Class6();
@@ -45,7 +45,7 @@ public class Class3 {
 			aClass6_101 = new Class6();
 			aClass6_101.method81(arg0);
 		}
-		i = arg0.readSignedByte(true);
+		i = arg0.readUByte();
 		if (i != 0) {
 			arg0.position--;
 			aClass6_110 = new Class6();
@@ -53,7 +53,7 @@ public class Class3 {
 			aClass6_104 = new Class6();
 			aClass6_104.method81(arg0);
 		}
-		i = arg0.readSignedByte(true);
+		i = arg0.readUByte();
 		if (i != 0) {
 			arg0.position--;
 			aClass6_112 = new Class6();

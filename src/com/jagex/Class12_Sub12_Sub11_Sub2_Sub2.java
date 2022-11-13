@@ -213,7 +213,7 @@ public class Class12_Sub12_Sub11_Sub2_Sub2 extends Class12_Sub12_Sub11_Sub2 {
 		try {
 			arg0.position = 0;
 			anInt2949++;
-			int i = arg0.readSignedByte(true);
+			int i = arg0.readUByte();
 			anInt2957 = arg0.readByte(true);
 			int[] is = new int[12];
 			int i_9_ = -1;
@@ -222,11 +222,11 @@ public class Class12_Sub12_Sub11_Sub2_Sub2 extends Class12_Sub12_Sub11_Sub2 {
 			if (arg1 != false)
 				method463(-25);
 			for (int i_10_ = 0; i_10_ < 12; i_10_++) {
-				int i_11_ = arg0.readSignedByte(!arg1);
+				int i_11_ = arg0.readUByte();
 				if (i_11_ == 0)
 					is[i_10_] = 0;
 				else {
-					int i_12_ = arg0.readSignedByte(true);
+					int i_12_ = arg0.readUByte();
 					is[i_10_] = (i_11_ << -1468252792) + i_12_;
 					if ((i_10_ ^ 0xffffffff) == -1
 							&& (is[0] ^ 0xffffffff) == -65536) {
@@ -243,7 +243,7 @@ public class Class12_Sub12_Sub11_Sub2_Sub2 extends Class12_Sub12_Sub11_Sub2 {
 			}
 			int[] is_14_ = new int[5];
 			for (int i_15_ = 0; (i_15_ ^ 0xffffffff) > -6; i_15_++) {
-				int i_16_ = arg0.readSignedByte(true);
+				int i_16_ = arg0.readUByte();
 				if ((i_16_ ^ 0xffffffff) > -1
 						|| (Class12_Sub12_Sub4.anIntArrayArray2206[i_15_].length ^ 0xffffffff) >= (i_16_ ^ 0xffffffff))
 					i_16_ = 0;
@@ -272,7 +272,7 @@ public class Class12_Sub12_Sub11_Sub2_Sub2 extends Class12_Sub12_Sub11_Sub2 {
 				anInt2677 = -1;
 			aClass59_2951 = Class12_Sub12_Sub13.method524(-3,
 					arg0.readLong(103)).toString(-14767);
-			anInt2955 = arg0.readSignedByte(true);
+			anInt2955 = arg0.readUByte();
 			anInt2947 = arg0.readShort(-1);
 			if (aClass42_2954 == null)
 				aClass42_2954 = new Class42();

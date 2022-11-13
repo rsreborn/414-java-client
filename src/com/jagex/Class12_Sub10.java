@@ -86,8 +86,8 @@ public class Class12_Sub10 extends Class12 {
 
 	public Class12_Sub10(Buffer arg0) {
 		anInt1762 = arg0.readShort(-1);
-		aBoolean1763 = arg0.readSignedByte(true) == 1;
-		int i = arg0.readSignedByte(true);
+		aBoolean1763 = arg0.readUByte() == 1;
+		int i = arg0.readUByte();
 		if (i < 1 || i > 4)
 			throw new RuntimeException();
 		anIntArray1770 = new int[i];
@@ -96,18 +96,18 @@ public class Class12_Sub10 extends Class12 {
 		if (i > 1) {
 			anIntArray1766 = new int[i - 1];
 			for (int i_13_ = 0; i_13_ < i - 1; i_13_++)
-				anIntArray1766[i_13_] = arg0.readSignedByte(true);
+				anIntArray1766[i_13_] = arg0.readUByte();
 		}
 		if (i > 1) {
 			anIntArray1768 = new int[i - 1];
 			for (int i_14_ = 0; i_14_ < i - 1; i_14_++)
-				anIntArray1768[i_14_] = arg0.readSignedByte(true);
+				anIntArray1768[i_14_] = arg0.readUByte();
 		}
 		anIntArray1769 = new int[i];
 		for (int i_15_ = 0; i_15_ < i; i_15_++)
 			anIntArray1769[i_15_] = arg0.method207(-708753192);
-		anInt1764 = arg0.readSignedByte(true);
-		anInt1765 = arg0.readSignedByte(true);
+		anInt1764 = arg0.readUByte();
+		anInt1765 = arg0.readUByte();
 		anIntArray1772 = null;
 	}
 

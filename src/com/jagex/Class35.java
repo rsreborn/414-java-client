@@ -115,7 +115,7 @@ public class Class35 {
 					+ arg1.length;
 			Class1.anInt81 = class12_sub11.readShort(-1);
 			Class12_Sub2.anInt1654 = class12_sub11.readShort(-1);
-			int i = (0xff & class12_sub11.readSignedByte(true)) - -1;
+			int i = (0xff & class12_sub11.readUByte()) - -1;
 			for (int i_0_ = 0; (Class12_Sub12.anInt1838 ^ 0xffffffff) < (i_0_ ^ 0xffffffff); i_0_++)
 				Class57.anIntArray1337[i_0_] = class12_sub11.readShort(Class21
 						.method609(arg0, -24508));
@@ -144,7 +144,7 @@ public class Class35 {
 				int i_8_ = i_6_ * i_7_;
 				byte[] is = new byte[i_8_];
 				Class28.aByteArrayArray669[i_5_] = is;
-				int i_9_ = class12_sub11.readSignedByte(true);
+				int i_9_ = class12_sub11.readUByte();
 				if ((i_9_ ^ 0xffffffff) == -1) {
 					for (int i_10_ = 0; i_8_ > i_10_; i_10_++)
 						is[i_10_] = class12_sub11.readByte(true);

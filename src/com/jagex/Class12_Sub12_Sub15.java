@@ -221,7 +221,7 @@ public class Class12_Sub12_Sub15 extends Class12_Sub12 {
 			int i = -16 % ((arg1 - 48) / 40);
 			anInt2493++;
 			for (;;) {
-				int i_6_ = arg0.readSignedByte(true);
+				int i_6_ = arg0.readUByte();
 				if (i_6_ == 0)
 					break;
 				method550(i_6_, arg0, -1);
@@ -468,13 +468,13 @@ public class Class12_Sub12_Sub15 extends Class12_Sub12 {
 											else if ((arg0 ^ 0xffffffff) == -24) {
 												anInt2524 = arg1.readShort(-1);
 												anInt2510 = arg1
-														.readSignedByte(true);
+														.readUByte();
 											} else if (arg0 != 24) {
 												if (arg0 == 25) {
 													anInt2492 = arg1
 															.readShort(arg2);
 													anInt2509 = arg1
-															.readSignedByte(true);
+															.readUByte();
 												} else if ((arg0 ^ 0xffffffff) != -27) {
 													if (arg0 < 30 || arg0 >= 35) {
 														if (arg0 >= 35
@@ -518,7 +518,7 @@ public class Class12_Sub12_Sub15 extends Class12_Sub12 {
 																				else if ((arg0 ^ 0xffffffff) != -115) {
 																					if ((arg0 ^ 0xffffffff) == -116)
 																						anInt2520 = arg1
-																								.readSignedByte(true);
+																								.readUByte();
 																				} else
 																					anInt2472 = 5 * arg1
 																							.readByte(true);
@@ -547,7 +547,7 @@ public class Class12_Sub12_Sub15 extends Class12_Sub12 {
 																		.readShort(arg2));
 														} else {
 															int i = (arg1
-																	.readSignedByte(true));
+																	.readUByte());
 															anIntArray2498 = new int[i];
 															anIntArray2494 = new int[i];
 															for (int i_11_ = 0; i > i_11_; i_11_++) {

@@ -176,7 +176,7 @@ public class Class12_Sub12_Sub14 extends Class12_Sub12 {
 	public void method538(Buffer arg0, int arg1) {
 		try {
 			for (;;) {
-				int i = arg0.readSignedByte(true);
+				int i = arg0.readUByte();
 				if ((i ^ 0xffffffff) == -1)
 					break;
 				method541(arg0, -51, i);
@@ -232,9 +232,9 @@ public class Class12_Sub12_Sub14 extends Class12_Sub12 {
 				else if ((arg2 ^ 0xffffffff) == -7)
 					anInt2466 = arg0.readShort(-1);
 				else if ((arg2 ^ 0xffffffff) == -8)
-					anInt2467 = arg0.readSignedByte(true);
+					anInt2467 = arg0.readUByte();
 				else if ((arg2 ^ 0xffffffff) == -9)
-					anInt2455 = arg0.readSignedByte(true);
+					anInt2455 = arg0.readUByte();
 				else if ((arg2 ^ 0xffffffff) > -41
 						|| (arg2 ^ 0xffffffff) <= -51) {
 					if (arg2 >= 50 && arg2 < 60)

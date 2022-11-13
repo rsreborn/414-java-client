@@ -141,30 +141,30 @@ public class Class12_Sub12_Sub3 extends Class12_Sub12 {
 
 	public void method297(Buffer arg0, int arg1) {
 		anInt2126++;
-		anInt2141 = arg0.readSignedByte(true);
-		anInt2145 = arg0.readSignedByte(true);
+		anInt2141 = arg0.readUByte();
+		anInt2145 = arg0.readUByte();
 		anInt2180 = arg0.readShort(-1);
 		anInt2106 = anInt2171 = arg0.method212((byte) -88);
 		anInt2178 = anInt2166 = arg0.method212((byte) -80);
 		anInt2121 = arg0.readShort(-1);
 		anInt2111 = arg0.readShort(-1);
-		anInt2120 = arg0.readSignedByte(true);
+		anInt2120 = arg0.readUByte();
 		anInt2107 = arg0.readShort(-1);
 		if (anInt2107 == 65535)
 			anInt2107 = -1;
 		anInt2179 = arg0.readShort(-1);
 		if ((anInt2179 ^ 0xffffffff) == -65536)
 			anInt2179 = -1;
-		int i = arg0.readSignedByte(true);
+		int i = arg0.readUByte();
 		if (i > 0) {
 			anIntArray2152 = new int[i];
 			anIntArray2118 = new int[i];
 			for (int i_0_ = 0; i > i_0_; i_0_++) {
-				anIntArray2152[i_0_] = arg0.readSignedByte(true);
+				anIntArray2152[i_0_] = arg0.readUByte();
 				anIntArray2118[i_0_] = arg0.readShort(-1);
 			}
 		}
-		int i_1_ = arg0.readSignedByte(true);
+		int i_1_ = arg0.readUByte();
 		if (i_1_ > 0) {
 			anIntArrayArray2170 = new int[i_1_][];
 			for (int i_2_ = 0; i_2_ < i_1_; i_2_++) {
@@ -179,26 +179,26 @@ public class Class12_Sub12_Sub3 extends Class12_Sub12 {
 		}
 		if ((anInt2141 ^ 0xffffffff) == -1) {
 			anInt2138 = arg0.readShort(-1);
-			aBoolean2169 = (arg0.readSignedByte(true) ^ 0xffffffff) == -2;
+			aBoolean2169 = (arg0.readUByte() ^ 0xffffffff) == -2;
 		}
 		if ((anInt2141 ^ 0xffffffff) == -2) {
 			arg0.readShort(-1);
-			arg0.readSignedByte(true);
+			arg0.readUByte();
 		}
 		if ((anInt2141 ^ 0xffffffff) == -3) {
 			anIntArray2140 = new int[anInt2111 * anInt2121];
 			anIntArray2149 = new int[anInt2111 * anInt2121];
-			aBoolean2172 = arg0.readSignedByte(true) == 1;
-			aBoolean2135 = (arg0.readSignedByte(true) ^ 0xffffffff) == -2;
-			aBoolean2162 = arg0.readSignedByte(true) == 1;
-			aBoolean2159 = (arg0.readSignedByte(true) ^ 0xffffffff) == -2;
-			anInt2151 = arg0.readSignedByte(true);
-			anInt2133 = arg0.readSignedByte(true);
+			aBoolean2172 = arg0.readUByte() == 1;
+			aBoolean2135 = (arg0.readUByte() ^ 0xffffffff) == -2;
+			aBoolean2162 = arg0.readUByte() == 1;
+			aBoolean2159 = (arg0.readUByte() ^ 0xffffffff) == -2;
+			anInt2151 = arg0.readUByte();
+			anInt2133 = arg0.readUByte();
 			anIntArray2148 = new int[20];
 			anIntArray2163 = new int[20];
 			anIntArray2182 = new int[20];
 			for (int i_5_ = 0; (i_5_ ^ 0xffffffff) > -21; i_5_++) {
-				int i_6_ = arg0.readSignedByte(true);
+				int i_6_ = arg0.readUByte();
 				if (i_6_ != 1)
 					anIntArray2148[i_5_] = -1;
 				else {
@@ -215,13 +215,13 @@ public class Class12_Sub12_Sub3 extends Class12_Sub12 {
 			}
 		}
 		if (anInt2141 == 3)
-			aBoolean2177 = (arg0.readSignedByte(true) ^ 0xffffffff) == -2;
+			aBoolean2177 = (arg0.readUByte() ^ 0xffffffff) == -2;
 		if ((anInt2141 ^ 0xffffffff) == -5 || anInt2141 == 1) {
-			anInt2122 = arg0.readSignedByte(true);
-			anInt2181 = arg0.readSignedByte(true);
-			anInt2117 = arg0.readSignedByte(true);
-			anInt2160 = arg0.readSignedByte(true);
-			aBoolean2153 = (arg0.readSignedByte(true) ^ 0xffffffff) == -2;
+			anInt2122 = arg0.readUByte();
+			anInt2181 = arg0.readUByte();
+			anInt2117 = arg0.readUByte();
+			anInt2160 = arg0.readUByte();
+			aBoolean2153 = (arg0.readUByte() ^ 0xffffffff) == -2;
 		}
 		if ((anInt2141 ^ 0xffffffff) == -5) {
 			aClass59_2130 = arg0.method246(20356);
@@ -261,13 +261,13 @@ public class Class12_Sub12_Sub3 extends Class12_Sub12 {
 			if (anInt2141 == 7) {
 				anIntArray2140 = new int[anInt2111 * anInt2121];
 				anIntArray2149 = new int[anInt2121 * anInt2111];
-				anInt2122 = arg0.readSignedByte(true);
-				anInt2160 = arg0.readSignedByte(true);
-				aBoolean2153 = arg0.readSignedByte(true) == 1;
+				anInt2122 = arg0.readUByte();
+				anInt2160 = arg0.readUByte();
+				aBoolean2153 = arg0.readUByte() == 1;
 				anInt2186 = arg0.method207(-708753192);
 				anInt2151 = arg0.method212((byte) -113);
 				anInt2133 = arg0.method212((byte) -28);
-				aBoolean2135 = arg0.readSignedByte(true) == 1;
+				aBoolean2135 = arg0.readUByte() == 1;
 				aClass59Array2137 = new RSString[5];
 				for (int i_8_ = 0; i_8_ < 5; i_8_++) {
 					aClass59Array2137[i_8_] = arg0.method246(20356);

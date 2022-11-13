@@ -86,7 +86,7 @@ public class Class19 implements Runnable {
 			Buffer class12_sub11 = new Buffer(arg1);
 			if (arg0 != 98)
 				return null;
-			int i = class12_sub11.readSignedByte(true);
+			int i = class12_sub11.readUByte();
 			int i_0_ = class12_sub11.method207(-708753192);
 			anInt451++;
 			if (i_0_ < 0

@@ -194,7 +194,7 @@ public class RSString implements Interface1 {
 			anInt1477++;
 			long l = method918(arg0 ^ 0x1030);
 			synchronized (aClass1526 != null ? aClass1526
-					: (aClass1526 = method949("com.jagex.Class59"))) {
+					: (aClass1526 = method949("com.jagex.RSString"))) {
 				if (Class12_Sub12_Sub11_Sub2.aClass48_2696 == null)
 					Class12_Sub12_Sub11_Sub2.aClass48_2696 = new Class48(4096);
 				else {
@@ -621,7 +621,7 @@ public class RSString implements Interface1 {
 			if (arg0 != -23078)
 				method936(80, null, null, null);
 			anInt1476++;
-			int i = arg1.method649(arg3, -22814);
+			int i = arg1.hashFileName(arg3, -22814);
 			int i_25_ = arg1.method655(i, (byte) 57, arg2);
 			return Class12_Sub12_Sub15.method553(i, arg1, i_25_, arg0 ^ 0x5a4e);
 		} catch (RuntimeException runtimeexception) {

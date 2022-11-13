@@ -14,7 +14,7 @@ public class Class58 {
 	public static int anInt1347;
 	public static int anInt1348;
 	public static RSString aClass59_1349;
-	public static int[][] anIntArrayArray1350;
+	public static int[][] xteaKeys;
 	public static RSString aClass59_1351 = Class55.method898("@gr3@", -10983);
 	public static RSString aClass59_1352 = Class55.method898(
 			"Your account has been disabled)3", -10983);
@@ -127,7 +127,7 @@ public class Class58 {
 			aClass59_1353 = null;
 			aClass59_1352 = null;
 			anIntArray1346 = null;
-			anIntArrayArray1350 = null;
+			xteaKeys = null;
 			aClass27_1344 = null;
 		} catch (RuntimeException runtimeexception) {
 			throw Class35.method724(runtimeexception, "uc.A(" + arg0 + ')');

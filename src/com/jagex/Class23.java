@@ -153,8 +153,8 @@ public class Class23 {
 			Class12_Sub12_Sub11_Sub2_Sub2 arg3) {
 		if ((arg1 & 0x80) != 0) {
 			arg3.anInt2690 = Game.inBuffer
-					.method227((byte) 110);
-			arg3.anInt2672 = Game.inBuffer.method214(512);
+					.readUShortLEA();
+			arg3.anInt2672 = Game.inBuffer.readUShortLE();
 		}
 		anInt504++;
 		if ((arg1 & 0x20) != 0) {
@@ -163,7 +163,7 @@ public class Class23 {
 				arg3.anInt2694 = -1;
 		}
 		if ((arg1 & 0x400) != 0) {
-			int i = Game.inBuffer.readSignedByte(true);
+			int i = Game.inBuffer.readUByte();
 			int i_0_ = Game.inBuffer.method238(true);
 			arg3.method448(Class64_Sub2.anInt1968, arg2 ^ 0xff, i, i_0_);
 			arg3.anInt2676 = Class64_Sub2.anInt1968 - -300;
@@ -172,7 +172,7 @@ public class Class23 {
 		}
 		if ((arg1 & 0x100 ^ 0xffffffff) != -1) {
 			arg3.anInt2692 = Game.inBuffer
-					.method227((byte) 123);
+					.readUShortLEA();
 			int i = Game.inBuffer.method215((byte) 94);
 			if ((arg3.anInt2692 ^ 0xffffffff) == -65536)
 				arg3.anInt2692 = -1;
@@ -186,7 +186,7 @@ public class Class23 {
 		if (arg2 != 255)
 			aClass59_506 = null;
 		if ((arg1 & 0x2) != 0) {
-			int i = Game.inBuffer.method214(512);
+			int i = Game.inBuffer.readUShortLE();
 			if ((i ^ 0xffffffff) == -65536)
 				i = -1;
 			int i_1_ = Game.inBuffer.getByteS(arg2 ^ ~0x206);
@@ -223,8 +223,8 @@ public class Class23 {
 		}
 		if ((arg1 & 0x4) != 0) {
 			int i = Game.inBuffer.readShort(arg2 + -256); // short the colour and effect
-			int i_3_ = Game.inBuffer.method230(false); // right
-			int i_4_ = Game.inBuffer.readSignedByte(true);
+			int i_3_ = Game.inBuffer.readUByteA(); // right
+			int i_4_ = Game.inBuffer.readUByte();
 			int i_5_ = Game.inBuffer.position;
 			if (arg3.aClass59_2951 != null && arg3.aClass42_2954 != null) {
 				long l = arg3.aClass59_2951.method912(124);
@@ -270,12 +270,12 @@ public class Class23 {
 			Game.inBuffer.position = i_4_ + i_5_;
 		}
 		if ((0x1 & arg1 ^ 0xffffffff) != -1) {
-			int i = Game.inBuffer.readSignedByte(true);
-			int i_7_ = Game.inBuffer.method230(false);
+			int i = Game.inBuffer.readUByte();
+			int i_7_ = Game.inBuffer.readUByteA();
 			arg3.method448(Class64_Sub2.anInt1968, 0, i, i_7_);
 			arg3.anInt2676 = 300 + Class64_Sub2.anInt1968;
-			arg3.anInt2711 = Game.inBuffer.readSignedByte(true);
-			arg3.anInt2698 = Game.inBuffer.method230(false);
+			arg3.anInt2711 = Game.inBuffer.readUByte();
+			arg3.anInt2698 = Game.inBuffer.readUByteA();
 		}
 		if ((arg1 & 0x200) != 0) {
 			arg3.anInt2705 = Game.inBuffer.getByteS(arg2
@@ -284,9 +284,9 @@ public class Class23 {
 			arg3.anInt2682 = Game.inBuffer.method238(true);
 			arg3.anInt2728 = Game.inBuffer.method238(true);
 			arg3.anInt2667 = (Game.inBuffer
-					.method227((byte) 125) - -Class64_Sub2.anInt1968);
+					.readUShortLEA() - -Class64_Sub2.anInt1968);
 			arg3.anInt2721 = (Game.inBuffer.method236(-12543) + Class64_Sub2.anInt1968);
-			arg3.anInt2689 = Game.inBuffer.method230(false);
+			arg3.anInt2689 = Game.inBuffer.readUByteA();
 			arg3.method446(-99);
 		}
 		if ((0x10 & arg1 ^ 0xffffffff) != -1) {

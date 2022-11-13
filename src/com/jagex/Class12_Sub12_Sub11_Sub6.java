@@ -169,7 +169,7 @@ public class Class12_Sub12_Sub11_Sub6 extends Class12_Sub12_Sub11 {
 					int i_13_ = 0x3f & i_11_;
 					int i_14_ = (i_11_ & 0xfc0) >> -317780698;
 					int i_15_ = i_11_ >> -871530292;
-					int i_16_ = class12_sub11.readSignedByte(true);
+					int i_16_ = class12_sub11.readUByte();
 					int i_17_ = i_16_ >> -1104831966;
 					int i_18_ = 0x3 & i_16_;
 					if ((i_15_ ^ 0xffffffff) == (arg0 ^ 0xffffffff)
@@ -288,7 +288,7 @@ public class Class12_Sub12_Sub11_Sub6 extends Class12_Sub12_Sub11 {
 							break;
 						i_24_ += -1 + i_26_;
 						int i_27_ = 0x3f & i_24_;
-						int i_28_ = class12_sub11.readSignedByte(true) >> 581957570;
+						int i_28_ = class12_sub11.readUByte() >> 581957570;
 						int i_29_ = (i_24_ & 0xfcb) >> 1904997382;
 						int i_30_ = arg3 + i_29_;
 						int i_31_ = i_27_ + arg2;
@@ -310,7 +310,7 @@ public class Class12_Sub12_Sub11_Sub6 extends Class12_Sub12_Sub11 {
 						int i_32_ = class12_sub11.method231(false);
 						if (i_32_ == 0)
 							break;
-						class12_sub11.readSignedByte(true);
+						class12_sub11.readUByte();
 					}
 				}
 			}

@@ -133,17 +133,17 @@ public class Class12_Sub4 extends Class12 {
 		try {
 			anInt1667 = arg0;
 			Buffer class12_sub11 = new Buffer(arg1);
-			anInt1676 = class12_sub11.readSignedByte(true);
+			anInt1676 = class12_sub11.readUByte();
 			anIntArrayArray1670 = new int[anInt1676][];
 			anIntArray1665 = new int[anInt1676];
 			for (int i = 0; anInt1676 > i; i++)
-				anIntArray1665[i] = class12_sub11.readSignedByte(true);
+				anIntArray1665[i] = class12_sub11.readUByte();
 			for (int i = 0; anInt1676 > i; i++)
-				anIntArrayArray1670[i] = new int[class12_sub11.readSignedByte(true)];
+				anIntArrayArray1670[i] = new int[class12_sub11.readUByte()];
 			for (int i = 0; (i ^ 0xffffffff) > (anInt1676 ^ 0xffffffff); i++) {
 				for (int i_5_ = 0; i_5_ < anIntArrayArray1670[i].length; i_5_++)
 					anIntArrayArray1670[i][i_5_] = class12_sub11
-							.readSignedByte(true);
+							.readUByte();
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw Class35.method724(runtimeexception, ("gd.<init>(" + arg0

@@ -37,7 +37,7 @@ public class Class12_Sub12_Sub13 extends Class12_Sub12 {
 	public void method522(Buffer arg0, boolean arg1, int arg2) {
 		try {
 			for (;;) {
-				int i = arg0.readSignedByte(true);
+				int i = arg0.readUByte();
 				if ((i ^ 0xffffffff) == -1)
 					break;
 				method529(arg2, i, arg0, -15913);
@@ -238,7 +238,7 @@ public class Class12_Sub12_Sub13 extends Class12_Sub12 {
 													Class26 arg2, int arg3) {
 		try {
 			anInt2439++;
-			int i = arg2.method649(arg1, -22814);
+			int i = arg2.hashFileName(arg1, -22814);
 			int i_11_ = arg2.method655(i, (byte) 57, arg0);
 			if (arg3 != -1)
 				method527(-11);

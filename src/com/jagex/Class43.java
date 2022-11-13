@@ -114,12 +114,12 @@ public class Class43 {
 						if (Class13.aClass12_Sub12_Sub8_354 == null) {
 							Class12_Sub12_Sub11_Sub1.aClass12_Sub11_2659.position = 0;
 							int i_5_ = Class12_Sub12_Sub11_Sub1.aClass12_Sub11_2659
-									.readSignedByte(true);
+									.readUByte();
 							int i_6_ = Class12_Sub12_Sub11_Sub1.aClass12_Sub11_2659
 									.readShort(-1);
 							long l_7_ = (long) (i_6_ + (i_5_ << 1341974000));
 							int i_8_ = Class12_Sub12_Sub11_Sub1.aClass12_Sub11_2659
-									.readSignedByte(true);
+									.readUByte();
 							int i_9_ = Class12_Sub12_Sub11_Sub1.aClass12_Sub11_2659
 									.method207(-708753192);
 							Class12_Sub12_Sub8 class12_sub12_sub8 = ((Class12_Sub12_Sub8) Class12_Sub12_Sub8.aClass48_2288

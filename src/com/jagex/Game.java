@@ -10,7 +10,10 @@ import com.jagex.sign.SignlinkNode;
 import com.jagex.util.Constants;
 import com.jagex.util.Statics;
 
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.ObjectInputStream;
 import java.math.BigInteger;
 import java.net.InetAddress;
 import java.net.Socket;
@@ -44,13 +47,28 @@ public class Game extends RSApplet {
 	public static PacketBuffer outBuffer;
 	public static BigInteger rsaModulus;
 	public static BigInteger rsaKey;
-	public static PacketBuffer encryptedLoginBuffer = new PacketBuffer(
-			5000);
+	public static PacketBuffer loginBuffer = new PacketBuffer(5000);
 	public static Signlink signlink;
 	public static PacketBuffer inBuffer;
 	public static int loginState = 0;
 	public static RSSocket gameServerSocket;
 	public static SignlinkNode gameServerSignlinkNode;
+
+	private void loadRSAKeys() {
+		try {
+			// final ObjectInputStream oin = new ObjectInputStream(new FileInputStream("./data/public.key"));
+			InputStream is = getClass().getResourceAsStream("/data/public.key");
+			if (is == null) {
+				is = new FileInputStream("./data/public.key");
+			}
+			final ObjectInputStream oin = new ObjectInputStream(is);
+			rsaModulus = (BigInteger) oin.readObject();
+			rsaKey = (BigInteger) oin.readObject();
+		} catch (final Exception ex) {
+			System.err.println("Cannot find public RSA key file! Shutting down...");
+			System.exit(1);
+		}
+	}
 
 	public static void handleLogin() {
 		try {
@@ -82,8 +100,9 @@ public class Game extends RSApplet {
 				outBuffer.writeByte(14);
 				int i = (int) (l >> 16 & 0x1fL);
 				outBuffer.writeByte(i);
+				outBuffer.writeIntBE(Constants.BUILD_NUMBER); // Added to support multiple builds
 				gameServerSocket.method622(
-						outBuffer.payload, 2, 0,
+						outBuffer.payload, 6, 0,
 						true);
 				loginState = 3;
 				inBuffer.position = 0;
@@ -132,47 +151,47 @@ public class Game extends RSApplet {
 				outBuffer.writeIntBE(signlink.uid);
 				outBuffer.writeLongBE(Class11.aClass59_260.method912(109));
 				outBuffer.writeString(Class11.aClass59_301);
-				outBuffer.encrypt((rsaKey), (rsaModulus));
-				encryptedLoginBuffer.position = 0;
+				outBuffer.encrypt(rsaKey, rsaModulus);
+				loginBuffer.position = 0;
 				if (Class9_Sub2.anInt1588 == 40)
-					encryptedLoginBuffer.writeByte(18);
+					loginBuffer.writeByte(18);
 				else
-					encryptedLoginBuffer.writeByte(16);
-				encryptedLoginBuffer.writeByte(outBuffer.position + 53);
-				encryptedLoginBuffer.writeIntBE(Constants.BUILD_NUMBER);
-				encryptedLoginBuffer.writeByte(!Class21.aBoolean483 ? 0 : 1);
+					loginBuffer.writeByte(16);
+				loginBuffer.writeByte(outBuffer.position + 53);
+				loginBuffer.writeIntBE(Constants.BUILD_NUMBER);
+				loginBuffer.writeByte(!Class21.aBoolean483 ? 0 : 1);
 
-				encryptedLoginBuffer.writeIntBE(
+				loginBuffer.writeIntBE(
 						Cache.animsArchive.checksum);
-				encryptedLoginBuffer.writeIntBE(
+				loginBuffer.writeIntBE(
 						Cache.basesArchive.checksum);
-				encryptedLoginBuffer.writeIntBE(
+				loginBuffer.writeIntBE(
 						Cache.configArchive.checksum);
-				encryptedLoginBuffer.writeIntBE(
+				loginBuffer.writeIntBE(
 						Cache.interfacesArchive.checksum);
-				encryptedLoginBuffer.writeIntBE(
+				loginBuffer.writeIntBE(
 						Cache.synthSoundsArchive.checksum);
-				encryptedLoginBuffer.writeIntBE(
+				loginBuffer.writeIntBE(
 						Cache.mapsArchive.checksum);
-				encryptedLoginBuffer.writeIntBE(
+				loginBuffer.writeIntBE(
 						Cache.midiSongsArchive.checksum);
-				encryptedLoginBuffer.writeIntBE(
+				loginBuffer.writeIntBE(
 						Cache.modelsArchive.checksum);
-				encryptedLoginBuffer.writeIntBE(
+				loginBuffer.writeIntBE(
 						Cache.spritesArchive.checksum);
-				encryptedLoginBuffer.writeIntBE(
+				loginBuffer.writeIntBE(
 						Cache.texturesArchive.checksum);
-				encryptedLoginBuffer.writeIntBE(
+				loginBuffer.writeIntBE(
 						Cache.binaryArchive.checksum);
-				encryptedLoginBuffer.writeIntBE(
+				loginBuffer.writeIntBE(
 						Cache.midiJinglesArchive.checksum);
 
-				encryptedLoginBuffer.method253(-8366,
+				loginBuffer.method253(-8366,
 						outBuffer.payload,
 						outBuffer.position, 0);
 				gameServerSocket.method622(
-						encryptedLoginBuffer.payload,
-						encryptedLoginBuffer.position, 0,
+						loginBuffer.payload,
+						loginBuffer.position, 0,
 						true);
 
 				outBuffer.initIsaacCipher(isaacSeed);
@@ -259,7 +278,7 @@ public class Game extends RSApplet {
 								0);
 						Class18.method596(0);
 						Class29.anInt715 = -1;
-						Class14.method569(101, false);
+						Class14.constructMapRegion(101, false);
 						Class57.anInt1334 = -1;
 					}
 				} else {
@@ -332,7 +351,7 @@ public class Game extends RSApplet {
 								Buffer class12_sub11 = new Buffer(
 										5);
 								class12_sub11.writeByte(15);
-								class12_sub11.writeIntBE(414);
+								class12_sub11.writeIntBE(Constants.BUILD_NUMBER);
 								Class12_Sub12_Sub4.aClass24_2217.method622(
 										class12_sub11.payload, 5, 0,
 										true);
@@ -502,6 +521,7 @@ public class Game extends RSApplet {
 					Class14.method572(11128);
 				Game var_game = new Game();
 				var_game.method18(765, "runescape", 414, 12, InetAddress.getByName(SERVER), 32 - -RuntimeException_Sub1.anInt1471, -128, 503);
+				var_game.loadRSAKeys();
 			} catch (Exception exception) {
 				Class12_Sub12_Sub15.method551(true, null, exception);
 			}
@@ -595,6 +615,7 @@ public class Game extends RSApplet {
 					Class12_Sub12_Sub11_Sub6.aBoolean2898 = false;
 				this.method24(765, 0, 503, 414,
 						RuntimeException_Sub1.anInt1471 + 32);
+				loadRSAKeys();
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw Class35.method724(runtimeexception, "client.init(" + ')');
@@ -842,7 +863,7 @@ public class Game extends RSApplet {
 	}
 
 	public void method23(byte arg0) {
-		Class48.anInt1133 = ((Class20.anInt478 ^ 0xffffffff) != -1 ? 40000 - -RSCanvas.anInt65
+		Class48.anInt1133 = (Class20.anInt478 != 0 ? 40000 - -RSCanvas.anInt65
 				: 43594);
 		Class12_Sub12_Sub11_Sub5.anInt2877 = Class48.anInt1133;
 		anInt1556++;

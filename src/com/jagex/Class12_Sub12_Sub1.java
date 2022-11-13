@@ -74,7 +74,7 @@ public class Class12_Sub12_Sub1 extends Class12_Sub12 {
 				} else
 					aBoolean2043 = false;
 			} else
-				anInt2050 = arg3.readSignedByte(true);
+				anInt2050 = arg3.readUByte();
 			if (arg1 != -87)
 				method282(-25, false);
 			anInt2034++;
@@ -156,7 +156,7 @@ public class Class12_Sub12_Sub1 extends Class12_Sub12 {
 		try {
 			int i = -10 % ((62 - arg0) / 54);
 			for (;;) {
-				int i_0_ = arg1.readSignedByte(true);
+				int i_0_ = arg1.readUByte();
 				if (i_0_ == 0)
 					break;
 				method275(arg2, (byte) -87, i_0_, arg1);

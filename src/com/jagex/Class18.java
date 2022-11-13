@@ -54,7 +54,6 @@ public class Class18 {
 			Class26.anInt613 = 0;
 			Class12_Sub12_Sub11_Sub6.anInt2892 = 0;
 			Class12_Sub12_Sub11_Sub2_Sub1.anInt2922 = 0;
-			Statics.anInt1809 = 0;
 			Class27.anInt649 = 0;
 			Class51.anInt1192 = 0;
 			Class13.anInt348 = 0;
@@ -171,7 +170,6 @@ public class Class18 {
 			Statics.anInt1790 = 0;
 			Game.anInt1568 = 0;
 			Class40.anInt952 = 0;
-			Statics.anInt1819 = 0;
 			Class12_Sub12_Sub13.anInt2446 = 0;
 			Class12_Sub12_Sub15.anInt2518 = 0;
 			Class12_Sub12_Sub1.anInt2045 = 0;
@@ -356,7 +354,6 @@ public class Class18 {
 			Class23.anInt505 = 0;
 			Class9.anInt215 = 0;
 			Class12_Sub12_Sub10.anInt2379 = 0;
-			Statics.anInt1825 = 0;
 			Game.anInt1570 = 0;
 			Class26.anInt594 = 0;
 			Class12_Sub12_Sub14.anInt2457 = 0;
@@ -427,7 +424,6 @@ public class Class18 {
 			RSSocket.anInt513 = 0;
 			Class28.anInt684 = 0;
 			Class51.anInt1197 = 0;
-			Statics.anInt1822 = 0;
 			Class12_Sub12_Sub2.anInt2070 = 0;
 			Class13.anInt350 = 0;
 			Class12_Sub12_Sub13.anInt2436 = 0;
@@ -816,7 +812,6 @@ public class Class18 {
 			Class12_Sub9.anInt1750 = 0;
 			Class12_Sub12_Sub4.anInt2191 = 0;
 			Game.anInt1571 = 0;
-			Statics.anInt1820 = 0;
 			Class1.aClass19_72.anInt457 = 0;
 			Class36.aBoolean884 = true;
 			Class58.method908((byte) -29);

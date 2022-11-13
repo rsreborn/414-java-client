@@ -82,14 +82,14 @@ public class Class14 {
 		Class41.method755(arg1, -100);
 	}
 
-	public static void method569(int arg0, boolean arg1) {
+	public static void constructMapRegion(int arg0, boolean arg1) {
 		try {
 			Class44.aBoolean1038 = arg1;
 			if (Class44.aBoolean1038) {
-				int i = Game.inBuffer.method214(512);
+				int i = Game.inBuffer.readUShortLE();
 				int i_0_ = Game.inBuffer
-						.method227((byte) 114);
-				int i_1_ = Game.inBuffer.method230(false);
+						.readUShortLEA();
+				int i_1_ = Game.inBuffer.readUByteA();
 				Game.inBuffer.initBitAccess();
 				for (int i_2_ = 0; i_2_ < 4; i_2_++) {
 					for (int i_3_ = 0; i_3_ < 13; i_3_++) {
@@ -106,10 +106,10 @@ public class Class14 {
 				}
 				Game.inBuffer.finishBitAccess();
 				int i_6_ = ((-Game.inBuffer.position + Class5.anInt159) / 16);
-				Class58.anIntArrayArray1350 = new int[i_6_][4];
+				Class58.xteaKeys = new int[i_6_][4];
 				for (int i_7_ = 0; (i_6_ ^ 0xffffffff) < (i_7_ ^ 0xffffffff); i_7_++) {
 					for (int i_8_ = 0; (i_8_ ^ 0xffffffff) > -5; i_8_++)
-						Class58.anIntArrayArray1350[i_7_][i_8_] = Game.inBuffer
+						Class58.xteaKeys[i_7_][i_8_] = Game.inBuffer
 								.method215((byte) 94);
 				}
 				int i_9_ = Game.inBuffer.method236(-12543);
@@ -140,7 +140,7 @@ public class Class14 {
 									int i_19_ = i_17_ & 0xff;
 									int i_20_ = i_17_ >> 1913043304 & 0xff;
 									Class48.anIntArray1125[i_6_] = (Cache.mapsArchive
-											.method649(
+											.hashFileName(
 													(Statics
 															.method251(
 																	(byte) -103,
@@ -155,7 +155,7 @@ public class Class14 {
 																					10) }))),
 													-22814));
 									Class12_Sub12_Sub3.anIntArray2157[i_6_] = (Cache.mapsArchive
-											.method649(
+											.hashFileName(
 													(Statics
 															.method251(
 																	(byte) -66,
@@ -177,39 +177,35 @@ public class Class14 {
 				}
 				Class49.method802(i_1_, 0, i_9_, i_0_, i, i_10_);
 			} else {
-				int i = Game.inBuffer.method227((byte) 105);
-				int i_21_ = Game.inBuffer.method214(512);
-				int i_22_ = Game.inBuffer.method214(512);
-				int i_23_ = ((Class5.anInt159 + -Game.inBuffer.position) / 16);
-				Class58.anIntArrayArray1350 = new int[i_23_][4];
-				for (int i_24_ = 0; i_24_ < i_23_; i_24_++) {
-					for (int i_25_ = 0; i_25_ < 4; i_25_++)
-						Class58.anIntArrayArray1350[i_24_][i_25_] = Game.inBuffer
-								.method222(true);
+				int chunkX = Game.inBuffer.readUShortLE();
+				int i_21_ = Game.inBuffer.readUShortLE();
+				int chunkY = Game.inBuffer.readUShortLE();
+				int keyCount = ((Class5.anInt159 - Game.inBuffer.position) / 16);
+				Class58.xteaKeys = new int[keyCount][4];
+				for (int keyIndex = 0; keyIndex < keyCount; keyIndex++) {
+					for (int plane = 0; plane < 4; plane++)
+						Class58.xteaKeys[keyIndex][plane] = Game.inBuffer.readUIntLE();
 				}
-				boolean bool = false;
-				if ((i / 8 == 48 || i / 8 == 49) && i_22_ / 8 == 48)
+				boolean bool = (chunkX / 8 == 48 || chunkX / 8 == 49) && chunkY / 8 == 48;
+				int plane = Game.inBuffer.readUByte();
+				if (chunkX / 8 == 48 && chunkY / 8 == 148)
 					bool = true;
-				int i_26_ = Game.inBuffer.method230(false);
-				if ((i / 8 ^ 0xffffffff) == -49
-						&& (i_22_ / 8 ^ 0xffffffff) == -149)
-					bool = true;
-				int i_27_ = Game.inBuffer.method214(512);
-				Class26.aByteArrayArray597 = new byte[i_23_][];
-				Statics.anIntArray573 = new int[i_23_];
-				Class12_Sub12_Sub3.anIntArray2157 = new int[i_23_];
-				Class48.anIntArray1125 = new int[i_23_];
-				Class40.aByteArrayArray957 = new byte[i_23_][];
-				i_23_ = 0;
-				for (int i_28_ = (-6 + i) / 8; (i - -6) / 8 >= i_28_; i_28_++) {
-					for (int i_29_ = (-6 + i_22_) / 8; i_29_ <= (6 + i_22_) / 8; i_29_++) {
-						int i_30_ = i_29_ + (i_28_ << 1417377160);
+				int i_27_ = Game.inBuffer.readUShortLE();
+				Class26.aByteArrayArray597 = new byte[keyCount][];
+				Statics.anIntArray573 = new int[keyCount];
+				Class12_Sub12_Sub3.anIntArray2157 = new int[keyCount];
+				Class48.anIntArray1125 = new int[keyCount];
+				Class40.aByteArrayArray957 = new byte[keyCount][];
+				keyCount = 0;
+				for (int i_28_ = (-6 + chunkX) / 8; (chunkX - -6) / 8 >= i_28_; i_28_++) {
+					for (int i_29_ = (-6 + chunkY) / 8; i_29_ <= (6 + chunkY) / 8; i_29_++) {
+						int i_30_ = i_29_ + (i_28_ << 8);
 						if (!bool
 								|| (i_29_ != 49 && i_29_ != 149 && i_29_ != 147
-										&& i_28_ != 50 && (i_28_ != 49 || (i_29_ ^ 0xffffffff) != -48))) {
-							Statics.anIntArray573[i_23_] = i_30_;
-							Class48.anIntArray1125[i_23_] = (Cache.mapsArchive
-									.method649(
+										&& i_28_ != 50 && (i_28_ != 49 || i_29_ != 47))) {
+							Statics.anIntArray573[keyCount] = i_30_;
+							Class48.anIntArray1125[keyCount] = (Cache.mapsArchive
+									.hashFileName(
 											(Statics
 													.method251(
 															(byte) -125,
@@ -223,8 +219,8 @@ public class Class14 {
 																			i_29_,
 																			10) }))),
 											-22814));
-							Class12_Sub12_Sub3.anIntArray2157[i_23_] = (Cache.mapsArchive
-									.method649(
+							Class12_Sub12_Sub3.anIntArray2157[keyCount] = (Cache.mapsArchive
+									.hashFileName(
 											(Statics
 													.method251(
 															(byte) -34,
@@ -238,11 +234,11 @@ public class Class14 {
 																			i_29_,
 																			10) }))),
 											-22814));
-							i_23_++;
+							keyCount++;
 						}
 					}
 				}
-				Class49.method802(i_26_, 0, i, i_21_, i_22_, i_27_);
+				Class49.method802(plane, 0, chunkX, i_21_, chunkY, i_27_);
 			}
 			if (arg0 >= 34)
 				anInt360++;

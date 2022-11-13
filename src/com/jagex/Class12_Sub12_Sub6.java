@@ -121,7 +121,7 @@ public class Class12_Sub12_Sub6 extends Class12_Sub12 {
 				method328(true);
 			anInt2258++;
 			if (arg2 == 1)
-				anInt2251 = arg1.readSignedByte(true);
+				anInt2251 = arg1.readUByte();
 			else if ((arg2 ^ 0xffffffff) != -3) {
 				if ((arg2 ^ 0xffffffff) == -4)
 					aBoolean2271 = true;
@@ -136,7 +136,7 @@ public class Class12_Sub12_Sub6 extends Class12_Sub12 {
 				} else
 					anIntArray2261[-40 + arg2] = arg1.readShort(-1);
 			} else {
-				int i = arg1.readSignedByte(true);
+				int i = arg1.readUByte();
 				anIntArray2275 = new int[i];
 				for (int i_3_ = 0; i > i_3_; i_3_++)
 					anIntArray2275[i_3_] = arg1.readShort(-1);
@@ -152,7 +152,7 @@ public class Class12_Sub12_Sub6 extends Class12_Sub12 {
 			if (arg0 == -61) {
 				anInt2268++;
 				for (;;) {
-					int i = arg1.readSignedByte(true);
+					int i = arg1.readUByte();
 					if (i == 0)
 						break;
 					method330(-84, arg1, i);

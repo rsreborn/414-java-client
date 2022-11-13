@@ -82,7 +82,6 @@ public class Statics {
     public static RSString aClass59_1806 = Class55.method898("(U3", -10983);
     public static int anInt1807;
     public static int anInt1808;
-    public static int anInt1809;
     public static int anInt1810;
     public static int anInt1811;
     public static int anInt1812;
@@ -92,13 +91,9 @@ public class Statics {
     public static int anInt1816;
     public static int anInt1817;
     public static int anInt1818;
-    public static int anInt1819;
-    public static int anInt1820;
     public static int anInt1821;
-    public static int anInt1822;
     public static int anInt1823;
     public static int anInt1824;
-    public static int anInt1825;
     public static int anInt1826;
     public static int anInt1827;
     public static RSString aClass59_1828;
@@ -178,23 +173,23 @@ public class Statics {
             for (int i = 0; (Class47.anInt1094 ^ 0xffffffff) < (i ^ 0xffffffff); i++) {
                 int i_10_ = Class10.anIntArray220[i];
                 Class12_Sub12_Sub11_Sub2_Sub1 class12_sub12_sub11_sub2_sub1 = Class7.aClass12_Sub12_Sub11_Sub2_Sub1Array1531[i_10_];
-                int i_11_ = Game.inBuffer.readSignedByte(true);
+                int i_11_ = Game.inBuffer.readUByte();
                 if ((0x8 & i_11_ ^ 0xffffffff) != -1) {
-                    int i_12_ = Game.inBuffer.readSignedByte(true);
-                    int i_13_ = Game.inBuffer.readSignedByte(true);
+                    int i_12_ = Game.inBuffer.readUByte();
+                    int i_13_ = Game.inBuffer.readUByte();
                     class12_sub12_sub11_sub2_sub1.method448(
                             (Class64_Sub2.anInt1968), arg0 ^ ~0x3288, i_12_,
                             i_13_);
                     class12_sub12_sub11_sub2_sub1.anInt2676 = 300 + Class64_Sub2.anInt1968;
                     class12_sub12_sub11_sub2_sub1.anInt2711 = Game.inBuffer
-                            .readSignedByte(true);
+                            .readUByte();
                     class12_sub12_sub11_sub2_sub1.anInt2698 = Game.inBuffer
                             .getByteS(-762);
                 }
                 if ((i_11_ & 0x40 ^ 0xffffffff) != -1) {
                     int i_14_ = Game.inBuffer
                             .method236(-12543);
-                    int i_15_ = Game.inBuffer.readSignedByte(true);
+                    int i_15_ = Game.inBuffer.readUByte();
                     if ((i_14_ ^ 0xffffffff) == -65536)
                         i_14_ = -1;
                     if (((class12_sub12_sub11_sub2_sub1.anInt2734 ^ 0xffffffff) != (i_14_ ^ 0xffffffff))
@@ -226,7 +221,7 @@ public class Statics {
                 }
                 if ((0x4 & i_11_) != 0) {
                     class12_sub12_sub11_sub2_sub1.anInt2694 = Game.inBuffer
-                            .method214(512);
+                            .readUShortLE();
                     if (class12_sub12_sub11_sub2_sub1.anInt2694 == 65535)
                         class12_sub12_sub11_sub2_sub1.anInt2694 = -1;
                 }
@@ -234,7 +229,7 @@ public class Statics {
                     class12_sub12_sub11_sub2_sub1.aClass12_Sub12_Sub2_2923 = Class31
                             .method701((byte) -75,
                                     Game.inBuffer
-                                            .method227((byte) 109));
+                                            .readUShortLEA());
                     class12_sub12_sub11_sub2_sub1.anInt2727 = (class12_sub12_sub11_sub2_sub1.aClass12_Sub12_Sub2_2923.anInt2097);
                     class12_sub12_sub11_sub2_sub1.anInt2710 = (class12_sub12_sub11_sub2_sub1.aClass12_Sub12_Sub2_2923.anInt2100);
                     class12_sub12_sub11_sub2_sub1.anInt2662 = (class12_sub12_sub11_sub2_sub1.aClass12_Sub12_Sub2_2923.anInt2058);
@@ -249,8 +244,8 @@ public class Statics {
                     class12_sub12_sub11_sub2_sub1.anInt2701 = 100;
                 }
                 if ((0x1 & i_11_ ^ 0xffffffff) != -1) {
-                    int i_17_ = Game.inBuffer.readSignedByte(true);
-                    int i_18_ = Game.inBuffer.readSignedByte(true);
+                    int i_17_ = Game.inBuffer.readUByte();
+                    int i_18_ = Game.inBuffer.readUByte();
                     class12_sub12_sub11_sub2_sub1.method448(
                             Class64_Sub2.anInt1968, 0, i_17_, i_18_);
                     class12_sub12_sub11_sub2_sub1.anInt2676 = 300 + Class64_Sub2.anInt1968;
@@ -261,7 +256,7 @@ public class Statics {
                 }
                 if ((i_11_ & 0x2 ^ 0xffffffff) != -1) {
                     class12_sub12_sub11_sub2_sub1.anInt2692 = Game.inBuffer
-                            .method214(512);
+                            .readUShortLE();
                     int i_19_ = Game.inBuffer
                             .method210((byte) -6);
                     class12_sub12_sub11_sub2_sub1.anInt2713 = i_19_ >> -1233350960;
@@ -336,7 +331,7 @@ public class Statics {
                                                       RSString arg1, RSString arg2, int arg3) {
         try {
             anInt2015++;
-            int i = arg0.method649(arg1, -22814);
+            int i = arg0.hashFileName(arg1, -22814);
             int i_0_ = arg0.method655(i, (byte) 57, arg2);
             if (arg3 != -29072)
                 anInt2019 = 101;

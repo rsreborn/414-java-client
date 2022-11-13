@@ -144,7 +144,7 @@ public class Class12_Sub12_Sub4 extends Class12_Sub12 {
 
 	public void method308(int arg0, int arg1, Buffer arg2) {
 		if ((arg1 ^ 0xffffffff) == -2) {
-			int i = arg2.readSignedByte(true);
+			int i = arg2.readUByte();
 			anIntArray2215 = new int[i];
 			for (int i_0_ = 0; i > i_0_; i_0_++)
 				anIntArray2215[i_0_] = arg2.readShort(-1);
@@ -156,10 +156,10 @@ public class Class12_Sub12_Sub4 extends Class12_Sub12 {
 		} else if (arg1 == 2)
 			anInt2200 = arg2.readShort(-1);
 		else if ((arg1 ^ 0xffffffff) == -4) {
-			int i = arg2.readSignedByte(true);
+			int i = arg2.readUByte();
 			anIntArray2192 = new int[i - -1];
 			for (int i_3_ = 0; (i_3_ ^ 0xffffffff) > (i ^ 0xffffffff); i_3_++)
-				anIntArray2192[i_3_] = arg2.readSignedByte(true);
+				anIntArray2192[i_3_] = arg2.readUByte();
 			anIntArray2192[i] = 9999999;
 		} else if ((arg1 ^ 0xffffffff) == -5)
 			aBoolean2229 = true;
@@ -168,12 +168,12 @@ public class Class12_Sub12_Sub4 extends Class12_Sub12 {
 				if ((arg1 ^ 0xffffffff) != -8) {
 					if ((arg1 ^ 0xffffffff) != -9) {
 						if ((arg1 ^ 0xffffffff) == -10)
-							anInt2188 = arg2.readSignedByte(true);
+							anInt2188 = arg2.readUByte();
 						else if (arg1 != 10) {
 							if ((arg1 ^ 0xffffffff) == -12)
-								anInt2213 = arg2.readSignedByte(true);
+								anInt2213 = arg2.readUByte();
 							else if ((arg1 ^ 0xffffffff) == -13) {
-								int i = arg2.readSignedByte(true);
+								int i = arg2.readUByte();
 								anIntArray2208 = new int[i];
 								for (int i_4_ = 0; i_4_ < i; i_4_++)
 									anIntArray2208[i_4_] = arg2.readShort(arg0
@@ -184,15 +184,15 @@ public class Class12_Sub12_Sub4 extends Class12_Sub12 {
 													-7745))) << 1719416720) - -anIntArray2208[i_5_]);
 							}
 						} else
-							anInt2198 = arg2.readSignedByte(true);
+							anInt2198 = arg2.readUByte();
 					} else
-						anInt2201 = arg2.readSignedByte(true);
+						anInt2201 = arg2.readUByte();
 				} else
 					anInt2218 = arg2.readShort(-1);
 			} else
 				anInt2187 = arg2.readShort(-1);
 		} else
-			anInt2194 = arg2.readSignedByte(true);
+			anInt2194 = arg2.readUByte();
 		anInt2223++;
 		if (arg0 != 7744)
 			method307(false, null, 35, 36);
@@ -258,7 +258,7 @@ public class Class12_Sub12_Sub4 extends Class12_Sub12 {
 
 	public void method311(Buffer arg0, int arg1) {
 		for (;;) {
-			int i = arg0.readSignedByte(true);
+			int i = arg0.readUByte();
 			if (i == 0)
 				break;
 			method308(7744, i, arg0);

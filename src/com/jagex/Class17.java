@@ -3,8 +3,6 @@ package com.jagex;/* com.jagex.Class17 - Decompiled by JODE
  */
 import com.jagex.cache.Cache;
 
-import java.math.BigInteger;
-
 public class Class17 {
 	public static RSString aClass59_411 = Class55
 			.method898("backright1", -10983);
@@ -44,7 +42,7 @@ public class Class17 {
 			if (arg1 != 0)
 				method595(95);
 			anInt420++;
-			int i = arg2.method649(arg3, -22814);
+			int i = arg2.hashFileName(arg3, -22814);
 			int i_0_ = arg2.method655(i, (byte) 57, arg0);
 			return Class28.method683(i_0_, arg2, i, (byte) -113);
 		} catch (RuntimeException runtimeexception) {
@@ -80,8 +78,6 @@ public class Class17 {
 
 	static {
 		aClass59_414 = aClass59_418;
-		Game.rsaModulus = (new BigInteger(
-				"7162900525229798032761816791230527296329313291232324290237849263501208207972894053929065636522363163621000728841182238772712427862772219676577293600221789"));
 		aBoolean422 = false;
 		anInt421 = 0;
 		aClass27_424 = new Class27(500);

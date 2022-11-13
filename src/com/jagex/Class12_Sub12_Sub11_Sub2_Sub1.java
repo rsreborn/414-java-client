@@ -189,7 +189,7 @@ public class Class12_Sub12_Sub11_Sub2_Sub1 extends Class12_Sub12_Sub11_Sub2 {
 			anInt2918++;
 			if (!Class12_Sub12_Sub5.aBoolean2248) {
 				Class12_Sub6 class12_sub6 = new Class12_Sub6();
-				class12_sub6.anInt1686 = arg2.readSignedByte(true);
+				class12_sub6.anInt1686 = arg2.readUByte();
 				class12_sub6.anInt1690 = arg2.method207(-708753192);
 				class12_sub6.anIntArray1689 = new int[class12_sub6.anInt1686];
 				class12_sub6.anIntArray1696 = new int[class12_sub6.anInt1686];
@@ -199,14 +199,14 @@ public class Class12_Sub12_Sub11_Sub2_Sub1 extends Class12_Sub12_Sub11_Sub2 {
 				class12_sub6.anIntArray1698 = new int[class12_sub6.anInt1686];
 				for (int i_3_ = 0; ((class12_sub6.anInt1686 ^ 0xffffffff) < (i_3_ ^ 0xffffffff)); i_3_++) {
 					try {
-						int i_4_ = arg2.readSignedByte(true);
+						int i_4_ = arg2.readUByte();
 						if ((i_4_ ^ 0xffffffff) != -1 && i_4_ != 1 && i_4_ != 2) {
 							if (i_4_ == 3 || (i_4_ ^ 0xffffffff) == -5) {
 								String string = new String(arg2
 										.method246(20356).method940((byte) -57));
 								String string_5_ = new String(arg2.method246(
 										20356).method940((byte) 115));
-								int i_6_ = arg2.readSignedByte(true);
+								int i_6_ = arg2.readUByte();
 								String[] strings = new String[i_6_];
 								for (int i_7_ = 0; (i_7_ ^ 0xffffffff) > (i_6_ ^ 0xffffffff); i_7_++)
 									strings[i_7_] = new String(arg2.method246(

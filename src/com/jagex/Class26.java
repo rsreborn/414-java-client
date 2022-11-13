@@ -322,9 +322,9 @@ public abstract class Class26 {
 		checksum = Class12_Sub12_Sub5.method319(arg1.length, arg1, (byte) 52);
 		Buffer class12_sub11 = new Buffer(Class19.method600(
 				(byte) 98, arg1));
-		int i = class12_sub11.readSignedByte(true);
+		int i = class12_sub11.readUByte();
 		if ((i ^ 0xffffffff) == -6) {
-			int i_17_ = class12_sub11.readSignedByte(!arg0);
+			int i_17_ = class12_sub11.readUByte();
 			anInt618 = class12_sub11.readShort(-1);
 			anIntArray590 = new int[anInt618];
 			int i_18_ = 0;
@@ -536,7 +536,7 @@ public abstract class Class26 {
 		}
 	}
 
-	public int method649(RSString arg0, int arg1) {
+	public int hashFileName(RSString arg0, int arg1) {
 		try {
 			if (arg1 != -22814)
 				aClass59Array591 = null;

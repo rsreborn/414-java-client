@@ -53,7 +53,7 @@ public class Class12_Sub1 extends Class12 {
 	public static Class12_Sub12_Sub7_Sub2 method145(Class26 arg0, RSString arg1,
 			byte arg2, RSString arg3) {
 		try {
-			int i = arg0.method649(arg1, -22814);
+			int i = arg0.hashFileName(arg1, -22814);
 			int i_0_ = arg0.method655(i, (byte) 57, arg3);
 			int i_1_ = 72 % ((arg2 - 74) / 38);
 			anInt1614++;
