@@ -197,13 +197,13 @@ public class Class14 {
 				Class48.anIntArray1125 = new int[keyCount];
 				Class40.aByteArrayArray957 = new byte[keyCount][];
 				keyCount = 0;
-				for (int i_28_ = (-6 + chunkX) / 8; (chunkX - -6) / 8 >= i_28_; i_28_++) {
-					for (int i_29_ = (-6 + chunkY) / 8; i_29_ <= (6 + chunkY) / 8; i_29_++) {
-						int i_30_ = i_29_ + (i_28_ << 8);
+				for (int x = (-6 + chunkX) / 8; (chunkX - -6) / 8 >= x; x++) {
+					for (int y = (-6 + chunkY) / 8; y <= (6 + chunkY) / 8; y++) {
+						int hash = y + (x << 8);
 						if (!bool
-								|| (i_29_ != 49 && i_29_ != 149 && i_29_ != 147
-										&& i_28_ != 50 && (i_28_ != 49 || i_29_ != 47))) {
-							Statics.anIntArray573[keyCount] = i_30_;
+								|| (y != 49 && y != 149 && y != 147
+										&& x != 50 && (x != 49 || y != 47))) {
+							Statics.anIntArray573[keyCount] = hash;
 							Class48.anIntArray1125[keyCount] = (Cache.mapsArchive
 									.hashFileName(
 											(Statics
@@ -212,11 +212,11 @@ public class Class14 {
 															(new RSString[] {
 																	Class35.aClass59_869,
 																	Class19.method599(
-																			i_28_,
+																			x,
 																			10),
 																	Class64_Sub2.aClass59_1983,
 																	Class19.method599(
-																			i_29_,
+																			y,
 																			10) }))),
 											-22814));
 							Class12_Sub12_Sub3.anIntArray2157[keyCount] = (Cache.mapsArchive
@@ -227,11 +227,11 @@ public class Class14 {
 															(new RSString[] {
 																	Class10.aClass59_249,
 																	Class19.method599(
-																			i_28_,
+																			x,
 																			10),
 																	Class64_Sub2.aClass59_1983,
 																	Class19.method599(
-																			i_29_,
+																			y,
 																			10) }))),
 											-22814));
 							keyCount++;
