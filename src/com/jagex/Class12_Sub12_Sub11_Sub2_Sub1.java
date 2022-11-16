@@ -73,14 +73,14 @@ public class Class12_Sub12_Sub11_Sub2_Sub1 extends Class12_Sub12_Sub11_Sub2 {
 		Class12_Sub12_Sub11_Sub6.method515(false);
 		Class44.method782(-13354);
 		Statics.method626(arg0 ^ ~0x32c3);
-		for (int i = 0; (Class11.anInt287 ^ 0xffffffff) < (i ^ 0xffffffff); i++) {
+		for (int i = 0; i < Class11.anInt287; i++) {
 			int i_0_ = Statics.anIntArray1833[i];
 			if (Class7.aClass12_Sub12_Sub11_Sub2_Sub1Array1531[i_0_].anInt2663 != Class64_Sub2.anInt1968) {
 				Class7.aClass12_Sub12_Sub11_Sub2_Sub1Array1531[i_0_].aClass12_Sub12_Sub2_2923 = null;
 				Class7.aClass12_Sub12_Sub11_Sub2_Sub1Array1531[i_0_] = null;
 			}
 		}
-		if ((Class5.anInt159 ^ 0xffffffff) != (Game.inBuffer.position ^ 0xffffffff))
+		if (Game.inBuffer.position != Class5.anInt159)
 			throw new RuntimeException("gnp1 pos:"
 					+ (Game.inBuffer.position) + " psize:"
 					+ Class5.anInt159);
@@ -216,7 +216,7 @@ public class Class12_Sub12_Sub11_Sub2_Sub1 extends Class12_Sub12_Sub11_Sub2 {
 									for (int i_8_ = 0; ((i_8_ ^ 0xffffffff) > (i_6_ ^ 0xffffffff)); i_8_++) {
 										int i_9_ = arg2.method207(-708753192);
 										is[i_8_] = new byte[i_9_];
-										arg2.method213(14362, i_9_, 0, is[i_8_]);
+										arg2.readBytes(is[i_8_], 0, i_9_);
 									}
 								}
 								class12_sub6.anIntArray1689[i_3_] = i_4_;

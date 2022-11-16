@@ -16,7 +16,7 @@ public class Class12_Sub7 extends Class12 {
 	public Class55 aClass55_1710;
 	public int anInt1711;
 	public int anInt1712;
-	public static Class12_Sub12_Sub11_Sub2_Sub2 aClass12_Sub12_Sub11_Sub2_Sub2_1713;
+	public static Player aClass12_Sub12_Sub11_Sub2_Sub2_1713;
 	public boolean aBoolean1714;
 	public Class29 aClass29_1715;
 	public static int anInt1716;

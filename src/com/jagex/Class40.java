@@ -63,7 +63,7 @@ public class Class40 {
 			anInt947++;
 			if (arg4 == 15204 && Class5.aClass64_158 != null) {
 				if (Class33.anInt825 >= 0) {
-					Class12_Sub12_Sub11_Sub2_Sub2.anInt2976 = arg1;
+					Player.anInt2976 = arg1;
 					if (Class33.anInt825 != 0) {
 						int i = RuntimeException_Sub1.method1003(
 								Class33.anInt825, 0);

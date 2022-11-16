@@ -46,7 +46,7 @@ public class Class58 {
 				int i = arg1.anInt2694 + -32768;
 				if ((i ^ 0xffffffff) == (Class12_Sub9.anInt1751 ^ 0xffffffff))
 					i = 2047;
-				Class12_Sub12_Sub11_Sub2_Sub2 class12_sub12_sub11_sub2_sub2 = Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[i];
+				Player class12_sub12_sub11_sub2_sub2 = Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[i];
 				if (class12_sub12_sub11_sub2_sub2 != null) {
 					int i_1_ = (arg1.anInt2691 - class12_sub12_sub11_sub2_sub2.anInt2691);
 					int i_2_ = (arg1.anInt2683 - class12_sub12_sub11_sub2_sub2.anInt2683);

@@ -94,7 +94,7 @@ public class Class19 implements Runnable {
 				throw new RuntimeException();
 			if ((i ^ 0xffffffff) == -1) {
 				byte[] is = new byte[i_0_];
-				class12_sub11.method213(14362, i_0_, 0, is);
+				class12_sub11.readBytes(is, 0, i_0_);
 				return is;
 			}
 			int i_1_ = class12_sub11.method207(-708753192);

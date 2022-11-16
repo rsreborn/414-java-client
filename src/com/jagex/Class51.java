@@ -109,7 +109,7 @@ public class Class51 {
 					}
 					if (class12_sub12_sub11_sub3.anInt2773 < 0) {
 						int i = -class12_sub12_sub11_sub3.anInt2773 - 1;
-						Class12_Sub12_Sub11_Sub2_Sub2 class12_sub12_sub11_sub2_sub2;
+						Player class12_sub12_sub11_sub2_sub2;
 						if ((Class12_Sub9.anInt1751 ^ 0xffffffff) == (i ^ 0xffffffff))
 							class12_sub12_sub11_sub2_sub2 = (Class12_Sub7.aClass12_Sub12_Sub11_Sub2_Sub2_1713);
 						else

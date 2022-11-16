@@ -223,7 +223,7 @@ public class Class55 {
 				if (arg1 == -1)
 					Class12_Sub12_Sub11_Sub3.method468(Class11.aClass59_275,
 							Class31.aClass59_760,
-							Class12_Sub12_Sub11_Sub2_Sub2.aClass59_2971, -4774);
+							Player.aClass59_2971, -4774);
 				else if (arg1 == 3)
 					Class12_Sub12_Sub11_Sub3.method468(Class11.aClass59_271,
 							Class11.aClass59_288, Class30.aClass59_735, -4774);
@@ -298,14 +298,14 @@ public class Class55 {
 																	.method468(
 																			(Class11.aClass59_304),
 																			(Class30.aClass59_718),
-																			(Class12_Sub12_Sub11_Sub2_Sub2.aClass59_2977),
+																			(Player.aClass59_2977),
 																			-4774);
 													} else
 														Class12_Sub12_Sub11_Sub3
 																.method468(
 																		(Class11.aClass59_261),
 																		(Class12_Sub12_Sub4.aClass59_2211),
-																		(Class12_Sub12_Sub11_Sub2_Sub2.aClass59_2975),
+																		(Player.aClass59_2975),
 																		-4774);
 												} else
 													Class12_Sub12_Sub11_Sub3
@@ -319,7 +319,7 @@ public class Class55 {
 														.method468(
 																Class11.aClass59_309,
 																Class15.aClass59_403,
-																(Class12_Sub12_Sub11_Sub2_Sub2.aClass59_2972),
+																(Player.aClass59_2972),
 																-4774);
 										} else
 											Class12_Sub12_Sub11_Sub3
@@ -338,7 +338,7 @@ public class Class55 {
 											.method468(
 													Class11.aClass59_305,
 													Class61.aClass59_1368,
-													(Class12_Sub12_Sub11_Sub2_Sub2.aClass59_2974),
+													(Player.aClass59_2974),
 													-4774);
 							} else
 								Class12_Sub12_Sub11_Sub3
@@ -368,7 +368,7 @@ public class Class55 {
 		} else
 			Class12_Sub12_Sub11_Sub3.method468(Class11.aClass59_308,
 					Class40.aClass59_955,
-					(Class12_Sub12_Sub11_Sub2_Sub2.aClass59_2970), -4774);
+					(Player.aClass59_2970), -4774);
 		Class29.method686((byte) 67, 10);
 		anInt1310++;
 		if (arg0 <= 2)

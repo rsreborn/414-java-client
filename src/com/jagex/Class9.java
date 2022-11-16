@@ -41,15 +41,15 @@ public abstract class Class9 {
 
 	public abstract void method108(byte i);
 
-	public static void method109(byte arg0) {
+	public static void parseTrackedPlayerUpdateMasks(byte arg0) {
 		try {
-			for (int i = 0; (i ^ 0xffffffff) > (Class47.anInt1094 ^ 0xffffffff); i++) {
+			for (int i = 0; Class47.anInt1094 > i; i++) {
 				int i_2_ = Class10.anIntArray220[i];
-				Class12_Sub12_Sub11_Sub2_Sub2 class12_sub12_sub11_sub2_sub2 = Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[i_2_];
+				Player class12_sub12_sub11_sub2_sub2 = Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[i_2_];
 				int i_3_ = Game.inBuffer.readUByte();
-				if ((i_3_ & 0x40 ^ 0xffffffff) != -1)
-					i_3_ += (Game.inBuffer.readUByte() << 1830798056);
-				Class23.method614(i_2_, i_3_, 255,
+				if ((i_3_ & 0x40) != 0)
+					i_3_ += (Game.inBuffer.readUByte() << 8);
+				Class23.parsePlayerSyncMasks(i_2_, i_3_, 255,
 						class12_sub12_sub11_sub2_sub2);
 			}
 			int i = -41 / ((arg0 - -4) / 58);
@@ -210,8 +210,8 @@ public abstract class Class9 {
 							Game.outBuffer.writePacket(76);
 							int i_15_ = (int) l;
 							Game.outBuffer.method209(
-									-921469304, ((i_15_ << 1321801492)
-											- -(i_14_ << 972375155) + i_13_));
+									-921469304, ((i_15_ << 20)
+											- -(i_14_ << 19) + i_13_));
 						}
 						if ((Class12_Sub12_Sub3.anInt2125 ^ 0xffffffff) < -1)
 							Class12_Sub12_Sub3.anInt2125--;

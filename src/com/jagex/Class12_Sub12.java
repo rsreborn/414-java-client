@@ -112,7 +112,7 @@ public class Class12_Sub12 extends Class12 {
 					}
 				}
 				for (int i_8_ = 0; (i_8_ ^ 0xffffffff) > (Class9.anInt203 ^ 0xffffffff); i_8_++) {
-					Class12_Sub12_Sub11_Sub2_Sub2 class12_sub12_sub11_sub2_sub2 = (Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[Class36.anIntArray888[i_8_]]);
+					Player class12_sub12_sub11_sub2_sub2 = (Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[Class36.anIntArray888[i_8_]]);
 					if (class12_sub12_sub11_sub2_sub2 != null
 							&& class12_sub12_sub11_sub2_sub2.method452(arg0
 									^ ~0xefa1bd7)) {
@@ -180,7 +180,7 @@ public class Class12_Sub12 extends Class12 {
 					if (Class12_Sub12_Sub13.anInt2431 == 10
 							&& (Class12_Sub12_Sub9.anInt2362 ^ 0xffffffff) <= -1
 							&& ((Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398).length > Class12_Sub12_Sub9.anInt2362)) {
-						Class12_Sub12_Sub11_Sub2_Sub2 class12_sub12_sub11_sub2_sub2 = (Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[Class12_Sub12_Sub9.anInt2362]);
+						Player class12_sub12_sub11_sub2_sub2 = (Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[Class12_Sub12_Sub9.anInt2362]);
 						if (class12_sub12_sub11_sub2_sub2 != null) {
 							i_3_ = (class12_sub12_sub11_sub2_sub2.anInt2683 / 32 + -((Class12_Sub7.aClass12_Sub12_Sub11_Sub2_Sub2_1713.anInt2683) / 32));
 							i_2_ = (class12_sub12_sub11_sub2_sub2.anInt2691 / 32 + -((Class12_Sub7.aClass12_Sub12_Sub11_Sub2_Sub2_1713.anInt2691) / 32));

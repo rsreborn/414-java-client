@@ -6,7 +6,7 @@ import com.jagex.io.Buffer;
 
 import java.util.zip.CRC32;
 
-public class Class12_Sub12_Sub11_Sub2_Sub2 extends Class12_Sub12_Sub11_Sub2 {
+public class Player extends Class12_Sub12_Sub11_Sub2 {
 	public int anInt2940;
 	public int anInt2941 = -1;
 	public int anInt2942;
@@ -209,7 +209,7 @@ public class Class12_Sub12_Sub11_Sub2_Sub2 extends Class12_Sub12_Sub11_Sub2 {
 		}
 	}
 
-	public void method462(Buffer arg0, boolean arg1) {
+	public void syncAppearance(Buffer arg0, boolean arg1) {
 		try {
 			arg0.position = 0;
 			anInt2949++;
@@ -227,9 +227,9 @@ public class Class12_Sub12_Sub11_Sub2_Sub2 extends Class12_Sub12_Sub11_Sub2 {
 					is[i_10_] = 0;
 				else {
 					int i_12_ = arg0.readUByte();
-					is[i_10_] = (i_11_ << -1468252792) + i_12_;
-					if ((i_10_ ^ 0xffffffff) == -1
-							&& (is[0] ^ 0xffffffff) == -65536) {
+					is[i_10_] = (i_11_ << 8) + i_12_;
+					if (i_10_ == 0
+							&& is[0] == 65535) {
 						i_9_ = arg0.readShort(-1);
 						break;
 					}
@@ -244,8 +244,8 @@ public class Class12_Sub12_Sub11_Sub2_Sub2 extends Class12_Sub12_Sub11_Sub2 {
 			int[] is_14_ = new int[5];
 			for (int i_15_ = 0; (i_15_ ^ 0xffffffff) > -6; i_15_++) {
 				int i_16_ = arg0.readUByte();
-				if ((i_16_ ^ 0xffffffff) > -1
-						|| (Class12_Sub12_Sub4.anIntArrayArray2206[i_15_].length ^ 0xffffffff) >= (i_16_ ^ 0xffffffff))
+				if (i_16_ < 0
+						|| i_16_ >= Class12_Sub12_Sub4.anIntArrayArray2206[i_15_].length)
 					i_16_ = 0;
 				is_14_[i_15_] = i_16_;
 			}
@@ -253,7 +253,7 @@ public class Class12_Sub12_Sub11_Sub2_Sub2 extends Class12_Sub12_Sub11_Sub2 {
 			if (anInt2681 == 65535)
 				anInt2681 = -1;
 			anInt2679 = arg0.readShort(-1);
-			if ((anInt2679 ^ 0xffffffff) == -65536)
+			if (anInt2679 == 65535)
 				anInt2679 = -1;
 			anInt2710 = arg0.readShort(-1);
 			if (anInt2710 == 65535)
@@ -262,13 +262,13 @@ public class Class12_Sub12_Sub11_Sub2_Sub2 extends Class12_Sub12_Sub11_Sub2 {
 			if (anInt2700 == 65535)
 				anInt2700 = -1;
 			anInt2662 = arg0.readShort(-1);
-			if ((anInt2662 ^ 0xffffffff) == -65536)
+			if (anInt2662 == 65535)
 				anInt2662 = -1;
 			anInt2706 = arg0.readShort(-1);
 			if (anInt2706 == 65535)
 				anInt2706 = -1;
 			anInt2677 = arg0.readShort(-1);
-			if ((anInt2677 ^ 0xffffffff) == -65536)
+			if (anInt2677 == 65535)
 				anInt2677 = -1;
 			aClass59_2951 = Class12_Sub12_Sub13.method524(-3,
 					arg0.readLong(103)).toString(-14767);
@@ -276,7 +276,7 @@ public class Class12_Sub12_Sub11_Sub2_Sub2 extends Class12_Sub12_Sub11_Sub2 {
 			anInt2947 = arg0.readShort(-1);
 			if (aClass42_2954 == null)
 				aClass42_2954 = new Class42();
-			aClass42_2954.method770(is_14_, i_9_, (i ^ 0xffffffff) == -2,
+			aClass42_2954.method770(is_14_, i_9_, i == 1,
 					13314, is);
 		} catch (RuntimeException runtimeexception) {
 			throw Class35.method724(runtimeexception, "me.J("
@@ -304,7 +304,7 @@ public class Class12_Sub12_Sub11_Sub2_Sub2 extends Class12_Sub12_Sub11_Sub2 {
 		}
 	}
 
-	public Class12_Sub12_Sub11_Sub2_Sub2() {
+	public Player() {
 		anInt2946 = 0;
 		anInt2955 = 0;
 		anInt2957 = -1;

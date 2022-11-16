@@ -93,7 +93,7 @@ public class Class12_Sub12_Sub14 extends Class12_Sub12 {
 					i = 1;
 				int i_1_ = 0;
 				for (/**/; i > i_1_; i_1_++) {
-					Class12_Sub12_Sub11_Sub2_Sub2 class12_sub12_sub11_sub2_sub2;
+					Player class12_sub12_sub11_sub2_sub2;
 					int i_2_;
 					if (arg1) {
 						i_2_ = 33538048;

@@ -190,12 +190,12 @@ public class Class43 {
 									}
 								}
 							} else {
-								Class12_Sub12_Sub11_Sub2_Sub2.aCRC32_2966
+								Player.aCRC32_2966
 										.reset();
-								Class12_Sub12_Sub11_Sub2_Sub2.aCRC32_2966
+								Player.aCRC32_2966
 										.update((Class12_Sub12_Sub10.aClass12_Sub11_2377.payload),
 												0, i_11_);
-								int i_16_ = (int) Class12_Sub12_Sub11_Sub2_Sub2.aCRC32_2966
+								int i_16_ = (int) Player.aCRC32_2966
 										.getValue();
 								if (i_16_ != (Class13.aClass12_Sub12_Sub8_354.anInt2293)) {
 									try {

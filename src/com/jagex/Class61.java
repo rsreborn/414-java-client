@@ -29,7 +29,7 @@ public class Class61 {
 				i_0_ = Class36.anIntArray888[i];
 			else
 				i_0_ = 2047;
-			Class12_Sub12_Sub11_Sub2_Sub2 class12_sub12_sub11_sub2_sub2 = Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[i_0_];
+			Player class12_sub12_sub11_sub2_sub2 = Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[i_0_];
 			if (class12_sub12_sub11_sub2_sub2 != null)
 				Class33.method712(class12_sub12_sub11_sub2_sub2, 1, 0);
 		}

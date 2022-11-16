@@ -45,7 +45,7 @@ public class Class12_Sub12_Sub5 extends Class12_Sub12 {
 		}
 	}
 
-	public static void method318(int arg0) {
+	public static void parsePlayerMovement(int arg0) {
 		Game.inBuffer.initBitAccess();
 		anInt2237++;
 		if (arg0 == 7) {
@@ -74,7 +74,7 @@ public class Class12_Sub12_Sub5 extends Class12_Sub12 {
 							i_4_, 64, true);
 					int i_5_ = Game.inBuffer.readBits(1
 					);
-					if ((i_5_ ^ 0xffffffff) == -2)
+					if (i_5_ == 1)
 						Class10.anIntArray220[Class47.anInt1094++] = 2047;
 				} else if (i_0_ == 3) {
 					int i_6_ = Game.inBuffer.readBits(7
@@ -90,7 +90,7 @@ public class Class12_Sub12_Sub5 extends Class12_Sub12 {
 					RSString.anInt1504 = Game.inBuffer
 							.readBits(2);
 					Class12_Sub7.aClass12_Sub12_Sub11_Sub2_Sub2_1713.method453(
-							i_8_, (i_9_ ^ 0xffffffff) == -2, false, i_6_);
+							i_8_, i_9_ == 1, false, i_6_);
 				}
 			}
 		}
@@ -235,7 +235,7 @@ public class Class12_Sub12_Sub5 extends Class12_Sub12 {
 													if ((Class12_Sub12_Sub16.anInt2560) != 0
 															&& ((i_12_ ^ 0xffffffff) == ((Class33.anInt829) ^ 0xffffffff))
 															&& ((i
-																	+ (arg5 << 951925200) ^ 0xffffffff) == ((Class12_Sub12_Sub11_Sub2_Sub2.anInt2973) ^ 0xffffffff)))
+																	+ (arg5 << 951925200) ^ 0xffffffff) == ((Player.anInt2973) ^ 0xffffffff)))
 														class12_sub12_sub7_sub1
 																.method360(
 																		i_16_,

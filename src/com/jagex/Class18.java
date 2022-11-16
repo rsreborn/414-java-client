@@ -118,7 +118,7 @@ public class Class18 {
 			Class8.anInt200 = 0;
 			Class62.anInt1382 = 0;
 			RSCanvas.anInt55 = 0;
-			Class12_Sub12_Sub11_Sub2_Sub2.anInt2948 = 0;
+			Player.anInt2948 = 0;
 			Class1.anInt86 = 0;
 			Statics.anInt1775 = 0;
 			Class58.anInt1360 = 0;
@@ -167,7 +167,6 @@ public class Class18 {
 			Class12_Sub4.anInt1663 = 0;
 			Class12_Sub12_Sub5.anInt2237 = 0;
 			Class12_Sub12_Sub5.anInt2233 = 0;
-			Statics.anInt1790 = 0;
 			Game.anInt1568 = 0;
 			Class40.anInt952 = 0;
 			Class12_Sub12_Sub13.anInt2446 = 0;
@@ -257,7 +256,7 @@ public class Class18 {
 			Class12_Sub12_Sub11_Sub1.anInt2650 = 0;
 			Class12_Sub12_Sub11_Sub3.anInt2759 = 0;
 			RSSocket.anInt530 = 0;
-			Class12_Sub12_Sub11_Sub2_Sub2.anInt2949 = 0;
+			Player.anInt2949 = 0;
 			Class44.anInt1030 = 0;
 			RSApplet.anInt26 = 0;
 			Statics.anInt1827 = 0;
@@ -333,7 +332,7 @@ public class Class18 {
 			Statics.anInt2023 = 0;
 			Class40.anInt954 = 0;
 			Class12_Sub9.anInt1752 = 0;
-			Class12_Sub12_Sub11_Sub2_Sub2.anInt2953 = 0;
+			Player.anInt2953 = 0;
 			Class31.anInt763 = 0;
 			Class12_Sub6.anInt1697 = 0;
 			Class12_Sub12_Sub6.anInt2249 = 0;
@@ -418,7 +417,7 @@ public class Class18 {
 			Class35.anInt840 = 0;
 			Class12_Sub12_Sub11.anInt2388 = 0;
 			RSString.anInt1496 = 0;
-			Class12_Sub12_Sub11_Sub2_Sub2.anInt2956 = 0;
+			Player.anInt2956 = 0;
 			Class9_Sub2.anInt1594 = 0;
 			Class9_Sub2.anInt1602 = 0;
 			RSSocket.anInt513 = 0;
@@ -430,7 +429,7 @@ public class Class18 {
 			Class30.anInt741 = 0;
 			Class14.anInt362 = 0;
 			Class12_Sub12_Sub6.anInt2268 = 0;
-			Class12_Sub12_Sub11_Sub2_Sub2.anInt2944 = 0;
+			Player.anInt2944 = 0;
 			Class8.anInt194 = 0;
 			Class26.anInt578 = 0;
 			RSString.anInt1483 = 0;
@@ -582,7 +581,6 @@ public class Class18 {
 			Archive.anInt1892 = 0;
 			Class49.anInt1150 = 0;
 			Class64.anInt1439 = 0;
-			Statics.anInt1807 = 0;
 			Class26.anInt586 = 0;
 			Class49.anInt1153 = 0;
 			Class12_Sub12_Sub11_Sub5.anInt2851 = 0;
@@ -623,7 +621,7 @@ public class Class18 {
 			Class27.anInt636 = 0;
 			Class36.anInt885 = 0;
 			Class62_Sub2.anInt1932 = 0;
-			Class12_Sub12_Sub11_Sub2_Sub2.anInt2965 = 0;
+			Player.anInt2965 = 0;
 			Class64.anInt1440 = 0;
 			Class64_Sub2.anInt1960 = 0;
 			Statics.anInt1816 = 0;
@@ -851,7 +849,7 @@ public class Class18 {
 			}
 			for (int i = 0; (i ^ 0xffffffff) > -16385; i++)
 				Class7.aClass12_Sub12_Sub11_Sub2_Sub1Array1531[i] = null;
-			Class12_Sub7.aClass12_Sub12_Sub11_Sub2_Sub2_1713 = Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[2047] = new Class12_Sub12_Sub11_Sub2_Sub2();
+			Class12_Sub7.aClass12_Sub12_Sub11_Sub2_Sub2_1713 = Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[2047] = new Player();
 			Class56.aClass8_1324.method101(2);
 			Class10.aClass8_243.method101(2);
 			for (int i = 0; i < 4; i++) {

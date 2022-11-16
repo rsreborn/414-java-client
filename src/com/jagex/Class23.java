@@ -149,88 +149,88 @@ public class Class23 {
 		}
 	}
 
-	public static void method614(int arg0, int arg1, int arg2,
-			Class12_Sub12_Sub11_Sub2_Sub2 arg3) {
+	public static void parsePlayerSyncMasks(int arg0, int arg1, int arg2,
+                                            Player player) {
 		if ((arg1 & 0x80) != 0) {
-			arg3.anInt2690 = Game.inBuffer
+			player.anInt2690 = Game.inBuffer
 					.readUShortLEA();
-			arg3.anInt2672 = Game.inBuffer.readUShortLE();
+			player.anInt2672 = Game.inBuffer.readUShortLE();
 		}
 		anInt504++;
 		if ((arg1 & 0x20) != 0) {
-			arg3.anInt2694 = Game.inBuffer.method236(-12543);
-			if ((arg3.anInt2694 ^ 0xffffffff) == -65536)
-				arg3.anInt2694 = -1;
+			player.anInt2694 = Game.inBuffer.method236(-12543);
+			if (player.anInt2694 == 65535)
+				player.anInt2694 = -1;
 		}
 		if ((arg1 & 0x400) != 0) {
 			int i = Game.inBuffer.readUByte();
 			int i_0_ = Game.inBuffer.method238(true);
-			arg3.method448(Class64_Sub2.anInt1968, arg2 ^ 0xff, i, i_0_);
-			arg3.anInt2676 = Class64_Sub2.anInt1968 - -300;
-			arg3.anInt2711 = Game.inBuffer.method238(true);
-			arg3.anInt2698 = Game.inBuffer.getByteS(-762);
+			player.method448(Class64_Sub2.anInt1968, arg2 ^ 0xff, i, i_0_);
+			player.anInt2676 = Class64_Sub2.anInt1968 - -300;
+			player.anInt2711 = Game.inBuffer.method238(true);
+			player.anInt2698 = Game.inBuffer.getByteS(-762);
 		}
-		if ((arg1 & 0x100 ^ 0xffffffff) != -1) {
-			arg3.anInt2692 = Game.inBuffer
+		if ((arg1 & 0x100) != 0) {
+			player.anInt2692 = Game.inBuffer
 					.readUShortLEA();
 			int i = Game.inBuffer.method215((byte) 94);
-			if ((arg3.anInt2692 ^ 0xffffffff) == -65536)
-				arg3.anInt2692 = -1;
-			arg3.anInt2724 = 0;
-			arg3.anInt2668 = (0xffff & i) + Class64_Sub2.anInt1968;
-			arg3.anInt2673 = 0;
-			if (Class64_Sub2.anInt1968 < arg3.anInt2668)
-				arg3.anInt2673 = -1;
-			arg3.anInt2713 = i >> -34426160;
+			if (player.anInt2692 == 65535)
+				player.anInt2692 = -1;
+			player.anInt2724 = 0;
+			player.anInt2668 = (0xffff & i) + Class64_Sub2.anInt1968;
+			player.anInt2673 = 0;
+			if (Class64_Sub2.anInt1968 < player.anInt2668)
+				player.anInt2673 = -1;
+			player.anInt2713 = i >> 16;
 		}
 		if (arg2 != 255)
 			aClass59_506 = null;
 		if ((arg1 & 0x2) != 0) {
 			int i = Game.inBuffer.readUShortLE();
-			if ((i ^ 0xffffffff) == -65536)
+			if (i == 65535)
 				i = -1;
 			int i_1_ = Game.inBuffer.getByteS(arg2 ^ ~0x206);
-			if ((i ^ 0xffffffff) == (arg3.anInt2734 ^ 0xffffffff)
-					&& (i ^ 0xffffffff) != 0) {
+			if (player.anInt2734 == i
+					&& i != -1) {
 				int i_2_ = Class5.method74(9, i).anInt2213;
-				if ((i_2_ ^ 0xffffffff) == -2) {
-					arg3.anInt2726 = 0;
-					arg3.anInt2675 = 0;
-					arg3.anInt2719 = i_1_;
-					arg3.anInt2687 = 0;
+				if (i_2_ == 1) {
+					player.anInt2726 = 0;
+					player.anInt2675 = 0;
+					player.anInt2719 = i_1_;
+					player.anInt2687 = 0;
 				}
-				if ((i_2_ ^ 0xffffffff) == -3)
-					arg3.anInt2675 = 0;
-			} else if ((i ^ 0xffffffff) == 0
-					|| (arg3.anInt2734 ^ 0xffffffff) == 0
+				if (i_2_ == 2)
+					player.anInt2675 = 0;
+			} else if (i == -1
+					|| player.anInt2734 == -1
 					|| (Class5.method74(9, i).anInt2194 >= Class5.method74(9,
-							arg3.anInt2734).anInt2194)) {
-				arg3.anInt2726 = 0;
-				arg3.anInt2719 = i_1_;
-				arg3.anInt2714 = arg3.anInt2665;
-				arg3.anInt2675 = 0;
-				arg3.anInt2687 = 0;
-				arg3.anInt2734 = i;
+							player.anInt2734).anInt2194)) {
+				player.anInt2726 = 0;
+				player.anInt2719 = i_1_;
+				player.anInt2714 = player.anInt2665;
+				player.anInt2675 = 0;
+				player.anInt2687 = 0;
+				player.anInt2734 = i;
 			}
 		}
-		if ((0x8 & arg1 ^ 0xffffffff) != -1) {
-			int i = Game.inBuffer.getByteS(-762);
+		if ((0x8 & arg1) != 0) {
+			int i = Game.inBuffer.readUByte();
 			byte[] is = new byte[i];
 			Buffer class12_sub11 = new Buffer(is);
-			Game.inBuffer.method234(is, 0, false, i);
+			Game.inBuffer.readBytes(is, 0, i);
 			Class9_Sub2.aClass12_Sub11Array1589[arg0] = class12_sub11;
-			arg3.method462(class12_sub11, false);
+			player.syncAppearance(class12_sub11, false);
 		}
 		if ((arg1 & 0x4) != 0) {
 			int i = Game.inBuffer.readShort(arg2 + -256); // short the colour and effect
 			int i_3_ = Game.inBuffer.readUByteA(); // right
 			int i_4_ = Game.inBuffer.readUByte();
 			int i_5_ = Game.inBuffer.position;
-			if (arg3.aClass59_2951 != null && arg3.aClass42_2954 != null) {
-				long l = arg3.aClass59_2951.method912(124);
+			if (player.aClass59_2951 != null && player.aClass42_2954 != null) {
+				long l = player.aClass59_2951.method912(124);
 				boolean bool = false;
-				if ((i_3_ ^ 0xffffffff) >= -2) {
-					for (int i_6_ = 0; ((Class49.anInt1147 ^ 0xffffffff) < (i_6_ ^ 0xffffffff)); i_6_++) {
+				if (i_3_ <= 1) {
+					for (int i_6_ = 0; (i_6_ < Class49.anInt1147); i_6_++) {
 						if (l == Class35.aLongArray859[i_6_]) {
 							bool = true;
 							break;
@@ -239,70 +239,70 @@ public class Class23 {
 				}
 				if (!bool && RSCanvas.anInt46 == 0) {
 					Class12_Sub7.aClass12_Sub11_1705.position = 0;
-					Game.inBuffer.method234(
+					Game.inBuffer.readBytesA(
 							Class12_Sub7.aClass12_Sub11_1705.payload, 0,
-							false, i_4_);
+							i_4_);
 					Class12_Sub7.aClass12_Sub11_1705.position = 0;
 					RSString class59 = Class12.method142(
 							Class12_Sub7.aClass12_Sub11_1705, 32767).method946(
 							(byte) 37);
-					arg3.aClass59_2678 = class59.method935(false);
-					arg3.anInt2730 = i & 0xff;
-					arg3.anInt2709 = i >> 970444136;
-					arg3.anInt2701 = 150;
-					if ((i_3_ ^ 0xffffffff) == -3 || i_3_ == 3)
+					player.aClass59_2678 = class59.method935(false);
+					player.anInt2730 = i & 0xff;
+					player.anInt2709 = i >> 8;
+					player.anInt2701 = 150;
+					if (i_3_ == 2 || i_3_ == 3)
 						Class12_Sub7.method190(Statics.method251(
 								(byte) -87, (new RSString[] {
 										(Class12_Sub12_Sub6.aClass59_2259),
-										arg3.aClass59_2951 })), class59, 1,
+										player.aClass59_2951 })), class59, 1,
 								false);
-					else if ((i_3_ ^ 0xffffffff) == -2)
+					else if (i_3_ == 1)
 						Class12_Sub7.method190(Statics.method251(
 								(byte) -116, (new RSString[] {
 										(Class12_Sub12_Sub16.aClass59_2542),
-										arg3.aClass59_2951 })), class59, 1,
+										player.aClass59_2951 })), class59, 1,
 								false);
 					else
-						Class12_Sub7.method190(arg3.aClass59_2951, class59, 2,
+						Class12_Sub7.method190(player.aClass59_2951, class59, 2,
 								false);
 				}
 			}
 			Game.inBuffer.position = i_4_ + i_5_;
 		}
-		if ((0x1 & arg1 ^ 0xffffffff) != -1) {
+		if ((0x1 & arg1) != 0) {
 			int i = Game.inBuffer.readUByte();
 			int i_7_ = Game.inBuffer.readUByteA();
-			arg3.method448(Class64_Sub2.anInt1968, 0, i, i_7_);
-			arg3.anInt2676 = 300 + Class64_Sub2.anInt1968;
-			arg3.anInt2711 = Game.inBuffer.readUByte();
-			arg3.anInt2698 = Game.inBuffer.readUByteA();
+			player.method448(Class64_Sub2.anInt1968, 0, i, i_7_);
+			player.anInt2676 = 300 + Class64_Sub2.anInt1968;
+			player.anInt2711 = Game.inBuffer.readUByte();
+			player.anInt2698 = Game.inBuffer.readUByteA();
 		}
 		if ((arg1 & 0x200) != 0) {
-			arg3.anInt2705 = Game.inBuffer.getByteS(arg2
+			player.anInt2705 = Game.inBuffer.getByteS(arg2
 					+ -1017);
-			arg3.anInt2686 = Game.inBuffer.getByteS(-762);
-			arg3.anInt2682 = Game.inBuffer.method238(true);
-			arg3.anInt2728 = Game.inBuffer.method238(true);
-			arg3.anInt2667 = (Game.inBuffer
+			player.anInt2686 = Game.inBuffer.getByteS(-762);
+			player.anInt2682 = Game.inBuffer.method238(true);
+			player.anInt2728 = Game.inBuffer.method238(true);
+			player.anInt2667 = (Game.inBuffer
 					.readUShortLEA() - -Class64_Sub2.anInt1968);
-			arg3.anInt2721 = (Game.inBuffer.method236(-12543) + Class64_Sub2.anInt1968);
-			arg3.anInt2689 = Game.inBuffer.readUByteA();
-			arg3.method446(-99);
+			player.anInt2721 = (Game.inBuffer.method236(-12543) + Class64_Sub2.anInt1968);
+			player.anInt2689 = Game.inBuffer.readUByteA();
+			player.method446(-99);
 		}
-		if ((0x10 & arg1 ^ 0xffffffff) != -1) {
-			arg3.aClass59_2678 = Game.inBuffer
+		if ((0x10 & arg1) != 0) {
+			player.aClass59_2678 = Game.inBuffer
 					.method246(20356);
-			if (arg3.aClass59_2678.method927(true, 0) == 126) {
-				arg3.aClass59_2678 = arg3.aClass59_2678.method945(arg2 + -192,
+			if (player.aClass59_2678.method927(true, 0) == 126) {
+				player.aClass59_2678 = player.aClass59_2678.method945(arg2 + -192,
 						1);
-				Class12_Sub7.method190(arg3.aClass59_2951, arg3.aClass59_2678,
+				Class12_Sub7.method190(player.aClass59_2951, player.aClass59_2678,
 						2, false);
-			} else if (arg3 == Class12_Sub7.aClass12_Sub12_Sub11_Sub2_Sub2_1713)
-				Class12_Sub7.method190(arg3.aClass59_2951, arg3.aClass59_2678,
+			} else if (player == Class12_Sub7.aClass12_Sub12_Sub11_Sub2_Sub2_1713)
+				Class12_Sub7.method190(player.aClass59_2951, player.aClass59_2678,
 						2, false);
-			arg3.anInt2730 = 0;
-			arg3.anInt2709 = 0;
-			arg3.anInt2701 = 150;
+			player.anInt2730 = 0;
+			player.anInt2709 = 0;
+			player.anInt2701 = 150;
 		}
 	}
 

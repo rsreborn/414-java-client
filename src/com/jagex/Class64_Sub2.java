@@ -346,12 +346,12 @@ public class Class64_Sub2 extends Class64 {
 					i_4_++;
 				i_16_ = Class29.anIntArrayArray706[i][i_4_];
 			}
-			if ((i_5_ ^ 0xffffffff) < -1) {
+			if (i_5_ > 0) {
 				i_6_ = i_5_;
 				i_5_--;
 				int i_18_ = Class12_Sub12_Sub15.anIntArray2507[i_5_];
 				int i_19_ = Class57.anIntArray1333[i_5_];
-				if ((i_6_ ^ 0xffffffff) < -26)
+				if (i_6_ > 25)
 					i_6_ = 25;
 				if (arg5 == 0) {
 					RSSocket.anInt515++;
@@ -365,7 +365,7 @@ public class Class64_Sub2 extends Class64 {
 					Game.outBuffer.writeByte(14 + i_6_
 							- (-i_6_ - 3));
 				}
-				if ((arg5 ^ 0xffffffff) == -3) {
+				if (arg5 == 2) {
 					Game.outBuffer.writePacket(20);
 					Class44.anInt1032++;
 					Game.outBuffer.writeByte(i_6_ - -i_6_
@@ -455,7 +455,7 @@ public class Class64_Sub2 extends Class64 {
 			method998((byte) -99);
 	}
 
-	public static void method999(int arg0) {
+	public static void parseTrackedPlayerMovement(int arg0) {
 		anInt1973++;
 		int i = Game.inBuffer.readBits(8);
 		if ((Class9.anInt203 ^ 0xffffffff) < (i ^ 0xffffffff)) {
@@ -467,7 +467,7 @@ public class Class64_Sub2 extends Class64 {
 		Class9.anInt203 = 0;
 		for (int i_22_ = 0; (i ^ 0xffffffff) < (i_22_ ^ 0xffffffff); i_22_++) {
 			int i_23_ = Class36.anIntArray888[i_22_];
-			Class12_Sub12_Sub11_Sub2_Sub2 class12_sub12_sub11_sub2_sub2 = Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[i_23_];
+			Player class12_sub12_sub11_sub2_sub2 = Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[i_23_];
 			int i_24_ = Game.inBuffer.readBits(1);
 			if (i_24_ == 0) {
 				Class36.anIntArray888[Class9.anInt203++] = i_23_;

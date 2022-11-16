@@ -16,7 +16,7 @@ public class Class63 {
 	public static int anInt1395;
 	public byte aByte1396;
 	public static RSString aClass59_1397;
-	public static Class12_Sub12_Sub11_Sub2_Sub2[] aClass12_Sub12_Sub11_Sub2_Sub2Array1398;
+	public static Player[] aClass12_Sub12_Sub11_Sub2_Sub2Array1398;
 	public static int anInt1399;
 	public static int anInt1400;
 	public byte[] aByteArray1401;
@@ -430,7 +430,7 @@ public class Class63 {
 	}
 
 	static {
-		aClass12_Sub12_Sub11_Sub2_Sub2Array1398 = new Class12_Sub12_Sub11_Sub2_Sub2[2048];
+		aClass12_Sub12_Sub11_Sub2_Sub2Array1398 = new Player[2048];
 		aClass59_1397 = Class55.method898("::errortest", -10983);
 		aClass59_1424 = aClass59_1421;
 		anIntArray1435 = new int[32];

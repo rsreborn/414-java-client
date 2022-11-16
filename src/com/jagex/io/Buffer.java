@@ -122,19 +122,10 @@ public class Buffer extends Class12 {
 		}
 	}
 
-	public void method213(int arg0, int arg1, int arg2, byte[] arg3) {
-		try {
-			Statics.anInt1807++;
-			int i = arg2;
-			if (arg0 != 14362)
-				method247((byte) 31, -30);
-			for (/**/; (arg1 + arg2 ^ 0xffffffff) < (i ^ 0xffffffff); i++)
-				arg3[i] = payload[position++];
-		} catch (RuntimeException runtimeexception) {
-			throw Class35.method724(runtimeexception, ("tc.HA(" + arg0 + ','
-					+ arg1 + ',' + arg2 + ','
-					+ (arg3 != null ? "{...}" : "null") + ')'));
-		}
+	public void readBytes(byte[] dest, int offset, int length) {
+		int i = offset;
+		for (/**/; i < length + offset; i++)
+			dest[i] = payload[position++];
 	}
 
 	public int readUShortLE() {
@@ -145,7 +136,7 @@ public class Buffer extends Class12 {
 	public int method215(byte arg0) {
 		try {
 			if (arg0 != 94)
-				method213(34, 80, 114, null);
+				readBytes(null, 114, 80);
 			Statics.anInt1786++;
 			position += 4;
 			return (((0xff & payload[position + -2]) << -1404385160)
@@ -357,12 +348,9 @@ public class Buffer extends Class12 {
 		}
 	}
 
-	public void method234(byte[] arg0, int arg1, boolean arg2, int arg3) {
-		for (int i = arg1; i < arg3 + arg1; i++)
-			arg0[i] = (byte) (-128 + payload[position++]);
-		Statics.anInt1790++;
-		if (arg2 != false)
-			Statics.aClass27_1785 = null;
+	public void readBytesA(byte[] dest, int offset, int length) {
+		for (int i = offset; i < length + offset; i++)
+			dest[i] = (byte) (-128 + payload[position++]);
 	}
 
 	public void method235(int arg0, byte arg1) {
@@ -461,7 +449,7 @@ public class Buffer extends Class12 {
 		int i = position;
 		position = 0;
 		byte[] is = new byte[i];
-		method213(14362, i, 0, is);
+		readBytes(is, 0, i);
 		Statics.anInt1814++;
 		BigInteger biginteger = new BigInteger(is);
 		BigInteger biginteger_10_ = biginteger.modPow(rsaExponent, rsaModulus);

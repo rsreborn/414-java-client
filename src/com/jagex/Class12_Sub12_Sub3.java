@@ -738,7 +738,7 @@ public class Class12_Sub12_Sub3 extends Class12_Sub12 {
 						!Class21.aBoolean483 ? 128 : 64);
 				Class12_Sub12_Sub7_Sub3.method386(class7);
 				Class12_Sub12_Sub7_Sub3.method373(0.8);
-				Class11.aClass59_285 = Class12_Sub12_Sub11_Sub2_Sub2.aClass59_2968;
+				Class11.aClass59_285 = Player.aClass59_2968;
 				Class12_Sub12_Sub11_Sub1.anInt2642 = 110;
 				Class64_Sub1.anInt1951 = 90;
 			}
@@ -923,7 +923,7 @@ public class Class12_Sub12_Sub3 extends Class12_Sub12 {
 											i_23_, (byte) -44);
 							}
 							for (int i_30_ = 0; Class9.anInt203 > i_30_; i_30_++) {
-								Class12_Sub12_Sub11_Sub2_Sub2 class12_sub12_sub11_sub2_sub2 = (Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[Class36.anIntArray888[i_30_]]);
+								Player class12_sub12_sub11_sub2_sub2 = (Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[Class36.anIntArray888[i_30_]]);
 								if (class12_sub12_sub11_sub2_sub2 != null
 										&& (((class12_sub12_sub11_sub2_sub2.anInt2691) ^ 0xffffffff) == ((class12_sub12_sub11_sub2_sub1.anInt2691) ^ 0xffffffff))
 										&& (class12_sub12_sub11_sub2_sub1.anInt2683 == (class12_sub12_sub11_sub2_sub2.anInt2683)))
@@ -941,7 +941,7 @@ public class Class12_Sub12_Sub3 extends Class12_Sub12 {
 								i_22_, i_25_, i_23_, (byte) -44);
 					}
 					if (i_24_ == 0) {
-						Class12_Sub12_Sub11_Sub2_Sub2 class12_sub12_sub11_sub2_sub2 = (Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[i_22_]);
+						Player class12_sub12_sub11_sub2_sub2 = (Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[i_22_]);
 						if (((0x7f & class12_sub12_sub11_sub2_sub2.anInt2691) == 64)
 								&& (class12_sub12_sub11_sub2_sub2.anInt2683 & 0x7f) == 64) {
 							for (int i_31_ = 0; Class62_Sub2.anInt1916 > i_31_; i_31_++) {
@@ -956,7 +956,7 @@ public class Class12_Sub12_Sub3 extends Class12_Sub12 {
 											i_23_, (byte) -44);
 							}
 							for (int i_32_ = 0; Class9.anInt203 > i_32_; i_32_++) {
-								Class12_Sub12_Sub11_Sub2_Sub2 class12_sub12_sub11_sub2_sub2_33_ = (Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[Class36.anIntArray888[i_32_]]);
+								Player class12_sub12_sub11_sub2_sub2_33_ = (Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[Class36.anIntArray888[i_32_]]);
 								if (class12_sub12_sub11_sub2_sub2_33_ != null
 										&& (class12_sub12_sub11_sub2_sub2_33_ != class12_sub12_sub11_sub2_sub2)
 										&& (class12_sub12_sub11_sub2_sub2.anInt2691 == (class12_sub12_sub11_sub2_sub2_33_.anInt2691))

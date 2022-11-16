@@ -102,7 +102,7 @@ public class Class38 {
 			anInt924++;
 			Class17.aClass27_424.method675(true);
 			Class44.aClass27_1046.method675(true);
-			Class12_Sub12_Sub11_Sub2_Sub2.aClass27_2961.method675(true);
+			Player.aClass27_2961.method675(true);
 			int i = 17 % ((65 - arg0) / 36);
 		} catch (RuntimeException runtimeexception) {
 			throw Class35.method724(runtimeexception, "mc.H(" + arg0 + ')');

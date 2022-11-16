@@ -65,7 +65,6 @@ public class Statics {
     public static int anInt1786;
     public static int anInt1788;
     public static int anInt1789;
-    public static int anInt1790;
     public static int anInt1791;
     public static int anInt1792;
     public static int anInt1793;
@@ -80,7 +79,6 @@ public class Statics {
     public static int anInt1804;
     public static int anInt1805;
     public static RSString aClass59_1806 = Class55.method898("(U3", -10983);
-    public static int anInt1807;
     public static int anInt1808;
     public static int anInt1810;
     public static int anInt1811;
@@ -170,11 +168,11 @@ public class Statics {
         try {
             if (arg0 != -12937)
                 anIntArrayArrayArray569 = null;
-            for (int i = 0; (Class47.anInt1094 ^ 0xffffffff) < (i ^ 0xffffffff); i++) {
+            for (int i = 0; i < Class47.anInt1094; i++) {
                 int i_10_ = Class10.anIntArray220[i];
                 Class12_Sub12_Sub11_Sub2_Sub1 class12_sub12_sub11_sub2_sub1 = Class7.aClass12_Sub12_Sub11_Sub2_Sub1Array1531[i_10_];
                 int i_11_ = Game.inBuffer.readUByte();
-                if ((0x8 & i_11_ ^ 0xffffffff) != -1) {
+                if ((0x8 & i_11_) != 0) {
                     int i_12_ = Game.inBuffer.readUByte();
                     int i_13_ = Game.inBuffer.readUByte();
                     class12_sub12_sub11_sub2_sub1.method448(
@@ -186,20 +184,20 @@ public class Statics {
                     class12_sub12_sub11_sub2_sub1.anInt2698 = Game.inBuffer
                             .getByteS(-762);
                 }
-                if ((i_11_ & 0x40 ^ 0xffffffff) != -1) {
+                if ((i_11_ & 0x40) != 0) {
                     int i_14_ = Game.inBuffer
                             .method236(-12543);
                     int i_15_ = Game.inBuffer.readUByte();
-                    if ((i_14_ ^ 0xffffffff) == -65536)
+                    if (i_14_ == 65535)
                         i_14_ = -1;
-                    if (((class12_sub12_sub11_sub2_sub1.anInt2734 ^ 0xffffffff) != (i_14_ ^ 0xffffffff))
-                            || (i_14_ ^ 0xffffffff) == 0) {
+                    if ((i_14_ != class12_sub12_sub11_sub2_sub1.anInt2734)
+                            || i_14_ == -1) {
                         if (i_14_ == -1
-                                || (class12_sub12_sub11_sub2_sub1.anInt2734 ^ 0xffffffff) == 0
-                                || ((Class5.method74(9, i_14_).anInt2194 ^ 0xffffffff) <= ((Class5
-                                        .method74(
-                                                9,
-                                                class12_sub12_sub11_sub2_sub1.anInt2734).anInt2194) ^ 0xffffffff))) {
+                                || class12_sub12_sub11_sub2_sub1.anInt2734 == -1
+                                || ((Class5
+                                .method74(
+                                        9,
+                                        class12_sub12_sub11_sub2_sub1.anInt2734).anInt2194) <= Class5.method74(9, i_14_).anInt2194)) {
                             class12_sub12_sub11_sub2_sub1.anInt2687 = 0;
                             class12_sub12_sub11_sub2_sub1.anInt2719 = i_15_;
                             class12_sub12_sub11_sub2_sub1.anInt2675 = 0;
@@ -225,7 +223,7 @@ public class Statics {
                     if (class12_sub12_sub11_sub2_sub1.anInt2694 == 65535)
                         class12_sub12_sub11_sub2_sub1.anInt2694 = -1;
                 }
-                if ((0x10 & i_11_ ^ 0xffffffff) != -1) {
+                if ((0x10 & i_11_) != 0) {
                     class12_sub12_sub11_sub2_sub1.aClass12_Sub12_Sub2_2923 = Class31
                             .method701((byte) -75,
                                     Game.inBuffer
@@ -238,12 +236,12 @@ public class Statics {
                     class12_sub12_sub11_sub2_sub1.anInt2681 = (class12_sub12_sub11_sub2_sub1.aClass12_Sub12_Sub2_2923.anInt2077);
                     class12_sub12_sub11_sub2_sub1.anInt2669 = (class12_sub12_sub11_sub2_sub1.aClass12_Sub12_Sub2_2923.anInt2068);
                 }
-                if ((0x80 & i_11_ ^ 0xffffffff) != -1) {
+                if ((0x80 & i_11_) != 0) {
                     class12_sub12_sub11_sub2_sub1.aClass59_2678 = Game.inBuffer
                             .method246(arg0 + 33293);
                     class12_sub12_sub11_sub2_sub1.anInt2701 = 100;
                 }
-                if ((0x1 & i_11_ ^ 0xffffffff) != -1) {
+                if ((0x1 & i_11_) != 0) {
                     int i_17_ = Game.inBuffer.readUByte();
                     int i_18_ = Game.inBuffer.readUByte();
                     class12_sub12_sub11_sub2_sub1.method448(
@@ -254,12 +252,12 @@ public class Statics {
                     class12_sub12_sub11_sub2_sub1.anInt2698 = Game.inBuffer
                             .getByteS(-762);
                 }
-                if ((i_11_ & 0x2 ^ 0xffffffff) != -1) {
+                if ((i_11_ & 0x2) != 0) {
                     class12_sub12_sub11_sub2_sub1.anInt2692 = Game.inBuffer
                             .readUShortLE();
                     int i_19_ = Game.inBuffer
                             .method210((byte) -6);
-                    class12_sub12_sub11_sub2_sub1.anInt2713 = i_19_ >> -1233350960;
+                    class12_sub12_sub11_sub2_sub1.anInt2713 = i_19_ >> 16;
                     class12_sub12_sub11_sub2_sub1.anInt2668 = Class64_Sub2.anInt1968
                             - -(i_19_ & 0xffff);
                     class12_sub12_sub11_sub2_sub1.anInt2673 = 0;
@@ -269,7 +267,7 @@ public class Statics {
                     if (Class64_Sub2.anInt1968 < class12_sub12_sub11_sub2_sub1.anInt2668)
                         class12_sub12_sub11_sub2_sub1.anInt2673 = -1;
                 }
-                if ((0x20 & i_11_ ^ 0xffffffff) != -1) {
+                if ((0x20 & i_11_) != 0) {
                     class12_sub12_sub11_sub2_sub1.anInt2690 = Game.inBuffer
                             .method236(arg0 + 394);
                     class12_sub12_sub11_sub2_sub1.anInt2672 = Game.inBuffer

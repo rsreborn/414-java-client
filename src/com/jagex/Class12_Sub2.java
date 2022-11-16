@@ -145,7 +145,7 @@ public class Class12_Sub2 extends Class12 {
 						}
 					}
 				} else if ((Class49.anInt1142 ^ 0xffffffff) < -1) {
-					Class15.anInt395 += Class12_Sub12_Sub11_Sub2_Sub2.anInt2976;
+					Class15.anInt395 += Player.anInt2976;
 					Class5.aClass64_158.method978(Class33.anInt825,
 							Class15.anInt395, (byte) -94);
 					Class49.anInt1142--;

@@ -28,7 +28,7 @@ public class Class12_Sub12_Sub12 extends Class12_Sub12 {
 	public static int anInt2419;
 
 	public static void method516(int arg0, byte arg1,
-			Class12_Sub12_Sub11_Sub2_Sub2 arg2, int arg3, int arg4) {
+                                 Player arg2, int arg3, int arg4) {
 		try {
 			anInt2406++;
 			if (Class12_Sub7.aClass12_Sub12_Sub11_Sub2_Sub2_1713 != arg2

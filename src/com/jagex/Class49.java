@@ -222,7 +222,7 @@ public class Class49 implements KeyListener, FocusListener {
 					}
 				}
 				for (int i_7_ = 0; (i_7_ ^ 0xffffffff) > -2049; i_7_++) {
-					Class12_Sub12_Sub11_Sub2_Sub2 class12_sub12_sub11_sub2_sub2 = (Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[i_7_]);
+					Player class12_sub12_sub11_sub2_sub2 = (Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[i_7_]);
 					if (class12_sub12_sub11_sub2_sub2 != null) {
 						for (int i_8_ = 0; (i_8_ ^ 0xffffffff) > -11; i_8_++) {
 							class12_sub12_sub11_sub2_sub2.anIntArray2708[i_8_] -= i_4_;

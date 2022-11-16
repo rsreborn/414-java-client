@@ -185,14 +185,14 @@ public class Class12_Sub12_Sub9 extends Class12_Sub12 {
 			else
 				l = (long) ((arg4 << 1352446563) + (anInt2316 << -1507496150) + arg2);
 			int i = 92 / ((52 - arg5) / 33);
-			Class12_Sub12_Sub11_Sub4 class12_sub12_sub11_sub4 = ((Class12_Sub12_Sub11_Sub4) Class12_Sub12_Sub11_Sub2_Sub2.aClass27_2961
+			Class12_Sub12_Sub11_Sub4 class12_sub12_sub11_sub4 = ((Class12_Sub12_Sub11_Sub4) Player.aClass27_2961
 					.method673(108, l));
 			if (class12_sub12_sub11_sub4 == null) {
 				class12_sub12_sub11_sub4 = method427(false, arg4, true, arg2,
 						true);
 				if (class12_sub12_sub11_sub4 == null)
 					return null;
-				Class12_Sub12_Sub11_Sub2_Sub2.aClass27_2961.method678(
+				Player.aClass27_2961.method678(
 						(byte) 123, class12_sub12_sub11_sub4, l);
 			}
 			if (arg3 == null && !aBoolean2322)

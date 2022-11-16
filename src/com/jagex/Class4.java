@@ -295,7 +295,7 @@ public class Class4 {
 					return true;
 				}
 				if (Class57.anInt1334 == 225) {
-					Class62_Sub2.method965((byte) 124);
+					Class62_Sub2.updatePlayers((byte) 124);
 					Class57.anInt1334 = -1;
 					return true;
 				}

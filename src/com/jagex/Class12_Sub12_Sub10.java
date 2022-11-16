@@ -112,7 +112,7 @@ public class Class12_Sub12_Sub10 extends Class12_Sub12 {
 						i_0_ = 2047;
 					else
 						i_0_ = Class36.anIntArray888[i];
-					Class12_Sub12_Sub11_Sub2_Sub2 class12_sub12_sub11_sub2_sub2 = (Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[i_0_]);
+					Player class12_sub12_sub11_sub2_sub2 = (Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[i_0_]);
 					if (class12_sub12_sub11_sub2_sub2 != null
 							&& class12_sub12_sub11_sub2_sub2.anInt2701 > 0) {
 						class12_sub12_sub11_sub2_sub2.anInt2701--;

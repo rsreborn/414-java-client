@@ -116,7 +116,7 @@ public class Class12_Sub12_Sub11_Sub1 extends Class12_Sub12_Sub11 {
 						}
 					} else {
 						int i_1_ = 30;
-						Class12_Sub12_Sub11_Sub2_Sub2 class12_sub12_sub11_sub2_sub2 = ((Class12_Sub12_Sub11_Sub2_Sub2) class12_sub12_sub11_sub2);
+						Player class12_sub12_sub11_sub2_sub2 = ((Player) class12_sub12_sub11_sub2);
 						if ((class12_sub12_sub11_sub2_sub2.anInt2957 ^ 0xffffffff) != 0
 								|| class12_sub12_sub11_sub2_sub2.anInt2941 != -1) {
 							Class12_Sub12_Sub5.method320(
@@ -160,7 +160,7 @@ public class Class12_Sub12_Sub11_Sub1 extends Class12_Sub12_Sub11 {
 									|| Class31.anInt757 == 3 || ((Class31.anInt757 ^ 0xffffffff) == -2 && (Class12_Sub12_Sub11_Sub5
 									.method506(
 											69,
-											(((Class12_Sub12_Sub11_Sub2_Sub2) class12_sub12_sub11_sub2).aClass59_2951)))))) {
+											(((Player) class12_sub12_sub11_sub2).aClass59_2951)))))) {
 						Class12_Sub12_Sub5.method320(class12_sub12_sub11_sub2,
 								(class12_sub12_sub11_sub2.anInt2725),
 								(byte) 123);

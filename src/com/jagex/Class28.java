@@ -46,7 +46,7 @@ public class Class28 implements Runnable {
 		}
 	}
 
-	public static void method682(byte arg0) {
+	public static void registerNewPlayers(byte arg0) {
 		anInt675++;
 		while ((Game.inBuffer.getRemainingBits(Class5.anInt159
 		) ^ 0xffffffff) <= -12) {
@@ -54,14 +54,14 @@ public class Class28 implements Runnable {
 			if (i == 2047)
 				break;
 			if (Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[i] == null) {
-				Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[i] = new Class12_Sub12_Sub11_Sub2_Sub2();
+				Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[i] = new Player();
 				if (Class9_Sub2.aClass12_Sub11Array1589[i] != null)
 					Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[i]
-							.method462(Class9_Sub2.aClass12_Sub11Array1589[i],
+							.syncAppearance(Class9_Sub2.aClass12_Sub11Array1589[i],
 									false);
 			}
 			Class36.anIntArray888[Class9.anInt203++] = i;
-			Class12_Sub12_Sub11_Sub2_Sub2 class12_sub12_sub11_sub2_sub2 = Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[i];
+			Player class12_sub12_sub11_sub2_sub2 = Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[i];
 			class12_sub12_sub11_sub2_sub2.anInt2663 = Class64_Sub2.anInt1968;
 			int i_0_ = Game.inBuffer.readBits(1);
 			if ((i_0_ ^ 0xffffffff) == -2)

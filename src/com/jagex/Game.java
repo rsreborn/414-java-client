@@ -770,7 +770,7 @@ public class Game extends RSApplet {
 			Class12_Sub12_Sub7_Sub4.method390();
 			Class52.method821();
 			Class10.method124(true);
-			Class12_Sub12_Sub11_Sub2_Sub2.method463(arg0 + 12);
+			Player.method463(arg0 + 12);
 			Class8.method92((byte) -90);
 			Class12_Sub12_Sub3.method299((byte) -118);
 			Class33.method715((byte) 111);

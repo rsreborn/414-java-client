@@ -619,7 +619,7 @@ public class Class42 {
 					int i_95_ = i_94_ >> -1762634078;
 					int i_96_ = RSCanvas.anIntArray63[i_95_];
 					int i_97_ = Game.inBuffer.method228(true);
-					Class12_Sub12_Sub11_Sub2_Sub2 class12_sub12_sub11_sub2_sub2;
+					Player class12_sub12_sub11_sub2_sub2;
 					if ((Class12_Sub9.anInt1751 ^ 0xffffffff) != (i_87_ ^ 0xffffffff))
 						class12_sub12_sub11_sub2_sub2 = (Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[i_87_]);
 					else

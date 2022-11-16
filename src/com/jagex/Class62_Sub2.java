@@ -202,16 +202,16 @@ public class Class62_Sub2 extends Class62 implements ImageProducer,
 		}
 	}
 
-	public static void method965(byte arg0) {
+	public static void updatePlayers(byte arg0) {
 		try {
 			Class47.anInt1094 = 0;
 			int i = 92 / ((52 - arg0) / 40);
 			Class11.anInt287 = 0;
 			anInt1911++;
-			Class12_Sub12_Sub5.method318(7);
-			Class64_Sub2.method999(14015);
-			Class28.method682((byte) -126);
-			Class9.method109((byte) 109);
+			Class12_Sub12_Sub5.parsePlayerMovement(7);
+			Class64_Sub2.parseTrackedPlayerMovement(14015);
+			Class28.registerNewPlayers((byte) -126);
+			Class9.parseTrackedPlayerUpdateMasks((byte) 109);
 			for (int i_0_ = 0; (Class11.anInt287 ^ 0xffffffff) < (i_0_ ^ 0xffffffff); i_0_++) {
 				int i_1_ = Statics.anIntArray1833[i_0_];
 				if (((Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[i_1_].anInt2663) ^ 0xffffffff) != (Class64_Sub2.anInt1968 ^ 0xffffffff))

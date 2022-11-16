@@ -448,13 +448,13 @@ public class Class8 {
 						arg0 = 1;
 					Class49.anInt1142 = arg0;
 					if ((Class33.anInt825 ^ 0xffffffff) == -1)
-						Class12_Sub12_Sub11_Sub2_Sub2.anInt2976 = 0;
+						Player.anInt2976 = 0;
 					else {
 						int i = RuntimeException_Sub1.method1003(
 								(Class33.anInt825), (arg1 ^ 0xffffffff));
 						i -= Class15.anInt395;
-						Class12_Sub12_Sub11_Sub2_Sub2.anInt2976 = ((-1
-								+ Class12_Sub12_Sub11_Sub2_Sub2.anInt2976 + (i + 3600)) / Class12_Sub12_Sub11_Sub2_Sub2.anInt2976);
+						Player.anInt2976 = ((-1
+								+ Player.anInt2976 + (i + 3600)) / Player.anInt2976);
 					}
 					Class33.aBoolean822 = arg2;
 					Class27.aByteArray655 = arg3;
