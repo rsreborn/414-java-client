@@ -222,15 +222,15 @@ public class Class12_Sub12_Sub14 extends Class12_Sub12 {
 		try {
 			if (arg1 == -51) {
 				if (arg2 == 1)
-					anInt2459 = arg0.readShort(-1);
+					anInt2459 = arg0.readShortBE();
 				else if (arg2 == 2)
-					anInt2449 = arg0.readShort(-1);
+					anInt2449 = arg0.readShortBE();
 				else if (arg2 == 4)
-					anInt2448 = arg0.readShort(-1);
+					anInt2448 = arg0.readShortBE();
 				else if (arg2 == 5)
-					anInt2458 = arg0.readShort(-1);
+					anInt2458 = arg0.readShortBE();
 				else if ((arg2 ^ 0xffffffff) == -7)
-					anInt2466 = arg0.readShort(-1);
+					anInt2466 = arg0.readShortBE();
 				else if ((arg2 ^ 0xffffffff) == -8)
 					anInt2467 = arg0.readUByte();
 				else if ((arg2 ^ 0xffffffff) == -9)
@@ -238,10 +238,9 @@ public class Class12_Sub12_Sub14 extends Class12_Sub12 {
 				else if ((arg2 ^ 0xffffffff) > -41
 						|| (arg2 ^ 0xffffffff) <= -51) {
 					if (arg2 >= 50 && arg2 < 60)
-						anIntArray2463[-50 + arg2] = arg0.readShort(Class21
-								.method609(arg1, 50));
+						anIntArray2463[-50 + arg2] = arg0.readShortBE();
 				} else
-					anIntArray2460[arg2 - 40] = arg0.readShort(-1);
+					anIntArray2460[arg2 - 40] = arg0.readShortBE();
 				anInt2453++;
 			}
 		} catch (RuntimeException runtimeexception) {

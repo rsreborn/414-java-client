@@ -71,8 +71,8 @@ public class Class3 {
 		}
 		anInt105 = arg0.method231(false);
 		anInt117 = arg0.method231(false);
-		anInt107 = arg0.readShort(-1);
-		anInt99 = arg0.readShort(-1);
+		anInt107 = arg0.readShortBE();
+		anInt99 = arg0.readShortBE();
 		aClass45_109 = new Class45();
 		aClass6_116 = new Class6();
 		aClass45_109.method783(arg0, aClass6_116);

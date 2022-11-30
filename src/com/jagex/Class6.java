@@ -44,8 +44,8 @@ public class Class6 {
 		anIntArray164 = new int[anInt167];
 		anIntArray163 = new int[anInt167];
 		for (int i = 0; i < anInt167; i++) {
-			anIntArray164[i] = arg0.readShort(-1);
-			anIntArray163[i] = arg0.readShort(-1);
+			anIntArray164[i] = arg0.readShortBE();
+			anIntArray163[i] = arg0.readShortBE();
 		}
 	}
 

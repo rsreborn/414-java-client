@@ -85,14 +85,14 @@ public class Class12_Sub10 extends Class12 {
 	}
 
 	public Class12_Sub10(Buffer arg0) {
-		anInt1762 = arg0.readShort(-1);
+		anInt1762 = arg0.readShortBE();
 		aBoolean1763 = arg0.readUByte() == 1;
 		int i = arg0.readUByte();
 		if (i < 1 || i > 4)
 			throw new RuntimeException();
 		anIntArray1770 = new int[i];
 		for (int i_12_ = 0; i_12_ < i; i_12_++)
-			anIntArray1770[i_12_] = arg0.readShort(-1);
+			anIntArray1770[i_12_] = arg0.readShortBE();
 		if (i > 1) {
 			anIntArray1766 = new int[i - 1];
 			for (int i_13_ = 0; i_13_ < i - 1; i_13_++)

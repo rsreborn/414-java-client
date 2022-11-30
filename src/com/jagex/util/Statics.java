@@ -55,7 +55,6 @@ public class Statics {
     public static int anInt1773;
     public static int anInt1774;
     public static int anInt1775;
-    public static int anInt1776;
     public static int anInt1777;
     public static int anInt1779;
     public static int anInt1780;
@@ -80,7 +79,6 @@ public class Statics {
     public static int anInt1805;
     public static RSString aClass59_1806 = Class55.method898("(U3", -10983);
     public static int anInt1808;
-    public static int anInt1810;
     public static int anInt1811;
     public static int anInt1812;
     public static int anInt1813;
@@ -271,7 +269,7 @@ public class Statics {
                     class12_sub12_sub11_sub2_sub1.anInt2690 = Game.inBuffer
                             .method236(arg0 + 394);
                     class12_sub12_sub11_sub2_sub1.anInt2672 = Game.inBuffer
-                            .readShort(arg0 ^ 0x3288);
+                            .readShortBE();
                 }
             }
             anInt575++;

@@ -455,9 +455,9 @@ public class Class12_Sub12_Sub2 extends Class12_Sub12 {
 				else if (arg0 == 12)
 					anInt2097 = arg1.readUByte();
 				else if (arg0 == 13)
-					anInt2077 = arg1.readShort(arg2 ^ 0x24dd);
+					anInt2077 = arg1.readShortBE();
 				else if ((arg0 ^ 0xffffffff) == -15)
-					anInt2100 = arg1.readShort(-1);
+					anInt2100 = arg1.readShortBE();
 				else if (arg0 != 17) {
 					if (arg0 >= 30 && arg0 < 35) {
 						aClass59Array2072[arg0 - 30] = arg1
@@ -470,9 +470,9 @@ public class Class12_Sub12_Sub2 extends Class12_Sub12 {
 							if ((arg0 ^ 0xffffffff) != -94) {
 								if (arg0 != 95) {
 									if (arg0 == 97)
-										anInt2064 = arg1.readShort(-1);
+										anInt2064 = arg1.readShortBE();
 									else if (arg0 == 98)
-										anInt2096 = arg1.readShort(-1);
+										anInt2096 = arg1.readShortBE();
 									else if ((arg0 ^ 0xffffffff) != -100) {
 										if (arg0 == 100)
 											anInt2093 = arg1.readByte(true);
@@ -480,22 +480,22 @@ public class Class12_Sub12_Sub2 extends Class12_Sub12 {
 											anInt2085 = 5 * arg1
 													.readByte(true);
 										else if (arg0 == 102)
-											anInt2069 = arg1.readShort(-1);
+											anInt2069 = arg1.readShortBE();
 										else if ((arg0 ^ 0xffffffff) == -104)
 											anInt2068 = arg1
-													.readShort(arg2 ^ 0x24dd);
+													.readShortBE();
 										else if (arg0 == 106) {
-											anInt2060 = arg1.readShort(-1);
+											anInt2060 = arg1.readShortBE();
 											if (anInt2060 == 65535)
 												anInt2060 = -1;
-											anInt2062 = arg1.readShort(-1);
+											anInt2062 = arg1.readShortBE();
 											if (anInt2062 == 65535)
 												anInt2062 = -1;
 											int i = arg1.readUByte();
 											anIntArray2063 = new int[i + 1];
 											for (int i_11_ = 0; i >= i_11_; i_11_++) {
 												anIntArray2063[i_11_] = arg1
-														.readShort(-1);
+														.readShortBE();
 												if (anIntArray2063[i_11_] == 65535)
 													anIntArray2063[i_11_] = -1;
 											}
@@ -504,36 +504,35 @@ public class Class12_Sub12_Sub2 extends Class12_Sub12 {
 									} else
 										aBoolean2079 = true;
 								} else
-									anInt2088 = arg1.readShort(-1);
+									anInt2088 = arg1.readShortBE();
 							} else
 								aBoolean2082 = false;
 						} else {
 							int i = arg1.readUByte();
 							anIntArray2101 = new int[i];
 							for (int i_12_ = 0; i > i_12_; i_12_++)
-								anIntArray2101[i_12_] = arg1.readShort(-1);
+								anIntArray2101[i_12_] = arg1.readShortBE();
 						}
 					} else {
 						int i = arg1.readUByte();
 						anIntArray2103 = new int[i];
 						anIntArray2083 = new int[i];
 						for (int i_13_ = 0; (i_13_ ^ 0xffffffff) > (i ^ 0xffffffff); i_13_++) {
-							anIntArray2083[i_13_] = arg1.readShort(Class21
-									.method609(arg2, 9437));
-							anIntArray2103[i_13_] = arg1.readShort(-1);
+							anIntArray2083[i_13_] = arg1.readShortBE();
+							anIntArray2103[i_13_] = arg1.readShortBE();
 						}
 					}
 				} else {
-					anInt2100 = arg1.readShort(arg2 + 9437);
-					anInt2080 = arg1.readShort(-1);
-					anInt2058 = arg1.readShort(arg2 + 9437);
-					anInt2092 = arg1.readShort(-1);
+					anInt2100 = arg1.readShortBE();
+					anInt2080 = arg1.readShortBE();
+					anInt2058 = arg1.readShortBE();
+					anInt2092 = arg1.readShortBE();
 				}
 			} else {
 				int i = arg1.readUByte();
 				anIntArray2076 = new int[i];
 				for (int i_14_ = 0; i_14_ < i; i_14_++)
-					anIntArray2076[i_14_] = arg1.readShort(arg2 + 9437);
+					anIntArray2076[i_14_] = arg1.readShortBE();
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw Class35.method724(runtimeexception, ("cc.D(" + arg0 + ','

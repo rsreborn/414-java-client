@@ -76,7 +76,6 @@ public class Class18 {
 			Class12_Sub12_Sub11_Sub5.anInt2853 = 0;
 			Class13.anInt342 = 0;
 			Class12_Sub12_Sub15.anInt2471 = 0;
-			Statics.anInt1776 = 0;
 			Class14.anInt377 = 0;
 			RSString.anInt1489 = 0;
 			Class15.anInt393 = 0;
@@ -689,7 +688,6 @@ public class Class18 {
 			Class12_Sub12_Sub11_Sub2.anInt2695 = 0;
 			Class12_Sub12_Sub11_Sub6.anInt2890 = 0;
 			Class12_Sub12_Sub11_Sub2.anInt2715 = 0;
-			Statics.anInt1810 = 0;
 			Class64_Sub1.anInt1940 = 0;
 			RSApplet.anInt30 = 0;
 			Class12_Sub12_Sub1.anInt2053 = 0;

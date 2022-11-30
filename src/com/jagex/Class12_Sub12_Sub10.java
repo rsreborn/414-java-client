@@ -58,7 +58,7 @@ public class Class12_Sub12_Sub10 extends Class12_Sub12 {
 			anInt2380 = 122;
 		anInt2379++;
 		if (arg1 == 1) {
-			anInt2373 = arg0.readShort(-1);
+			anInt2373 = arg0.readShortBE();
 			anInt2382 = arg0.readUByte();
 			anInt2380 = arg0.readUByte();
 		}

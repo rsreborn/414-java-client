@@ -260,7 +260,7 @@ public class Class1 {
 					Buffer class12_sub11 = new Buffer(4);
 					class12_sub11.writeByte(4);
 					class12_sub11.writeByte(Class15.aByte398);
-					class12_sub11.method247((byte) 91, 0);
+					class12_sub11.writeShortBE(0);
 					Class48.aClass24_1124.method622(
 							class12_sub11.payload, 4, 0, true);
 				} catch (java.io.IOException ioexception) {

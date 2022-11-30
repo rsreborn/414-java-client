@@ -82,8 +82,8 @@ public class Class34 {
 				aClass3Array832[i].method64(arg0);
 			}
 		}
-		anInt831 = arg0.readShort(-1);
-		anInt830 = arg0.readShort(-1);
+		anInt831 = arg0.readShortBE();
+		anInt830 = arg0.readShortBE();
 	}
 
 	public Class34() {

@@ -222,7 +222,7 @@ public class Class23 {
 			player.syncAppearance(class12_sub11, false);
 		}
 		if ((arg1 & 0x4) != 0) {
-			int i = Game.inBuffer.readShort(arg2 + -256); // short the colour and effect
+			int i = Game.inBuffer.readShortBE(); // short the colour and effect
 			int i_3_ = Game.inBuffer.readUByteA(); // right
 			int i_4_ = Game.inBuffer.readUByte();
 			int i_5_ = Game.inBuffer.position;

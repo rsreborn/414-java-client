@@ -251,7 +251,7 @@ public class Class12_Sub12_Sub16 extends Class12_Sub12 {
 	public void method560(int arg0, int arg1, Buffer arg2) {
 		try {
 			if ((arg1 ^ 0xffffffff) == -6)
-				anInt2551 = arg2.readShort(-1);
+				anInt2551 = arg2.readShortBE();
 			if (arg0 <= -83)
 				anInt2546++;
 		} catch (RuntimeException runtimeexception) {

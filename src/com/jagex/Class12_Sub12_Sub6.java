@@ -130,16 +130,16 @@ public class Class12_Sub12_Sub6 extends Class12_Sub12 {
 					if ((arg2 ^ 0xffffffff) > -51 || arg2 >= 60) {
 						if ((arg2 ^ 0xffffffff) <= -61
 								&& (arg2 ^ 0xffffffff) > -71)
-							anIntArray2274[-60 + arg2] = arg1.readShort(-1);
+							anIntArray2274[-60 + arg2] = arg1.readShortBE();
 					} else
-						anIntArray2270[-50 + arg2] = arg1.readShort(-1);
+						anIntArray2270[-50 + arg2] = arg1.readShortBE();
 				} else
-					anIntArray2261[-40 + arg2] = arg1.readShort(-1);
+					anIntArray2261[-40 + arg2] = arg1.readShortBE();
 			} else {
 				int i = arg1.readUByte();
 				anIntArray2275 = new int[i];
 				for (int i_3_ = 0; i > i_3_; i_3_++)
-					anIntArray2275[i_3_] = arg1.readShort(-1);
+					anIntArray2275[i_3_] = arg1.readShortBE();
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw Class35.method724(runtimeexception, ("j.L(" + arg0 + ','

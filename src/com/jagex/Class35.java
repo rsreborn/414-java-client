@@ -105,7 +105,7 @@ public class Class35 {
 			anInt834++;
 			Buffer class12_sub11 = new Buffer(arg1);
 			class12_sub11.position = arg1.length - 2;
-			Class12_Sub12.anInt1838 = class12_sub11.readShort(-1);
+			Class12_Sub12.anInt1838 = class12_sub11.readShortBE();
 			Class44.anIntArray1027 = new int[Class12_Sub12.anInt1838];
 			Class55.anIntArray1313 = new int[Class12_Sub12.anInt1838];
 			Class57.anIntArray1337 = new int[Class12_Sub12.anInt1838];
@@ -113,21 +113,20 @@ public class Class35 {
 			Class32.anIntArray778 = new int[Class12_Sub12.anInt1838];
 			class12_sub11.position = -(8 * Class12_Sub12.anInt1838) + -7
 					+ arg1.length;
-			Class1.anInt81 = class12_sub11.readShort(-1);
-			Class12_Sub2.anInt1654 = class12_sub11.readShort(-1);
+			Class1.anInt81 = class12_sub11.readShortBE();
+			Class12_Sub2.anInt1654 = class12_sub11.readShortBE();
 			int i = (0xff & class12_sub11.readUByte()) - -1;
 			for (int i_0_ = 0; (Class12_Sub12.anInt1838 ^ 0xffffffff) < (i_0_ ^ 0xffffffff); i_0_++)
-				Class57.anIntArray1337[i_0_] = class12_sub11.readShort(Class21
-						.method609(arg0, -24508));
+				Class57.anIntArray1337[i_0_] = class12_sub11.readShortBE();
 			for (int i_1_ = 0; (i_1_ ^ 0xffffffff) > (Class12_Sub12.anInt1838 ^ 0xffffffff); i_1_++)
-				Class32.anIntArray778[i_1_] = class12_sub11.readShort(-1);
+				Class32.anIntArray778[i_1_] = class12_sub11.readShortBE();
 			for (int i_2_ = 0; i_2_ < Class12_Sub12.anInt1838; i_2_++)
-				Class55.anIntArray1313[i_2_] = class12_sub11.readShort(-1);
+				Class55.anIntArray1313[i_2_] = class12_sub11.readShortBE();
 			int i_3_ = 0;
 			if (arg0 != 24507)
 				anInt849 = 58;
 			for (/**/; (Class12_Sub12.anInt1838 ^ 0xffffffff) < (i_3_ ^ 0xffffffff); i_3_++)
-				Class44.anIntArray1027[i_3_] = class12_sub11.readShort(-1);
+				Class44.anIntArray1027[i_3_] = class12_sub11.readShortBE();
 			class12_sub11.position = -(Class12_Sub12.anInt1838 * 8)
 					+ arg1.length - (7 - -((i - 1) * 3));
 			Class15.anIntArray385 = new int[i];

@@ -266,7 +266,7 @@ public class Game extends RSApplet {
 							inBuffer.payload, 0);
 					inBuffer.position = 0;
 					Class5.anInt159 = inBuffer
-							.readShort(-1);
+							.readShortBE();
 					loginState = 10;
 				}
 				if (loginState == 10) {

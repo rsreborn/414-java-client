@@ -398,7 +398,7 @@ public class Class42 {
 			int i = Game.inBuffer.readUByte();
 			int i_28_ = Class19.anInt456 + ((i & 0x72) >> -294562300);
 			int i_29_ = Class40.anInt949 + (0x7 & i);
-			int i_30_ = Game.inBuffer.readShort(-1);
+			int i_30_ = Game.inBuffer.readShortBE();
 			int i_31_ = Game.inBuffer.readUByte();
 			int i_32_ = i_31_ >> -1972947132 & 0xf;
 			int i_33_ = 0x7 & i_31_;
@@ -501,11 +501,11 @@ public class Class42 {
 					- -Game.inBuffer.readByte(true);
 			int i_55_ = Game.inBuffer.readByte(true) + i_53_;
 			int i_56_ = Game.inBuffer.method212((byte) -66);
-			int i_57_ = Game.inBuffer.readShort(-1);
+			int i_57_ = Game.inBuffer.readShortBE();
 			int i_58_ = 4 * Game.inBuffer.readUByte();
 			int i_59_ = 4 * Game.inBuffer.readUByte();
-			int i_60_ = Game.inBuffer.readShort(-1);
-			int i_61_ = Game.inBuffer.readShort(-1);
+			int i_60_ = Game.inBuffer.readShortBE();
+			int i_61_ = Game.inBuffer.readShortBE();
 			int i_62_ = Game.inBuffer.readUByte();
 			int i_63_ = Game.inBuffer.readUByte();
 			if ((i_52_ ^ 0xffffffff) <= -1 && i_53_ >= 0
@@ -533,7 +533,7 @@ public class Class42 {
 			}
 		} else if ((Class57.anInt1334 ^ 0xffffffff) == -109) {
 			int i = Game.inBuffer.method236(-12543);
-			int i_64_ = Game.inBuffer.readShort(-1);
+			int i_64_ = Game.inBuffer.readShortBE();
 			int i_65_ = Game.inBuffer.method236(-12543);
 			int i_66_ = Game.inBuffer.readUByteA();
 			int i_67_ = Class19.anInt456 + (i_66_ >> -138874716 & 0x7);
@@ -568,9 +568,9 @@ public class Class42 {
 				int i = Game.inBuffer.readUByte();
 				int i_76_ = (i & 0x7) + Class40.anInt949;
 				int i_77_ = ((i & 0x70) >> 172045476) + Class19.anInt456;
-				int i_78_ = Game.inBuffer.readShort(-1);
+				int i_78_ = Game.inBuffer.readShortBE();
 				int i_79_ = Game.inBuffer.readUByte();
-				int i_80_ = Game.inBuffer.readShort(-1);
+				int i_80_ = Game.inBuffer.readShortBE();
 				if ((i_77_ ^ 0xffffffff) <= -1 && i_76_ >= 0
 						&& (i_77_ ^ 0xffffffff) > -105 && i_76_ < 104) {
 					i_76_ = i_76_ * 128 + 64;
@@ -687,9 +687,9 @@ public class Class42 {
 					int i = Game.inBuffer.readUByte();
 					int i_107_ = Class40.anInt949 + (i & 0x7);
 					int i_108_ = (0x7 & i >> 224019652) + Class19.anInt456;
-					int i_109_ = Game.inBuffer.readShort(-1);
-					int i_110_ = Game.inBuffer.readShort(-1);
-					int i_111_ = Game.inBuffer.readShort(-1);
+					int i_109_ = Game.inBuffer.readShortBE();
+					int i_110_ = Game.inBuffer.readShortBE();
+					int i_111_ = Game.inBuffer.readShortBE();
 					if ((i_108_ ^ 0xffffffff) <= -1 && i_107_ >= 0
 							&& (i_108_ ^ 0xffffffff) > -105 && i_107_ < 104) {
 						Class8 class8 = (Class9_Sub2.aClass8ArrayArrayArray1584[RSString.anInt1504][i_108_][i_107_]);

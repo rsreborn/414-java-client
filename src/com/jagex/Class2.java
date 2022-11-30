@@ -72,8 +72,8 @@ public class Class2 {
 	public void method52(byte[] arg0) {
 		aClass12_Sub11_91.payload = arg0;
 		aClass12_Sub11_91.position = 10;
-		int i = aClass12_Sub11_91.readShort(-1);
-		anInt93 = aClass12_Sub11_91.readShort(-1);
+		int i = aClass12_Sub11_91.readShortBE();
+		anInt93 = aClass12_Sub11_91.readShortBE();
 		anInt98 = 500000;
 		anIntArray97 = new int[i];
 		int i_2_ = 0;

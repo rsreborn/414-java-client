@@ -375,17 +375,13 @@ public class Class64_Sub2 extends Class64 {
 				Class29.anInt711 = Class57.anIntArray1333[0];
 				for (int i_20_ = 1; i_6_ > i_20_; i_20_++) {
 					i_5_--;
-					Game.outBuffer.method208(-i_18_
-							+ Class12_Sub12_Sub15.anIntArray2507[i_5_], false);
-					Game.outBuffer.method232(false,
-							Class57.anIntArray1333[i_5_] - i_19_);
+					Game.outBuffer.writeByte(-i_18_ + Class12_Sub12_Sub15.anIntArray2507[i_5_]);
+					Game.outBuffer.writeByte(Class57.anIntArray1333[i_5_] - i_19_);
 				}
-				Game.outBuffer.method249(
-						!(Class12_Sub1.aBooleanArray1627[82]) ? 0 : 1, 255);
-				Game.outBuffer.method241(96, Class8.anInt174
-						+ i_19_);
-				Game.outBuffer.method235(i_18_
-						+ Class64.anInt1451, (byte) 94);
+				Game.outBuffer.writeByte(
+						!(Class12_Sub1.aBooleanArray1627[82]) ? 0 : 1);
+				Game.outBuffer.writeShortLE(Class8.anInt174 + i_19_);
+				Game.outBuffer.writeShortBE(i_18_ + Class64.anInt1451);
 				return true;
 			}
 			if (arg5 == 1)

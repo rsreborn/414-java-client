@@ -48,8 +48,7 @@ public class Class28 implements Runnable {
 
 	public static void registerNewPlayers(byte arg0) {
 		anInt675++;
-		while ((Game.inBuffer.getRemainingBits(Class5.anInt159
-		) ^ 0xffffffff) <= -12) {
+		while (Game.inBuffer.getRemainingBits(Class5.anInt159) >= 11) {
 			int i = Game.inBuffer.readBits(11);
 			if (i == 2047)
 				break;
@@ -64,10 +63,10 @@ public class Class28 implements Runnable {
 			Player class12_sub12_sub11_sub2_sub2 = Class63.aClass12_Sub12_Sub11_Sub2_Sub2Array1398[i];
 			class12_sub12_sub11_sub2_sub2.anInt2663 = Class64_Sub2.anInt1968;
 			int i_0_ = Game.inBuffer.readBits(1);
-			if ((i_0_ ^ 0xffffffff) == -2)
+			if (i_0_ == 1)
 				Class10.anIntArray220[Class47.anInt1094++] = i;
 			int i_1_ = Game.inBuffer.readBits(5);
-			if ((i_1_ ^ 0xffffffff) < -16)
+			if (i_1_ > 15)
 				i_1_ -= 32;
 			int i_2_ = Game.inBuffer.readBits(1);
 			int i_3_ = Game.inBuffer.readBits(5);
@@ -77,7 +76,7 @@ public class Class28 implements Runnable {
 					.method453(
 							(Class12_Sub7.aClass12_Sub12_Sub11_Sub2_Sub2_1713.anIntArray2671[0])
 									+ i_3_,
-							(i_2_ ^ 0xffffffff) == -2,
+							i_2_ == 1,
 							false,
 							i_1_
 									+ (Class12_Sub7.aClass12_Sub12_Sub11_Sub2_Sub2_1713.anIntArray2708[0]));

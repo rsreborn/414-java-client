@@ -1447,18 +1447,18 @@ public class Class12_Sub12_Sub11_Sub4 extends Class12_Sub12_Sub11 {
 		Buffer class12_sub11_243_ = new Buffer(arg0);
 		Buffer class12_sub11_244_ = new Buffer(arg0);
 		class12_sub11.position = arg0.length - 18;
-		int i = class12_sub11.readShort(-1);
-		int i_245_ = class12_sub11.readShort(-1);
+		int i = class12_sub11.readShortBE();
+		int i_245_ = class12_sub11.readShortBE();
 		int i_246_ = class12_sub11.readUByte();
 		int i_247_ = class12_sub11.readUByte();
 		int i_248_ = class12_sub11.readUByte();
 		int i_249_ = class12_sub11.readUByte();
 		int i_250_ = class12_sub11.readUByte();
 		int i_251_ = class12_sub11.readUByte();
-		int i_252_ = class12_sub11.readShort(-1);
-		int i_253_ = class12_sub11.readShort(-1);
-		int i_254_ = class12_sub11.readShort(-1);
-		int i_255_ = class12_sub11.readShort(-1);
+		int i_252_ = class12_sub11.readShortBE();
+		int i_253_ = class12_sub11.readShortBE();
+		int i_254_ = class12_sub11.readShortBE();
+		int i_255_ = class12_sub11.readShortBE();
 		int i_256_ = 0;
 		int i_257_ = i_256_;
 		i_256_ += i;
@@ -1560,7 +1560,7 @@ public class Class12_Sub12_Sub11_Sub4 extends Class12_Sub12_Sub11 {
 		class12_sub11_243_.position = i_263_;
 		class12_sub11_244_.position = i_260_;
 		for (int i_278_ = 0; i_278_ < i_245_; i_278_++) {
-			anIntArray2792[i_278_] = class12_sub11.readShort(-1);
+			anIntArray2792[i_278_] = class12_sub11.readShortBE();
 			if (anIntArray2805 != null)
 				anIntArray2805[i_278_] = class12_sub11_241_.readUByte();
 			if (anIntArray2778 != null)
@@ -1618,9 +1618,9 @@ public class Class12_Sub12_Sub11_Sub4 extends Class12_Sub12_Sub11 {
 		}
 		class12_sub11.position = i_266_;
 		for (int i_286_ = 0; i_286_ < i_246_; i_286_++) {
-			anIntArray2806[i_286_] = class12_sub11.readShort(-1);
-			anIntArray2797[i_286_] = class12_sub11.readShort(-1);
-			anIntArray2784[i_286_] = class12_sub11.readShort(-1);
+			anIntArray2806[i_286_] = class12_sub11.readShortBE();
+			anIntArray2797[i_286_] = class12_sub11.readShortBE();
+			anIntArray2784[i_286_] = class12_sub11.readShortBE();
 		}
 	}
 

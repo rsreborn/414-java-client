@@ -151,8 +151,7 @@ public abstract class Class9 {
 											i_10_ += 32;
 											i_9_ += 32;
 											Game.outBuffer
-													.method247(
-															(byte) 91,
+													.writeShortBE(
 															(i_9_ + ((i_10_ << 498233734) + ((Class12_Sub12_Sub11_Sub2.anInt2731) << 411314476))));
 											Class12_Sub12_Sub11_Sub2.anInt2731 = 0;
 										} else if (((Class12_Sub12_Sub11_Sub2.anInt2731) ^ 0xffffffff) > -9) {
@@ -226,9 +225,9 @@ public abstract class Class9 {
 							Class12_Sub12_Sub3.anInt2125 = 20;
 							Class12_Sub12_Sub15.aBoolean2474 = false;
 							Game.outBuffer.writePacket(0);
-							Game.outBuffer.method241(96,
+							Game.outBuffer.writeShortLEA(96,
 									Class12_Sub12_Sub13.anInt2441);
-							Game.outBuffer.method235(
+							Game.outBuffer.writeShortBEA(
 									Class48.anInt1127, (byte) 86);
 						}
 						if (arg0 < -104) {
@@ -359,7 +358,7 @@ public abstract class Class9 {
 													Game.outBuffer
 															.writePacket(40);
 													Game.outBuffer
-															.method235(
+															.writeShortBEA(
 																	(Class12_Sub12_Sub8.anInt2285),
 																	(byte) 67);
 													Game.outBuffer
@@ -369,7 +368,7 @@ public abstract class Class9 {
 																	(byte) -70,
 																	Class62.anInt1381);
 													Game.outBuffer
-															.method235(
+															.writeShortBEA(
 																	(Archive.anInt1904),
 																	(byte) 103);
 												}

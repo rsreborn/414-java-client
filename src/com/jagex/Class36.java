@@ -47,8 +47,8 @@ public class Class36 {
 			if ((i_1_ ^ 0xffffffff) == -39) {
 				Game.outBuffer.writePacket(64);
 				Game.outBuffer.method209(-921469304, i_0_);
-				Game.outBuffer.method235(i, (byte) 119);
-				Game.outBuffer.method247((byte) 91, i_2_);
+				Game.outBuffer.writeShortBEA(i, (byte) 119);
+				Game.outBuffer.writeShortBE(i_2_);
 				Class12_Sub12_Sub16.anInt2560 = 2;
 				Player.anInt2973 = i_0_;
 				Class33.anInt829 = i;
@@ -84,7 +84,7 @@ public class Class36 {
 					Game.outBuffer.writePacket(112);
 					Game.outBuffer.writeIntBE(
                             Class12_Sub2.anInt1647);
-					Game.outBuffer.method241(96, i_2_);
+					Game.outBuffer.writeShortLEA(96, i_2_);
 				}
 			}
 			if (i_1_ == 19) {
@@ -110,7 +110,7 @@ public class Class36 {
 					Class49.anInt1149 = Class42.anInt1000;
 					Archive.anInt1903 = 2;
 					Game.outBuffer.writePacket(98);
-					Game.outBuffer.method224(i_2_, -9129);
+					Game.outBuffer.writeShortLE(i_2_);
 				}
 			}
 			if (i_1_ == 28) {
@@ -154,11 +154,11 @@ public class Class36 {
 				Class33.anInt823 = Class10.anInt226;
 				Archive.anInt1903 = 2;
 				Game.outBuffer.writePacket(28);
-				Game.outBuffer.method224(i_0_
-						- -Class8.anInt174, -9129);
-				Game.outBuffer.method224(i_2_, -9129);
-				Game.outBuffer.method224(
-						Class64.anInt1451 + i, -9129);
+				Game.outBuffer.writeShortLE(i_0_
+						- -Class8.anInt174);
+				Game.outBuffer.writeShortLE(i_2_);
+				Game.outBuffer.writeShortLE(
+						Class64.anInt1451 + i);
 			}
 			if (i_1_ == 46) {
 				Class12_Sub12_Sub11_Sub1.anInt2653++;
@@ -196,10 +196,10 @@ public class Class36 {
 				Class49.anInt1149 = Class42.anInt1000;
 				Archive.anInt1903 = 2;
 				Game.outBuffer.writePacket(5);
-				Game.outBuffer.method247((byte) 91, i_2_);
-				Game.outBuffer.method235(Class8.anInt174
+				Game.outBuffer.writeShortBE(i_2_);
+				Game.outBuffer.writeShortBEA(Class8.anInt174
 						+ i_0_, (byte) 83);
-				Game.outBuffer.method241(96, Class64.anInt1451
+				Game.outBuffer.writeShortLEA(96, Class64.anInt1451
 						+ i);
 			}
 			if ((i_1_ ^ 0xffffffff) == -1004) {
@@ -212,8 +212,8 @@ public class Class36 {
 					if (class12_sub12_sub2 != null) {
 						Class30.anInt741++;
 						Game.outBuffer.writePacket(121);
-						Game.outBuffer.method224(
-								class12_sub12_sub2.anInt2086, -9129);
+						Game.outBuffer.writeShortLE(
+								class12_sub12_sub2.anInt2086);
 					}
 				}
 			}
@@ -240,14 +240,14 @@ public class Class36 {
 					Archive.anInt1903 = 2;
 					Class49.anInt1149 = Class42.anInt1000;
 					Game.outBuffer.writePacket(181);
-					Game.outBuffer.method235(i_2_, (byte) 61);
+					Game.outBuffer.writeShortBEA(i_2_, (byte) 61);
 				}
 			}
 			if (i_1_ == 6) {
 				Class12_Sub12_Sub14.anInt2451++;
 				Game.outBuffer.writePacket(161);
-				Game.outBuffer.method241(96, i_2_);
-				Game.outBuffer.method235(i, (byte) 59);
+				Game.outBuffer.writeShortLEA(96, i_2_);
+				Game.outBuffer.writeShortBEA(i, (byte) 59);
 				Game.outBuffer.method209(-921469304, i_0_);
 				Class33.anInt829 = i;
 				Class12_Sub12_Sub16.anInt2560 = 2;
@@ -261,11 +261,11 @@ public class Class36 {
 			if (i_1_ == 12) {
 				Game.outBuffer.writePacket(131);
 				Class12_Sub9.anInt1744++;
-				Game.outBuffer.method224(i_2_, -9129);
-				Game.outBuffer.method241(96, Class13.anInt352);
-				Game.outBuffer.method247((byte) 91,
+				Game.outBuffer.writeShortLE(i_2_);
+				Game.outBuffer.writeShortLEA(96, Class13.anInt352);
+				Game.outBuffer.writeShortBE(
 						Class12_Sub12_Sub13.anInt2434);
-				Game.outBuffer.method235(i, (byte) 89);
+				Game.outBuffer.writeShortBEA(i, (byte) 89);
 				Game.outBuffer.writeIntBE(i_0_);
 				Game.outBuffer.writeIntBE(
                         Class9_Sub2.anInt1596);
@@ -301,10 +301,10 @@ public class Class36 {
 					Class12_Sub12_Sub4.anInt2228 = 0;
 					Class49.anInt1149 = Class42.anInt1000;
 					Game.outBuffer.writePacket(242);
-					Game.outBuffer.method224(i_2_, -9129);
-					Game.outBuffer.method235(
+					Game.outBuffer.writeShortLE(i_2_);
+					Game.outBuffer.writeShortBEA(
 							Class12_Sub12_Sub13.anInt2434, (byte) 114);
-					Game.outBuffer.method235(Class13.anInt352,
+					Game.outBuffer.writeShortBEA(Class13.anInt352,
 							(byte) 79);
 					Game.outBuffer.method245((byte) -70,
 							Class9_Sub2.anInt1596);
@@ -315,12 +315,12 @@ public class Class36 {
 							-121, i)) {
 				Game.outBuffer.writePacket(252);
 				Class12_Sub12.anInt1840++;
-				Game.outBuffer.method247((byte) 91,
+				Game.outBuffer.writeShortBE(
 						Class64.anInt1451 + i);
-				Game.outBuffer.method241(96,
+				Game.outBuffer.writeShortLEA(96,
 						(0x1ffff66b & i_2_) >> 1081981230);
-				Game.outBuffer.method224(Class8.anInt174
-						+ i_0_, -9129);
+				Game.outBuffer.writeShortLE(Class8.anInt174
+						+ i_0_);
 				Game.outBuffer.method225(-11129,
 						Class12_Sub2.anInt1647);
 			}
@@ -347,7 +347,7 @@ public class Class36 {
 					Class49.anInt1149 = Class42.anInt1000;
 					Class42.anInt995++;
 					Game.outBuffer.writePacket(175);
-					Game.outBuffer.method235(i_2_, (byte) 117);
+					Game.outBuffer.writeShortBEA(i_2_, (byte) 117);
 				}
 			}
 			if ((i_1_ ^ 0xffffffff) == -56) {
@@ -385,11 +385,11 @@ public class Class36 {
 				Player.method461(i_0_, i_2_, -128, i);
 				Game.outBuffer.writePacket(201);
 				Player.anInt2953++;
-				Game.outBuffer.method241(96, i_0_
+				Game.outBuffer.writeShortLEA(96, i_0_
 						+ Class8.anInt174);
-				Game.outBuffer.method224(
-						Class64.anInt1451 + i, -9129);
-				Game.outBuffer.method235(
+				Game.outBuffer.writeShortLE(
+						Class64.anInt1451 + i);
+				Game.outBuffer.writeShortBEA(
 						i_2_ >> 1168071374 & 0x7fff, (byte) 118);
 			}
 			if ((i_1_ ^ 0xffffffff) == -40) {
@@ -415,7 +415,7 @@ public class Class36 {
 					Class49.anInt1149 = Class42.anInt1000;
 					Class12_Sub12_Sub4.anInt2228 = 0;
 					Game.outBuffer.writePacket(178);
-					Game.outBuffer.method235(i_2_, (byte) 97);
+					Game.outBuffer.writeShortBEA(i_2_, (byte) 97);
 				}
 			}
 			if (i_1_ == 45) {
@@ -441,15 +441,15 @@ public class Class36 {
 					Class49.anInt1149 = Class42.anInt1000;
 					Archive.anInt1903 = 2;
 					Game.outBuffer.writePacket(147);
-					Game.outBuffer.method247((byte) 91, i_2_);
+					Game.outBuffer.writeShortBE(i_2_);
 				}
 			}
 			if (i_1_ == 18) {
 				Class12_Sub12_Sub11_Sub2.anInt2729++;
 				Game.outBuffer.writePacket(10);
 				Game.outBuffer.method225(-11129, i_0_);
-				Game.outBuffer.method241(96, i);
-				Game.outBuffer.method241(96, i_2_);
+				Game.outBuffer.writeShortLEA(96, i);
+				Game.outBuffer.writeShortLEA(96, i_2_);
 				Class12_Sub12_Sub16.anInt2560 = 2;
 				if ((Class13.anInt343 ^ 0xffffffff) == (i_0_ >> -2040270480 ^ 0xffffffff))
 					Class12_Sub12_Sub16.anInt2560 = 1;
@@ -482,26 +482,26 @@ public class Class36 {
 					Class12_Sub12_Sub6.anInt2252++;
 					Class49.anInt1149 = Class42.anInt1000;
 					Game.outBuffer.writePacket(47);
-					Game.outBuffer.method235(i_2_, (byte) 79);
+					Game.outBuffer.writeShortBEA(i_2_, (byte) 79);
 				}
 			}
 			if (i_1_ == 1004) {
 				Player.method461(i_0_, i_2_, -118, i);
 				Class12_Sub12_Sub2.anInt2099++;
 				Game.outBuffer.writePacket(212);
-				Game.outBuffer.method241(96, i_0_
+				Game.outBuffer.writeShortLEA(96, i_0_
 						+ Class8.anInt174);
-				Game.outBuffer.method224(
-						0x7fff & i_2_ >> 558854478, -9129);
-				Game.outBuffer.method241(96, i
+				Game.outBuffer.writeShortLE(
+						0x7fff & i_2_ >> 558854478);
+				Game.outBuffer.writeShortLEA(96, i
 						+ Class64.anInt1451);
 			}
 			if (i_1_ == 3) {
 				Game.outBuffer.writePacket(146);
-				Game.outBuffer.method224(i_2_, -9129);
+				Game.outBuffer.writeShortLE(i_2_);
 				Statics.anInt548++;
 				Game.outBuffer.method225(-11129, i_0_);
-				Game.outBuffer.method241(96, i);
+				Game.outBuffer.writeShortLEA(96, i);
 				Class12_Sub12_Sub16.anInt2560 = 2;
 				Player.anInt2973 = i_0_;
 				Class12.anInt333 = 0;
@@ -514,7 +514,7 @@ public class Class36 {
 			if ((i_1_ ^ 0xffffffff) == -1006) {
 				Game.outBuffer.writePacket(233);
 				Class9_Sub2.anInt1602++;
-				Game.outBuffer.method235(i_2_, (byte) 90);
+				Game.outBuffer.writeShortBEA(i_2_, (byte) 90);
 			}
 			if (i_1_ == 23) {
 				Class58.anInt1347++;
@@ -552,11 +552,11 @@ public class Class36 {
 				Class49.anInt1149 = Class42.anInt1000;
 				Archive.anInt1903 = 2;
 				Game.outBuffer.writePacket(80);
-				Game.outBuffer.method247((byte) 91, i_2_);
-				Game.outBuffer.method224(
-						i + Class64.anInt1451, -9129);
-				Game.outBuffer.method224(Class8.anInt174
-						+ i_0_, -9129);
+				Game.outBuffer.writeShortBE(i_2_);
+				Game.outBuffer.writeShortLE(
+						i + Class64.anInt1451);
+				Game.outBuffer.writeShortLE(Class8.anInt174
+						+ i_0_);
 			}
 			int i_6_ = 32 % ((arg1 - 64) / 35);
 			if ((i_1_ ^ 0xffffffff) == -15) {
@@ -595,17 +595,17 @@ public class Class36 {
 				Class33.anInt823 = Class10.anInt226;
 				Archive.anInt1903 = 2;
 				Game.outBuffer.writePacket(162);
-				Game.outBuffer.method224(i_0_
-						+ Class8.anInt174, -9129);
+				Game.outBuffer.writeShortLE(i_0_
+						+ Class8.anInt174);
 				Game.outBuffer.writeIntBE(
                         Class9_Sub2.anInt1596);
-				Game.outBuffer.method224(i
-						- -Class64.anInt1451, -9129);
-				Game.outBuffer.method224(
-						Class12_Sub12_Sub13.anInt2434, -9129);
-				Game.outBuffer.method235(Class13.anInt352,
+				Game.outBuffer.writeShortLE(i
+						- -Class64.anInt1451);
+				Game.outBuffer.writeShortLE(
+						Class12_Sub12_Sub13.anInt2434);
+				Game.outBuffer.writeShortBEA(Class13.anInt352,
 						(byte) 113);
-				Game.outBuffer.method247((byte) 91, i_2_);
+				Game.outBuffer.writeShortBE(i_2_);
 			}
 			if (i_1_ == 7) {
 				Class12_Sub7.anInt1723++;
@@ -643,20 +643,20 @@ public class Class36 {
 				Class33.anInt823 = Class10.anInt226;
 				Class12_Sub12_Sub4.anInt2228 = 0;
 				Game.outBuffer.writePacket(202);
-				Game.outBuffer.method247((byte) 91,
+				Game.outBuffer.writeShortBE(
 						Class8.anInt174 + i_0_);
 				Game.outBuffer.method245((byte) -70,
 						Class12_Sub2.anInt1647);
-				Game.outBuffer.method224(
-						i + Class64.anInt1451, -9129);
-				Game.outBuffer.method235(i_2_, (byte) 83);
+				Game.outBuffer.writeShortLE(
+						i + Class64.anInt1451);
+				Game.outBuffer.writeShortBEA(i_2_, (byte) 83);
 			}
 			if ((i_1_ ^ 0xffffffff) == -30) {
 				Class12_Sub12_Sub11.anInt2397++;
 				Game.outBuffer.writePacket(2);
-				Game.outBuffer.method247((byte) 91, i_2_);
+				Game.outBuffer.writeShortBE(i_2_);
 				Game.outBuffer.method209(-921469304, i_0_);
-				Game.outBuffer.method247((byte) 91, i);
+				Game.outBuffer.writeShortBE(i);
 				Class12_Sub12_Sub16.anInt2560 = 2;
 				Class12.anInt333 = 0;
 				if (Class13.anInt343 == i_0_ >> -1109196944)
@@ -689,7 +689,7 @@ public class Class36 {
 					Class12_Sub12_Sub4.anInt2228 = 0;
 					Class49.anInt1149 = Class42.anInt1000;
 					Game.outBuffer.writePacket(86);
-					Game.outBuffer.method235(i_2_, (byte) 76);
+					Game.outBuffer.writeShortBEA(i_2_, (byte) 76);
 				}
 			}
 			if (i_1_ == 37
@@ -697,17 +697,17 @@ public class Class36 {
 							i)) {
 				Class12_Sub12_Sub11_Sub5.anInt2869++;
 				Game.outBuffer.writePacket(68);
-				Game.outBuffer.method224(i_0_
-						+ Class8.anInt174, -9129);
-				Game.outBuffer.method235(
+				Game.outBuffer.writeShortLE(i_0_
+						+ Class8.anInt174);
+				Game.outBuffer.writeShortBEA(
 						Class12_Sub12_Sub13.anInt2434, (byte) 78);
-				Game.outBuffer.method247((byte) 91,
+				Game.outBuffer.writeShortBE(
 						Class13.anInt352);
-				Game.outBuffer.method241(96, i
+				Game.outBuffer.writeShortLEA(96, i
 						- -Class64.anInt1451);
 				Game.outBuffer.method225(-11129,
 						Class9_Sub2.anInt1596);
-				Game.outBuffer.method247((byte) 91,
+				Game.outBuffer.writeShortBE(
 						i_2_ >> 415563758 & 0x7fff);
 			}
 			if ((i_1_ ^ 0xffffffff) == -34) {
@@ -733,7 +733,7 @@ public class Class36 {
 					Archive.anInt1903 = 2;
 					Class12_Sub12_Sub4.anInt2228 = 0;
 					Game.outBuffer.writePacket(37);
-					Game.outBuffer.method241(96, i_2_);
+					Game.outBuffer.writeShortLEA(96, i_2_);
 				}
 			}
 			if (i_1_ == 34) {
@@ -772,10 +772,10 @@ public class Class36 {
 				Archive.anInt1903 = 2;
 				Class33.anInt823 = Class10.anInt226;
 				Game.outBuffer.writePacket(183);
-				Game.outBuffer.method224(i
-						- -Class64.anInt1451, -9129);
-				Game.outBuffer.method241(96, i_2_);
-				Game.outBuffer.method235(Class8.anInt174
+				Game.outBuffer.writeShortLE(i
+						- -Class64.anInt1451);
+				Game.outBuffer.writeShortLEA(96, i_2_);
+				Game.outBuffer.writeShortBEA(Class8.anInt174
 						+ i_0_, (byte) 115);
 			}
 			if (i_1_ == 13) {
@@ -825,8 +825,8 @@ public class Class36 {
 					Class12_Sub12_Sub11_Sub2_Sub1.anInt2914++;
 					Game.outBuffer.writePacket(109);
 					Game.outBuffer.writeIntBE(i_0_);
-					Game.outBuffer.method224(i_2_, -9129);
-					Game.outBuffer.method235(i, (byte) 101);
+					Game.outBuffer.writeShortLE(i_2_);
+					Game.outBuffer.writeShortBEA(i, (byte) 101);
 					Class12_Sub12_Sub16.anInt2560 = 2;
 					Class33.anInt829 = i;
 					Player.anInt2973 = i_0_;
@@ -841,11 +841,11 @@ public class Class36 {
 							.method461(i_0_, i_2_, -106, i);
 					Class64_Sub2.anInt1956++;
 					Game.outBuffer.writePacket(184);
-					Game.outBuffer.method224(Class64.anInt1451
-							+ i, -9129);
-					Game.outBuffer.method224(
-							0x7fff & i_2_ >> -1491580210, -9129);
-					Game.outBuffer.method241(96, i_0_
+					Game.outBuffer.writeShortLE(Class64.anInt1451
+							+ i);
+					Game.outBuffer.writeShortLE(
+							0x7fff & i_2_ >> -1491580210);
+					Game.outBuffer.writeShortLEA(96, i_0_
 							- -Class8.anInt174);
 				}
 				if (i_1_ == 1006) {
@@ -872,7 +872,7 @@ public class Class36 {
 					else {
 						Game.outBuffer.writePacket(233);
 						Class9_Sub2.anInt1602++;
-						Game.outBuffer.method235(i_2_,
+						Game.outBuffer.writeShortBEA(i_2_,
 								(byte) 113);
 					}
 				}
@@ -880,11 +880,11 @@ public class Class36 {
 					Class12_Sub12_Sub15.anInt2484++;
 					Player.method461(i_0_, i_2_, -77, i);
 					Game.outBuffer.writePacket(159);
-					Game.outBuffer.method247((byte) 91, i
+					Game.outBuffer.writeShortBE(i
 							+ Class64.anInt1451);
-					Game.outBuffer.method241(96,
+					Game.outBuffer.writeShortLEA(96,
 							(i_2_ & 0x1fffc966) >> -1806687602);
-					Game.outBuffer.method247((byte) 91,
+					Game.outBuffer.writeShortBE(
 							Class8.anInt174 + i_0_);
 				}
 				if ((i_1_ ^ 0xffffffff) == -23
@@ -916,7 +916,7 @@ public class Class36 {
 						Class49.anInt1149 = Class42.anInt1000;
 						Class33.anInt823 = Class10.anInt226;
 						Game.outBuffer.writePacket(244);
-						Game.outBuffer.method247((byte) 91,
+						Game.outBuffer.writeShortBE(
 								i_2_);
 					}
 				}
@@ -945,7 +945,7 @@ public class Class36 {
 						Game.outBuffer.writePacket(90);
 						Game.outBuffer.writeIntBE(
                                 Class12_Sub2.anInt1647);
-						Game.outBuffer.method235(i_2_,
+						Game.outBuffer.writeShortBEA(i_2_,
 								(byte) 116);
 					}
 				}
@@ -954,9 +954,9 @@ public class Class36 {
 					Game.outBuffer.writePacket(107);
 					Game.outBuffer.method245((byte) -70,
 							Class12_Sub2.anInt1647);
-					Game.outBuffer.method224(i_2_, -9129);
+					Game.outBuffer.writeShortLE(i_2_);
 					Game.outBuffer.method245((byte) -70, i_0_);
-					Game.outBuffer.method241(96, i);
+					Game.outBuffer.writeShortLEA(96, i);
 					Player.anInt2973 = i_0_;
 					Class12.anInt333 = 0;
 					Class12_Sub12_Sub16.anInt2560 = 2;
@@ -989,13 +989,13 @@ public class Class36 {
 						Archive.anInt1903 = 2;
 						Class12_Sub12_Sub4.anInt2228 = 0;
 						Game.outBuffer.writePacket(253);
-						Game.outBuffer.method224(i_2_, -9129);
+						Game.outBuffer.writeShortLE(i_2_);
 						Game.outBuffer.writeIntBE(
                                 Class9_Sub2.anInt1596);
-						Game.outBuffer.method224(
-								Class12_Sub12_Sub13.anInt2434, -9129);
-						Game.outBuffer.method224(
-								Class13.anInt352, -9129);
+						Game.outBuffer.writeShortLE(
+								Class12_Sub12_Sub13.anInt2434);
+						Game.outBuffer.writeShortLE(
+								Class13.anInt352);
 					}
 				}
 				if ((i_1_ ^ 0xffffffff) == -9) {
@@ -1047,14 +1047,14 @@ public class Class36 {
 									Game.outBuffer.writePacket(
 											244);
 									Class28.anInt682++;
-									Game.outBuffer.method247(
-											(byte) 91, anIntArray888[i_10_]);
+									Game.outBuffer.writeShortBE(
+											anIntArray888[i_10_]);
 								}
 								if ((i_1_ ^ 0xffffffff) == -36) {
 									Game.anInt1570++;
 									Game.outBuffer.writePacket(
 											86);
-									Game.outBuffer.method235(
+									Game.outBuffer.writeShortBEA(
 											anIntArray888[i_10_], (byte) 62);
 								}
 								break;
@@ -1096,10 +1096,10 @@ public class Class36 {
 					if (i_1_ == 11) {
 						Game.outBuffer.writePacket(166);
 						Class12_Sub12_Sub2.anInt2066++;
-						Game.outBuffer.method224(i, -9129);
+						Game.outBuffer.writeShortLE(i);
 						Game.outBuffer.writeIntBE(
                                 i_0_);
-						Game.outBuffer.method224(i_2_, -9129);
+						Game.outBuffer.writeShortLE(i_2_);
 						Class12_Sub12_Sub16.anInt2560 = 2;
 						Player.anInt2973 = i_0_;
 						if ((i_0_ >> -1941335344 ^ 0xffffffff) == (Class13.anInt343 ^ 0xffffffff))
@@ -1131,7 +1131,7 @@ public class Class36 {
 					if ((i_1_ ^ 0xffffffff) == -1002) {
 						Class62_Sub2.anInt1909++;
 						Game.outBuffer.writePacket(74);
-						Game.outBuffer.method247((byte) 91,
+						Game.outBuffer.writeShortBE(
 								0x7fff & i_2_ >> -1995444626);
 					}
 					if (i_1_ == 17 || (i_1_ ^ 0xffffffff) == -16 || i_1_ == 48
@@ -1171,8 +1171,8 @@ public class Class36 {
 						Game.outBuffer.writePacket(240);
 						Game.outBuffer.method225(-11129, i_0_);
 						Class12_Sub12_Sub11_Sub2_Sub1.anInt2920++;
-						Game.outBuffer.method224(i_2_, -9129);
-						Game.outBuffer.method247((byte) 91, i);
+						Game.outBuffer.writeShortLE(i_2_);
+						Game.outBuffer.writeShortBE(i);
 						Player.anInt2973 = i_0_;
 						Class12.anInt333 = 0;
 						Class33.anInt829 = i;
@@ -1218,18 +1218,18 @@ public class Class36 {
 						Archive.anInt1903 = 2;
 						Class12_Sub12_Sub4.anInt2228 = 0;
 						Game.outBuffer.writePacket(99);
-						Game.outBuffer.method247((byte) 91,
+						Game.outBuffer.writeShortBE(
 								i_0_ - -Class8.anInt174);
-						Game.outBuffer.method241(96, i
+						Game.outBuffer.writeShortLEA(96, i
 								+ Class64.anInt1451);
-						Game.outBuffer.method241(96, i_2_);
+						Game.outBuffer.writeShortLEA(96, i_2_);
 					}
 					if ((i_1_ ^ 0xffffffff) == -37) {
 						Game.outBuffer.writePacket(148);
 						Game.outBuffer.method225(-11129, i_0_);
 						Class12_Sub12_Sub11_Sub5.anInt2850++;
-						Game.outBuffer.method241(96, i_2_);
-						Game.outBuffer.method247((byte) 91, i);
+						Game.outBuffer.writeShortLEA(96, i_2_);
+						Game.outBuffer.writeShortBE(i);
 						Class12_Sub12_Sub16.anInt2560 = 2;
 						Player.anInt2973 = i_0_;
 						if (Class13.anInt343 == i_0_ >> 1252456176)
@@ -1242,8 +1242,8 @@ public class Class36 {
 					if ((i_1_ ^ 0xffffffff) == -43) {
 						Class1.anInt70++;
 						Game.outBuffer.writePacket(249);
-						Game.outBuffer.method241(96, i);
-						Game.outBuffer.method224(i_2_, -9129);
+						Game.outBuffer.writeShortLEA(96, i);
+						Game.outBuffer.writeShortLE(i_2_);
 						Game.outBuffer.method209(-921469304,
 								i_0_);
 						Class12.anInt333 = 0;
@@ -1259,12 +1259,12 @@ public class Class36 {
 						Player.method461(i_0_, i_2_,
 								-103, i);
 						Game.outBuffer.writePacket(213);
-						Game.outBuffer.method235(i_0_
+						Game.outBuffer.writeShortBEA(i_0_
 								+ Class8.anInt174, (byte) 61);
 						Class12_Sub12_Sub2.anInt2084++;
-						Game.outBuffer.method235(
+						Game.outBuffer.writeShortBEA(
 								(i_2_ & 0x1fffc6ef) >> 171041390, (byte) 109);
-						Game.outBuffer.method247((byte) 91,
+						Game.outBuffer.writeShortBE(
 								Class64.anInt1451 + i);
 					}
 					if (i_1_ == 41) {
@@ -1291,7 +1291,7 @@ public class Class36 {
 							Class33.anInt823 = Class10.anInt226;
 							Game.outBuffer
 									.writePacket(153);
-							Game.outBuffer.method235(i_2_,
+							Game.outBuffer.writeShortBEA(i_2_,
 									(byte) 64);
 						}
 					}

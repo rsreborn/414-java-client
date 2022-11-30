@@ -230,7 +230,7 @@ public class Player extends Class12_Sub12_Sub11_Sub2 {
 					is[i_10_] = (i_11_ << 8) + i_12_;
 					if (i_10_ == 0
 							&& is[0] == 65535) {
-						i_9_ = arg0.readShort(-1);
+						i_9_ = arg0.readShortBE();
 						break;
 					}
 					if (is[i_10_] >= 512) {
@@ -249,31 +249,31 @@ public class Player extends Class12_Sub12_Sub11_Sub2 {
 					i_16_ = 0;
 				is_14_[i_15_] = i_16_;
 			}
-			anInt2681 = arg0.readShort(-1);
+			anInt2681 = arg0.readShortBE();
 			if (anInt2681 == 65535)
 				anInt2681 = -1;
-			anInt2679 = arg0.readShort(-1);
+			anInt2679 = arg0.readShortBE();
 			if (anInt2679 == 65535)
 				anInt2679 = -1;
-			anInt2710 = arg0.readShort(-1);
+			anInt2710 = arg0.readShortBE();
 			if (anInt2710 == 65535)
 				anInt2710 = -1;
-			anInt2700 = arg0.readShort(-1);
+			anInt2700 = arg0.readShortBE();
 			if (anInt2700 == 65535)
 				anInt2700 = -1;
-			anInt2662 = arg0.readShort(-1);
+			anInt2662 = arg0.readShortBE();
 			if (anInt2662 == 65535)
 				anInt2662 = -1;
-			anInt2706 = arg0.readShort(-1);
+			anInt2706 = arg0.readShortBE();
 			if (anInt2706 == 65535)
 				anInt2706 = -1;
-			anInt2677 = arg0.readShort(-1);
+			anInt2677 = arg0.readShortBE();
 			if (anInt2677 == 65535)
 				anInt2677 = -1;
 			aClass59_2951 = Class12_Sub12_Sub13.method524(-3,
 					arg0.readLong(103)).toString(-14767);
 			anInt2955 = arg0.readUByte();
-			anInt2947 = arg0.readShort(-1);
+			anInt2947 = arg0.readShortBE();
 			if (aClass42_2954 == null)
 				aClass42_2954 = new Class42();
 			aClass42_2954.method770(is_14_, i_9_, i == 1,

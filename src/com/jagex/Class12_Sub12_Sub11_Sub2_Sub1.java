@@ -306,7 +306,7 @@ public class Class12_Sub12_Sub11_Sub2_Sub1 extends Class12_Sub12_Sub11_Sub2 {
 					if (bool) {
 						Game.outBuffer.writeByte(i_13_);
 						Game.outBuffer.writeByte(i);
-						Game.outBuffer.method247((byte) 91,
+						Game.outBuffer.writeShortBE(
 								Class48.anInt1127);
 						Game.outBuffer.writeByte(
 								57);
@@ -316,12 +316,10 @@ public class Class12_Sub12_Sub11_Sub2_Sub1 extends Class12_Sub12_Sub11_Sub2 {
 								Class15.anInt384);
 						Game.outBuffer.writeByte(89);
 						Game.outBuffer
-								.method247(
-										(byte) 91,
+								.writeShortBE(
 										(Class12_Sub7.aClass12_Sub12_Sub11_Sub2_Sub2_1713.anInt2691));
 						Game.outBuffer
-								.method247(
-										(byte) 91,
+								.writeShortBE(
 										(Class12_Sub7.aClass12_Sub12_Sub11_Sub2_Sub2_1713.anInt2683));
 						Game.outBuffer.writeByte(
 								RSCanvas.anInt64);

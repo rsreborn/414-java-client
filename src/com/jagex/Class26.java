@@ -325,12 +325,12 @@ public abstract class Class26 {
 		int i = class12_sub11.readUByte();
 		if ((i ^ 0xffffffff) == -6) {
 			int i_17_ = class12_sub11.readUByte();
-			anInt618 = class12_sub11.readShort(-1);
+			anInt618 = class12_sub11.readShortBE();
 			anIntArray590 = new int[anInt618];
 			int i_18_ = 0;
 			int i_19_ = -1;
 			for (int i_20_ = 0; (anInt618 ^ 0xffffffff) < (i_20_ ^ 0xffffffff); i_20_++) {
-				anIntArray590[i_20_] = i_18_ += class12_sub11.readShort(-1);
+				anIntArray590[i_20_] = i_18_ += class12_sub11.readShortBE();
 				if ((i_19_ ^ 0xffffffff) > (anIntArray590[i_20_] ^ 0xffffffff))
 					i_19_ = anIntArray590[i_20_];
 			}
@@ -357,7 +357,7 @@ public abstract class Class26 {
 						.method207(-708753192);
 			for (int i_24_ = 0; i_24_ < anInt618; i_24_++)
 				anIntArray599[anIntArray590[i_24_]] = class12_sub11
-						.readShort(-1);
+						.readShortBE();
 			for (int i_25_ = 0; anInt618 > i_25_; i_25_++) {
 				i_18_ = 0;
 				int i_26_ = anIntArray590[i_25_];
@@ -366,7 +366,7 @@ public abstract class Class26 {
 				int i_28_ = -1;
 				for (int i_29_ = 0; i_27_ > i_29_; i_29_++) {
 					int i_30_ = (anIntArrayArray588[i_26_][i_29_] = i_18_ += class12_sub11
-							.readShort(-1));
+							.readShortBE());
 					if (i_28_ < i_30_)
 						i_28_ = i_30_;
 				}

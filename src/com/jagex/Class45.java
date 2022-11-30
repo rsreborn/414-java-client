@@ -19,24 +19,24 @@ public class Class45 {
 		anIntArray1054[0] = i >> 4;
 		anIntArray1054[1] = i & 0xf;
 		if (i != 0) {
-			anIntArray1051[0] = arg0.readShort(-1);
-			anIntArray1051[1] = arg0.readShort(-1);
+			anIntArray1051[0] = arg0.readShortBE();
+			anIntArray1051[1] = arg0.readShortBE();
 			int i_0_ = arg0.readUByte();
 			for (int i_1_ = 0; i_1_ < 2; i_1_++) {
 				for (int i_2_ = 0; i_2_ < anIntArray1054[i_1_]; i_2_++) {
 					anIntArrayArrayArray1052[i_1_][0][i_2_] = arg0
-							.readShort(-1);
+							.readShortBE();
 					anIntArrayArrayArray1055[i_1_][0][i_2_] = arg0
-							.readShort(-1);
+							.readShortBE();
 				}
 			}
 			for (int i_3_ = 0; i_3_ < 2; i_3_++) {
 				for (int i_4_ = 0; i_4_ < anIntArray1054[i_3_]; i_4_++) {
 					if ((i_0_ & 1 << i_3_ * 4 << i_4_) != 0) {
 						anIntArrayArrayArray1052[i_3_][1][i_4_] = arg0
-								.readShort(-1);
+								.readShortBE();
 						anIntArrayArrayArray1055[i_3_][1][i_4_] = arg0
-								.readShort(-1);
+								.readShortBE();
 					} else {
 						anIntArrayArrayArray1052[i_3_][1][i_4_] = anIntArrayArrayArray1052[i_3_][0][i_4_];
 						anIntArrayArrayArray1055[i_3_][1][i_4_] = anIntArrayArrayArray1055[i_3_][0][i_4_];
